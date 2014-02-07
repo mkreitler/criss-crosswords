@@ -28,6 +28,12 @@ joe.Scene.View = new joe.ClassEx({
     return this.camera;
   },
 
+  setSourceTransition: function(wantX, wantY, wantAnchorX, wantAnchorY, transDuration) {
+    joe.assert(this.camera, joe.Strings.ASSERT_VIEW_NO_CAMERA_AVAILABLE);
+
+    this.camera.setSourceTransition(wantX, wantY, wantAnchorX, wantAnchorY, transDuration);
+  },
+
   setWorldPos: function(x, y) {
     if (this.camera) {
       this.camera.setDestPosition(x, y);
@@ -45,6 +51,12 @@ joe.Scene.View = new joe.ClassEx({
     if (this.camera) {
       this.camera.setSourcePosition(x, y);
     }
+  },
+
+  getSourceRect: function() {
+    joe.assert(this.camera, joe.Strings.ASSERT_VIEW_NO_CAMERA_AVAILABLE);
+
+    return this.camera.getSourceRect();
   },
 
   getBounds: function() {

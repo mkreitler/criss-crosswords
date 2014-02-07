@@ -1,7 +1,7 @@
 // String tables
 ccw.STRINGS = {
   GAME_BACK_COLOR: "#ffffff",
-  
+
   TITLE_GREET: "Criss-Crosswords",
   TITLE_PROMPT: joe.Utility.isMobile() ? "Tap to Play" : "Click to Play",
 
@@ -20,8 +20,10 @@ ccw.STRINGS = {
   UP_CLUES: [
     {clue: "Boy flipped for Indian stew. (3)", hint:"Reversal"},
     {clue: "Constant pre-nuptials captivate Betty Page. (3-2)", hint:"Container"},
-    {clue: "Cadaver with damaged rear and a bloating middle sprawls on Venezualan coast. (7)", hint:"Container and deletion"},
+    {clue: "Cadaver with scarred back and a bloating middle sprawls on Venezualan coast. (7)", hint:"Container and deletion"},
     {clue: "Sergeant and Corporal take first bite of hot dogs. (5)", hint:"Deletion"},
     {clue: "What I heard was 'small island.' (3)", hint:"Homophone"}],
+
+  ASSERT_INVALID_GAME_VIEW: "Invalid game view!",
 }
 

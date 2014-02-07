@@ -18,6 +18,13 @@ joe.MathEx.buildTables = function() {
   }
 };
 
+joe.MathEx.trigTransition = function(param) {
+  param = Math.min(param, 1);
+  param = Math.max(0, param);
+
+  return (1 - joe.MathEx.cos(Math.PI * param)) * 0.5;
+};
+
 joe.MathEx.cos = function(angle) {
   var branchCut = Math.floor(angle / joe.MathEx.TWO_PI),
       lowIndex = 0,

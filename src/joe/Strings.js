@@ -6,4 +6,5 @@ joe.Strings = {
   ASSERT_LABEL_OVERFLOW: "Can't break string before length exceeded!",
   ASSERT_INVALID_ARGS: "Invalid arguments in function!",
   ASSERT_LAYER_BMP_INVALID_BITMAP: "Invalid bitmaps!",
+  ASSERT_VIEW_NO_CAMERA_AVAILABLE: "No camera available!",
 };

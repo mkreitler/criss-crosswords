@@ -4,6 +4,7 @@
 
 joe.Scene.Camera = new joe.ClassEx({
   // Class Definition /////////////////////////////////////////////////////////
+  DEFAULT_TRANSITION_TIME: 1,
 },
 {
   // Instance Definition //////////////////////////////////////////////////////
@@ -14,6 +15,42 @@ joe.Scene.Camera = new joe.ClassEx({
   drawRect: {x:0, y:0, w:0, h:0}, // Window we will draw: overlap between viewRect and screen buffer.
   magnification: 1,
   workPoint: {x:0, y:0},
+  transInfo: {bTransitioning: false, wantX:0, wantY:0, startX:0, startY:0, elapsedTime:0, duration:0},
+
+  setSourceTransition: function(wantX, wantY, wantAnchorX, wantAnchorY, transDuration) {
+    // TODO: add transition type.
+    // TODO: allow transitions to interrupt transitions.
+    if (!this.transInfo.bTransitioning) {
+      this.transInfo.startX = this.viewRect.x;
+      this.transInfo.startY = this.viewRect.y;
+      this.transInfo.wantX = wantX - (wantAnchorX || 0);
+      this.transInfo.wantY = wantY - (wantAnchorY || 0);
+      this.transInfo.elapsedTime = 0;
+      this.transInfo.duration = Math.abs(transDuration || joe.Scene.Camera.DEFAULT_TRANSITION_TIME);
+      this.transInfo.bTransitioning = true;
+
+      joe.UpdateLoop.addListener(this);
+    }
+  },
+
+  update: function(dt, gameTime) {
+    var param = 0;
+
+    if (this.transInfo.bTransitioning) {
+      this.transInfo.elapsedTime += dt * 0.001;
+      param = this.transInfo.elapsedTime / this.transInfo.duration;
+      this.transInfo.bTransitioning = 1 - param > joe.MathEx.EPSILON;
+
+      if (this.transInfo.bTransitioning) {
+        this.setSourcePosition(this.transInfo.startX * (1 - param) + this.transInfo.wantX * param,
+                               this.transInfo.startY * (1 - param) + this.transInfo.wantY * param);
+      }
+      else {
+        this.setSourcePosition(this.transInfo.wantX, this.transInfo.wantY);
+        joe.UpdateLoop.removeListener(this);
+      }
+    }
+  },
 
   init: function(width, height) {
     this.viewRect.w = Math.max(1, width);
@@ -95,7 +132,7 @@ joe.Scene.Camera = new joe.ClassEx({
   draw: function(gfx) {
     if (gfx && this.canvas && this.drawRect.w >= 0 && this.drawRect.h >= 0) {
       gfx.drawImage(this.canvas,
-                    0, 0, this.drawRect.w, this.drawRect.h,
+                    this.viewRect.x, this.viewRect.y, this.drawRect.w, this.drawRect.h,
                     this.drawRect.x, this.drawRect.y, this.drawRect.w, this.drawRect.h);
     }
   }

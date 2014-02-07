@@ -63,21 +63,22 @@ joe.GUI.ClickBox = new joe.ClassEx(
       if (context && this.widgetVisible()) {
         this.AABBoffset(worldX, worldY);
 
-        context.save();
-        if (this.widgetActive()) {
-          color = this.bIsOn ? this.onColor : this.offColor;
-        }
-
-        context.strokeStyle = color;
-        context.fillStyle = color;
-
-        this.AABBdraw(context, color);
-
         if (this.customDraw) {
           this.customDraw.call(this, context, worldX, worldY);
         }
+        else {
+          context.save();
+          if (this.widgetActive()) {
+            color = this.bIsOn ? this.onColor : this.offColor;
+          }
 
-        context.restore();
+          context.strokeStyle = color;
+          context.fillStyle = color;
+
+          this.AABBdraw(context, color);
+
+          context.restore();
+        }
 
         this.AABBoffset(-worldX, -worldY);
       }
