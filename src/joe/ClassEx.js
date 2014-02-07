@@ -4,9 +4,9 @@
 joe.assert = function(condition, message) {
   if (!condition) {
     if (joe.Utility.isMobile()) {
-      console.log(message || "Assertion failed!");
+      console.log(message || joe.STRINGS.ASSERT_DEFAULT_MESSAGE);
     }
-    else if (confirm(message + "\n\nHit 'yes' to debug.")) {
+    else if (confirm(message + joe.STRINGS.ASSERT_DISMISSAL)) {
       debugger;
     }
   }
@@ -56,6 +56,7 @@ joe.ClassEx = function(classModules, instanceModules) {
   return _class;
 };
 
+// Resolve 'requires' directives into a master list of modules.
 joe.ClassEx.include = function(modules) {
   var modulesArray = null,
       key = null,
@@ -66,6 +67,7 @@ joe.ClassEx.include = function(modules) {
       jl = 0,
       includes = null,
       included = [];
+      extraModules = [];
 
   if (modules) {
     if (!(modules instanceof Array)) {
@@ -88,16 +90,26 @@ joe.ClassEx.include = function(modules) {
             }
             else {
               included.push(includes[j]);
-              modulesArray.push(includes[j]);
-              il += 1;
+              extraModules.push(includes[j]);
             }
           }
         }
         else {
-          modulesArray.push(includes);
-          il += 1;
+          extraModules.push(includes);
         }
       }
+    }
+
+    if (extraModules.length) {
+      // Found depdendencies. Recurse into them to handle
+      // hierarchical dependencies.
+      extraModules = joe.ClassEx.include(extraModules);
+    }
+
+    // Insert required modules into the start of the module array
+    // (allows classes to override included methods).
+    for (i=0; i<extraModules.length; ++i) {
+      modulesArray.unshift(extraModules[i]);
     }
   }
 
@@ -154,7 +166,7 @@ joe.ClassEx.extendMethods = function(object, modules) {
   }
 };
 // Copy instance variables into the current object.
-joe.ClassEx.extendVariables = function(object, modules) {
+joe.ClassEx.extendVariables = function(object, modules, bIgnoreRequires) {
   var key = null;
   var i = 0;
   var module = null;
@@ -172,7 +184,12 @@ joe.ClassEx.extendVariables = function(object, modules) {
       module = modules[i];
 
       for (key in module) {
-        if (typeof(module[key]) !== "function") {
+        if (key === "requires") {
+          if (!bIgnoreRequires) {
+            joe.ClassEx.extendVariables(object, joe.ClassEx.include(module[key]), true);
+          }
+        }
+        else if (typeof(module[key]) !== "function") {
           joe.assert(!(object[key]), "Found duplicate object during instantiation.");
           object[key] = joe.ClassEx.cloneInstanceVars(module[key]);
         }

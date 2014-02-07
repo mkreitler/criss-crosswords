@@ -5,9 +5,7 @@
 joe.GUI.Label = new joe.ClassEx(
   // Static Definitions ////////////////////////////////////////////////////////
   {
-    defaultSize: 30,
-    defaultColor: "#ffffff",
-    errorColor: "#ff00ff"
+    DEFAULT_V_SPACE_FACTOR: 0.1,
   },
 
   // Instance Definitions ///////////////////////////////////////////////////////
@@ -16,24 +14,64 @@ joe.GUI.Label = new joe.ClassEx(
 
     buffer: null,
     context: null,
-    anchor: {x:0, y:0}, // Upper left
-    context: null,
 
-    init: function(text, font, color, size, x, y, inputCallbacks, anchorX, anchorY) {
+    init: function(text, font, x, y, inputCallbacks, anchorX, anchorY, maxWidth, vSpacing) {
       var metrics = null,
           dx = 0,
-          dy = 0;
+          dy = 0,
+          substrings = [],
+          tokens = [],
+          curLen = 0,
+          tokenLen = 0,
+          spaceLen = 0,
+          curStrIndex = 0,
+          spaceFactorY = 0;
+
+      spacefactorY = vSpacing || joe.GUI.Label.DEFAULT_V_SPACE_FACTOR;
 
       this.inputCallbacks = inputCallbacks || null;
 
-      if (font && text) {
-        metrics = font.measureText(text, size || joe.GUI.Label.defaultSize);
-        dx = metrics.bounds.maxx - metrics.bounds.minx + 1;
-        dy = metrics.fontsize;
+      joe.assert(font, joe.Strings.ASSERT_LABEL_NO_FONT);
+      joe.assert(text, joe.Strings.ASSERT_LABEL_NO_TEXT);
+
+      if (maxWidth) {
+        // Break the string into substrings below the maxWidth.
+        // TODO: rewrite algorithm to preserve whitespace sequences.
+        tokens = text.split(/\s+/);
+        spaceLen = font.measureText(' ').width;
+
+        for (i=0; i<tokens.length; ++i) {
+          tokenLen = font.measureText(tokens[i]).width;
+          if (curLen === 0 || curLen + spaceLen + tokenLen > maxWidth) {
+            // First token in string, or need to start a new string.
+            joe.assert(tokenLen < maxWidth, joe.Strings.ASSERT_LABEL_OVERFLOW);
+
+            substrings.push(tokens[i]);
+            curStrIndex = substrings.length - 1;
+            curLen = tokenLen;
+          }
+          else {
+            joe.assert(curLen + spaceLen + tokenLen < maxWidth, joe.Strings.ASSERT_LABEL_OVERFLOW);
+            // We can continue to build the current substring.
+            substrings[curStrIndex] += " " + tokens[i];
+            curLen += spaceLen + tokenLen;
+          }
+        }
       }
       else {
-        dx = joe.GUI.Label.defaultSize;
-        dy = dx;
+        substrings.push(text);
+      }
+
+      for (i=substrings.length - 1; i>=0; --i) {
+        metrics = font.measureText(substrings[i]);
+        dx = Math.max(dx, metrics.width);
+
+        if (i === 0) {
+          dy += metrics.height;
+        }
+        else {
+          dy += metrics.height * (1 + spaceFactorY);
+        }
       }
 
       x = x - dx * (anchorX || 0);
@@ -45,21 +83,9 @@ joe.GUI.Label = new joe.ClassEx(
 
       context = this.buffer.getContext('2d');
 
-      if (font && text) {
+      for (i=0; i<substrings.length; ++i) {
         // Render the text into the buffer.
-        font.draw(context, text, 0, 0, color || joe.GUI.Label.defaultColor, "top", size || joe.GUI.Label.defaultSize);
-      }
-      else {
-        context.fillColor = errorColor;
-
-        context.beginPath();
-        context.moveTo(0, 0);
-        context.lineTo(dx, 0);
-        context.lineTo(dx, dy);
-        context.lineTo(0, dy);
-        context.closePath();
-
-        context.fill();
+        font.draw(context, substrings[i], dx * anchorX - font.measureText(substrings[i]).width * anchorX, i * font.height * (1 + spaceFactorY), 0, 1);
       }
     },
 

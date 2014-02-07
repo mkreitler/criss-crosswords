@@ -4,6 +4,10 @@ ccw.GameClass = new joe.ClassEx({
            BOARD_HEIGHT: 150},
 
   IMAGES: {WORD_GRID: 0,
+           SS_ARROWS: 1,
+           SS_CIRCLES: 2,
+           SS_SQUARE: 3,
+           MSG_PANE: 4,
           },
 
   Z_ORDER: {
@@ -42,7 +46,23 @@ ccw.GameClass = new joe.ClassEx({
     this.images.push(joe.Resources.loader.loadImage("img/grid.png",
                                                     ccw.onResourceLoaded,
                                                     ccw.onResourceLoadFailed,
-                                                    this);
+                                                    this));
+    this.images.push(joe.Resources.loader.loadImage("img/ss_arrows.png",
+                                                    ccw.onResourceLoaded,
+                                                    ccw.onResourceLoadFailed,
+                                                    this));
+    this.images.push(joe.Resources.loader.loadImage("img/ss_circles.png",
+                                                    ccw.onResourceLoaded,
+                                                    ccw.onResourceLoadFailed,
+                                                    this));
+    this.images.push(joe.Resources.loader.loadImage("img/ss_square.png",
+                                                    ccw.onResourceLoaded,
+                                                    ccw.onResourceLoadFailed,
+                                                    this));
+    this.images.push(joe.Resources.loader.loadImage("img/message_pane.png",
+                                                    ccw.onResourceLoaded,
+                                                    ccw.onResourceLoadFailed,
+                                                    this));
 
     joe.MouseInput.addListener(this);
     joe.KeyInput.addListener(this);

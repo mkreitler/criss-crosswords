@@ -26,6 +26,7 @@ joe.Resources.BitmapFont = new joe.ClassEx(
 		extImages: [],
 		extBreakpoints: [],
 		nLoaded: 0,
+		metricsOut: {width:0, height:0},
 
 		addImage: function(image) {
 			this.extImages.push(image);
@@ -129,6 +130,13 @@ joe.Resources.BitmapFont = new joe.ClassEx(
 			if( this.alpha !== 1 ) {
 				joe.Graphics.setGlobalAlpha(1);
 			}
+		},
+
+		measureText: function(text) {
+			this.metricsOut.width = this.widthForString(text);
+			this.metricsOut.height = this.height;
+
+			return this.metricsOut;
 		},
 		
 		widthForString: function( text ) {

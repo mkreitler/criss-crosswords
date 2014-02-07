@@ -56,6 +56,10 @@ joe.Scene = {
 
     setParent: function(view) {
       this.parent = view;
+    },
+
+    drawClipped: function(gfx) {
+      // Override to provide custom functionality.
     }
   } 
 };

@@ -64,14 +64,20 @@ joe.Scene.Camera = new joe.ClassEx({
     return this.magnification;
   },
 
-  setSourcePosition: function(x, y) {
-    this.viewRect.x = x;
-    this.viewRect.y = y;
+  setSourcePosition: function(x, y, anchorX, anchorY) {
+    anchorX = anchorX || 0;
+    anchorY = anchorY || 0;
+
+    this.viewRect.x = x - this.viewRect.w / this.magnification * anchorX;
+    this.viewRect.y = y - this.viewRect.h / this.magnification * anchorY;
   },
 
-  setDestPosition: function(x, y) {
-    this.destPos.x = x;
-    this.destPos.y = y;
+  setDestPosition: function(x, y, anchorX, anchorY) {
+    anchorX = anchorX || 0;
+    anchorY = anchorY || 0;
+
+    this.destPos.x = x - this.viewRect.w * anchorX;
+    this.destPos.y = y - this.viewRect.h * anchorY;
 
     this.clipToScreen();
   },

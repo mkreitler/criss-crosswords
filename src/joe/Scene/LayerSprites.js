@@ -44,7 +44,15 @@ joe.Scene.SpriteLayer = new joe.ClassEx({
   drawClipped: function(gfx, srcRect, scale) {
     var i=0;
 
-    if (gfx && srcRect && scale) {
+    if (gfx && srcRect) {
+      gfx.save();
+
+      scale = scale || 1;
+
+      if (Math.abs(scale - 1) > joe.MathEx.EPSILON) {
+        gfx.scale(scale, scale);
+      }
+
       // Loop through sprites from back to front...
       for (i=this.sprites.length - 1; i >= 0; --i) {
 
@@ -53,6 +61,8 @@ joe.Scene.SpriteLayer = new joe.ClassEx({
           this.sprites[i].drawToWorld(gfx, srcRect.x, srcRect.y);
         }
       }
+
+      gfx.restore();
     }
   },
 })

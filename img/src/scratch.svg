@@ -25,8 +25,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497475"
-     inkscape:cx="469.67938"
-     inkscape:cy="533.03186"
+     inkscape:cx="-266.52392"
+     inkscape:cy="91.933083"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -52,296 +52,299 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-28.362183)">
-    <rect
-       style="fill:#000000;fill-opacity:1;stroke:none"
-       id="rect2993"
-       width="76"
-       height="76"
-       x="0"
-       y="28.362183" />
-    <rect
-       y="28.362183"
-       x="152"
-       height="76"
-       width="76"
-       id="rect2995"
-       style="fill:#000000;fill-opacity:1;stroke:none" />
-    <rect
-       style="fill:#000000;fill-opacity:1;stroke:none"
-       id="rect2997"
-       width="76"
-       height="76"
-       x="308"
-       y="28.362183" />
-    <rect
-       y="28.362183"
-       x="464"
-       height="76"
-       width="76"
-       id="rect2999"
-       style="fill:#000000;fill-opacity:1;stroke:none" />
-    <rect
-       style="fill:#000000;fill-opacity:1;stroke:none"
-       id="rect3001"
-       width="76"
-       height="76"
-       x="616"
-       y="28.362183" />
-    <rect
-       y="104.36218"
-       x="76"
-       height="76"
-       width="76"
-       id="rect3003"
-       style="fill:#000000;fill-opacity:1;stroke:none" />
-    <rect
-       style="fill:#000000;fill-opacity:1;stroke:none"
-       id="rect3005"
-       width="76"
-       height="76"
-       x="228"
-       y="104.36218" />
-    <rect
-       y="104.36218"
-       x="384"
-       height="76"
-       width="76"
-       id="rect3007"
-       style="fill:#000000;fill-opacity:1;stroke:none" />
-    <rect
-       style="fill:#000000;fill-opacity:1;stroke:none"
-       id="rect3009"
-       width="76"
-       height="76"
-       x="540"
-       y="104.36218" />
-    <rect
-       y="104.36218"
-       x="692"
-       height="76"
-       width="76"
-       id="rect3011"
-       style="fill:#000000;fill-opacity:1;stroke:none" />
-    <rect
-       y="180.36218"
-       x="0"
-       height="76"
-       width="76"
-       id="rect3027"
-       style="fill:#000000;fill-opacity:1;stroke:none" />
-    <rect
-       style="fill:#000000;fill-opacity:1;stroke:none"
-       id="rect3029"
-       width="76"
-       height="76"
-       x="152"
-       y="180.36218" />
-    <rect
-       y="180.36218"
-       x="308"
-       height="76"
-       width="76"
-       id="rect3031"
-       style="fill:#000000;fill-opacity:1;stroke:none" />
-    <rect
-       style="fill:#000000;fill-opacity:1;stroke:none"
-       id="rect3033"
-       width="76"
-       height="76"
-       x="464"
-       y="180.36218" />
-    <rect
-       y="180.36218"
-       x="616"
-       height="76"
-       width="76"
-       id="rect3035"
-       style="fill:#000000;fill-opacity:1;stroke:none" />
-    <rect
-       style="fill:#000000;fill-opacity:1;stroke:none"
-       id="rect3037"
-       width="76"
-       height="76"
-       x="76"
-       y="256.36218" />
-    <rect
-       y="256.36218"
-       x="228"
-       height="76"
-       width="76"
-       id="rect3039"
-       style="fill:#000000;fill-opacity:1;stroke:none" />
-    <rect
-       style="fill:#000000;fill-opacity:1;stroke:none"
-       id="rect3041"
-       width="76"
-       height="76"
-       x="384"
-       y="256.36218" />
-    <rect
-       y="256.36218"
-       x="540"
-       height="76"
-       width="76"
-       id="rect3043"
-       style="fill:#000000;fill-opacity:1;stroke:none" />
-    <rect
-       style="fill:#000000;fill-opacity:1;stroke:none"
-       id="rect3045"
-       width="76"
-       height="76"
-       x="692"
-       y="256.36218" />
     <g
-       id="g3089"
-       transform="translate(0,720)"
-       inkscape:export-filename="C:\xampp\htdocs\javascript\crisscrosswords\img\title_back.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90">
+       id="g3913">
+      <rect
+         y="28.362183"
+         x="800"
+         height="76"
+         width="76"
+         id="rect2993"
+         style="fill:#000000;fill-opacity:1;stroke:none" />
       <rect
          style="fill:#000000;fill-opacity:1;stroke:none"
-         id="rect3091"
+         id="rect2995"
          width="76"
          height="76"
-         x="0"
+         x="952"
          y="28.362183" />
       <rect
          y="28.362183"
-         x="152"
+         x="1108"
          height="76"
          width="76"
-         id="rect3093"
+         id="rect2997"
          style="fill:#000000;fill-opacity:1;stroke:none" />
       <rect
          style="fill:#000000;fill-opacity:1;stroke:none"
-         id="rect3095"
+         id="rect2999"
          width="76"
          height="76"
-         x="308"
+         x="1264"
          y="28.362183" />
       <rect
          y="28.362183"
-         x="464"
+         x="1416"
          height="76"
          width="76"
-         id="rect3097"
+         id="rect3001"
          style="fill:#000000;fill-opacity:1;stroke:none" />
       <rect
          style="fill:#000000;fill-opacity:1;stroke:none"
-         id="rect3099"
+         id="rect3003"
          width="76"
          height="76"
-         x="616"
-         y="28.362183" />
-      <rect
-         y="104.36218"
-         x="76"
-         height="76"
-         width="76"
-         id="rect3101"
-         style="fill:#000000;fill-opacity:1;stroke:none" />
-      <rect
-         style="fill:#000000;fill-opacity:1;stroke:none"
-         id="rect3103"
-         width="76"
-         height="76"
-         x="228"
+         x="876"
          y="104.36218" />
       <rect
          y="104.36218"
-         x="384"
+         x="1028"
          height="76"
          width="76"
-         id="rect3105"
+         id="rect3005"
          style="fill:#000000;fill-opacity:1;stroke:none" />
       <rect
          style="fill:#000000;fill-opacity:1;stroke:none"
-         id="rect3107"
+         id="rect3007"
          width="76"
          height="76"
-         x="540"
+         x="1184"
          y="104.36218" />
       <rect
          y="104.36218"
-         x="692"
+         x="1340"
          height="76"
          width="76"
-         id="rect3109"
-         style="fill:#000000;fill-opacity:1;stroke:none" />
-      <rect
-         y="180.36218"
-         x="0"
-         height="76"
-         width="76"
-         id="rect3111"
+         id="rect3009"
          style="fill:#000000;fill-opacity:1;stroke:none" />
       <rect
          style="fill:#000000;fill-opacity:1;stroke:none"
-         id="rect3113"
+         id="rect3011"
          width="76"
          height="76"
-         x="152"
+         x="1492"
+         y="104.36218" />
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         id="rect3027"
+         width="76"
+         height="76"
+         x="800"
          y="180.36218" />
       <rect
          y="180.36218"
-         x="308"
+         x="952"
          height="76"
          width="76"
-         id="rect3115"
+         id="rect3029"
          style="fill:#000000;fill-opacity:1;stroke:none" />
       <rect
          style="fill:#000000;fill-opacity:1;stroke:none"
-         id="rect3117"
+         id="rect3031"
          width="76"
          height="76"
-         x="464"
+         x="1108"
          y="180.36218" />
       <rect
          y="180.36218"
-         x="616"
+         x="1264"
          height="76"
          width="76"
-         id="rect3119"
+         id="rect3033"
          style="fill:#000000;fill-opacity:1;stroke:none" />
       <rect
          style="fill:#000000;fill-opacity:1;stroke:none"
-         id="rect3121"
+         id="rect3035"
          width="76"
          height="76"
-         x="76"
+         x="1416"
+         y="180.36218" />
+      <rect
+         y="256.36218"
+         x="876"
+         height="76"
+         width="76"
+         id="rect3037"
+         style="fill:#000000;fill-opacity:1;stroke:none" />
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         id="rect3039"
+         width="76"
+         height="76"
+         x="1028"
          y="256.36218" />
       <rect
          y="256.36218"
-         x="228"
+         x="1184"
          height="76"
          width="76"
-         id="rect3123"
+         id="rect3041"
          style="fill:#000000;fill-opacity:1;stroke:none" />
       <rect
          style="fill:#000000;fill-opacity:1;stroke:none"
-         id="rect3125"
+         id="rect3043"
          width="76"
          height="76"
-         x="384"
+         x="1340"
          y="256.36218" />
       <rect
          y="256.36218"
-         x="540"
+         x="1492"
          height="76"
          width="76"
-         id="rect3127"
+         id="rect3045"
          style="fill:#000000;fill-opacity:1;stroke:none" />
-      <rect
-         style="fill:#000000;fill-opacity:1;stroke:none"
-         id="rect3129"
-         width="76"
-         height="76"
-         x="692"
-         y="256.36218" />
+      <g
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="C:\xampp\htdocs\javascript\crisscrosswords\img\title_back.png"
+         transform="translate(800,720)"
+         id="g3089">
+        <rect
+           y="28.362183"
+           x="0"
+           height="76"
+           width="76"
+           id="rect3091"
+           style="fill:#000000;fill-opacity:1;stroke:none" />
+        <rect
+           style="fill:#000000;fill-opacity:1;stroke:none"
+           id="rect3093"
+           width="76"
+           height="76"
+           x="152"
+           y="28.362183" />
+        <rect
+           y="28.362183"
+           x="308"
+           height="76"
+           width="76"
+           id="rect3095"
+           style="fill:#000000;fill-opacity:1;stroke:none" />
+        <rect
+           style="fill:#000000;fill-opacity:1;stroke:none"
+           id="rect3097"
+           width="76"
+           height="76"
+           x="464"
+           y="28.362183" />
+        <rect
+           y="28.362183"
+           x="616"
+           height="76"
+           width="76"
+           id="rect3099"
+           style="fill:#000000;fill-opacity:1;stroke:none" />
+        <rect
+           style="fill:#000000;fill-opacity:1;stroke:none"
+           id="rect3101"
+           width="76"
+           height="76"
+           x="76"
+           y="104.36218" />
+        <rect
+           y="104.36218"
+           x="228"
+           height="76"
+           width="76"
+           id="rect3103"
+           style="fill:#000000;fill-opacity:1;stroke:none" />
+        <rect
+           style="fill:#000000;fill-opacity:1;stroke:none"
+           id="rect3105"
+           width="76"
+           height="76"
+           x="384"
+           y="104.36218" />
+        <rect
+           y="104.36218"
+           x="540"
+           height="76"
+           width="76"
+           id="rect3107"
+           style="fill:#000000;fill-opacity:1;stroke:none" />
+        <rect
+           style="fill:#000000;fill-opacity:1;stroke:none"
+           id="rect3109"
+           width="76"
+           height="76"
+           x="692"
+           y="104.36218" />
+        <rect
+           style="fill:#000000;fill-opacity:1;stroke:none"
+           id="rect3111"
+           width="76"
+           height="76"
+           x="0"
+           y="180.36218" />
+        <rect
+           y="180.36218"
+           x="152"
+           height="76"
+           width="76"
+           id="rect3113"
+           style="fill:#000000;fill-opacity:1;stroke:none" />
+        <rect
+           style="fill:#000000;fill-opacity:1;stroke:none"
+           id="rect3115"
+           width="76"
+           height="76"
+           x="308"
+           y="180.36218" />
+        <rect
+           y="180.36218"
+           x="464"
+           height="76"
+           width="76"
+           id="rect3117"
+           style="fill:#000000;fill-opacity:1;stroke:none" />
+        <rect
+           style="fill:#000000;fill-opacity:1;stroke:none"
+           id="rect3119"
+           width="76"
+           height="76"
+           x="616"
+           y="180.36218" />
+        <rect
+           y="256.36218"
+           x="76"
+           height="76"
+           width="76"
+           id="rect3121"
+           style="fill:#000000;fill-opacity:1;stroke:none" />
+        <rect
+           style="fill:#000000;fill-opacity:1;stroke:none"
+           id="rect3123"
+           width="76"
+           height="76"
+           x="228"
+           y="256.36218" />
+        <rect
+           y="256.36218"
+           x="384"
+           height="76"
+           width="76"
+           id="rect3125"
+           style="fill:#000000;fill-opacity:1;stroke:none" />
+        <rect
+           style="fill:#000000;fill-opacity:1;stroke:none"
+           id="rect3127"
+           width="76"
+           height="76"
+           x="540"
+           y="256.36218" />
+        <rect
+           y="256.36218"
+           x="692"
+           height="76"
+           width="76"
+           id="rect3129"
+           style="fill:#000000;fill-opacity:1;stroke:none" />
+      </g>
     </g>
     <g
        id="g3145"
-       transform="translate(740,-24.929687)">
+       transform="translate(800,-24.929687)">
       <text
          sodipodi:linespacing="125%"
          id="text2985"
@@ -380,187 +383,1197 @@
            y="708.36218"
            id="tspan3137" /></text>
     </g>
+    <g
+       id="g5082"
+       inkscape:export-filename="C:\xampp\htdocs\javascript\criss-crosswords\img\grid.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       transform="translate(4.1428452,0)">
+      <rect
+         y="46.806763"
+         x="11.194283"
+         height="735.38593"
+         width="737.32574"
+         id="rect3263"
+         style="fill:#000000;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         id="rect3178"
+         width="103.97289"
+         height="103.97289"
+         x="14.883692"
+         y="50.067047" />
+      <rect
+         y="50.067047"
+         x="223.23621"
+         height="103.97289"
+         width="103.97289"
+         id="rect3180"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+      <rect
+         y="154.03992"
+         x="118.69189"
+         height="103.97289"
+         width="103.97289"
+         id="rect3186"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         id="rect3188"
+         width="103.97289"
+         height="103.97289"
+         x="327.78052"
+         y="154.03992" />
+      <rect
+         y="258.01282"
+         x="14.883692"
+         height="103.97289"
+         width="103.97289"
+         id="rect3203"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         id="rect3205"
+         width="103.97289"
+         height="103.97289"
+         x="223.23621"
+         y="258.01282" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         id="rect3211"
+         width="103.97289"
+         height="103.97289"
+         x="118.69189"
+         y="361.98572" />
+      <rect
+         y="361.98572"
+         x="327.78052"
+         height="103.97289"
+         width="103.97289"
+         id="rect3213"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         id="rect3219"
+         width="103.97289"
+         height="103.97289"
+         x="14.883692"
+         y="465.95862" />
+      <rect
+         y="465.95862"
+         x="223.23621"
+         height="103.97289"
+         width="103.97289"
+         id="rect3221"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+      <rect
+         y="569.93152"
+         x="118.69189"
+         height="103.97289"
+         width="103.97289"
+         id="rect3227"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         id="rect3229"
+         width="103.97289"
+         height="103.97289"
+         x="327.78052"
+         y="569.93152" />
+      <rect
+         y="673.90442"
+         x="14.883692"
+         height="103.97289"
+         width="103.97289"
+         id="rect3240"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         id="rect3242"
+         width="103.97289"
+         height="103.97289"
+         x="223.23621"
+         y="673.90442" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         id="rect3182"
+         width="103.97289"
+         height="103.97289"
+         x="433.01727"
+         y="50.067047" />
+      <rect
+         y="50.067047"
+         x="640.96307"
+         height="103.97289"
+         width="103.97289"
+         id="rect3184"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+      <rect
+         y="154.03992"
+         x="536.99017"
+         height="103.97289"
+         width="103.97289"
+         id="rect3190"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+      <rect
+         y="258.01282"
+         x="433.01727"
+         height="103.97289"
+         width="103.97289"
+         id="rect3207"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         id="rect3209"
+         width="103.97289"
+         height="103.97289"
+         x="640.96307"
+         y="258.01282" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         id="rect3215"
+         width="103.97289"
+         height="103.97289"
+         x="536.99017"
+         y="361.98572" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         id="rect3223"
+         width="103.97289"
+         height="103.97289"
+         x="433.01727"
+         y="465.95862" />
+      <rect
+         y="465.95862"
+         x="640.96307"
+         height="103.97289"
+         width="103.97289"
+         id="rect3225"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+      <rect
+         y="569.93152"
+         x="536.99017"
+         height="103.97289"
+         width="103.97289"
+         id="rect3231"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+      <rect
+         y="673.90442"
+         x="433.01727"
+         height="103.97289"
+         width="103.97289"
+         id="rect3244"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         id="rect3246"
+         width="103.97289"
+         height="103.97289"
+         x="640.96307"
+         y="673.90442" />
+    </g>
+    <g
+       id="g4762"
+       inkscape:export-filename="C:\xampp\htdocs\javascript\criss-crosswords\img\keypad.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       transform="translate(-196.69822,129.68522)">
+      <g
+         id="g5116"
+         transform="translate(2482.9549,-80.812203)">
+        <rect
+           y="240.60056"
+           x="-699.5"
+           height="455.57883"
+           width="375.43649"
+           id="rect4508"
+           style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none" />
+        <rect
+           y="241.3622"
+           x="-699.44897"
+           height="75"
+           width="76"
+           id="rect4518"
+           style="fill:none;stroke:#000000;stroke-width:3.99999976;stroke-miterlimit:4;stroke-dasharray:none" />
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:3.99999976;stroke-miterlimit:4;stroke-dasharray:none"
+           id="rect4520"
+           width="76"
+           height="75"
+           x="-549.44897"
+           y="241.36215" />
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:3.99999976;stroke-miterlimit:4;stroke-dasharray:none"
+           id="rect4522"
+           width="73.979698"
+           height="76"
+           x="-623.42865"
+           y="316.36218" />
+        <rect
+           y="316.36218"
+           x="-473.44897"
+           height="76"
+           width="73.979698"
+           id="rect4524"
+           style="fill:none;stroke:#000000;stroke-width:3.99999976;stroke-miterlimit:4;stroke-dasharray:none" />
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none"
+           id="rect4526"
+           width="76"
+           height="76"
+           x="-699.44897"
+           y="392.36218" />
+        <rect
+           y="392.36218"
+           x="-549.44897"
+           height="76"
+           width="76"
+           id="rect4528"
+           style="fill:none;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none" />
+        <rect
+           y="468.36218"
+           x="-623.42865"
+           height="76"
+           width="73.979698"
+           id="rect4530"
+           style="fill:none;stroke:#000000;stroke-width:3.99999976;stroke-miterlimit:4;stroke-dasharray:none" />
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:3.99999976;stroke-miterlimit:4;stroke-dasharray:none"
+           id="rect4532"
+           width="73.979698"
+           height="76"
+           x="-473.44897"
+           y="468.36218" />
+        <rect
+           y="544.37195"
+           x="-699.44897"
+           height="74"
+           width="76"
+           id="rect4534"
+           style="fill:none;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none" />
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:3.99999976;stroke-miterlimit:4;stroke-dasharray:none"
+           id="rect4536"
+           width="76"
+           height="75"
+           x="-549.44897"
+           y="544.37195" />
+        <rect
+           y="241.37233"
+           x="-399.44897"
+           height="74.989845"
+           width="74.989845"
+           id="rect4544"
+           style="fill:none;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none" />
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:3.99999976;stroke-miterlimit:4;stroke-dasharray:none"
+           id="rect4550"
+           width="74.989845"
+           height="76"
+           x="-399.44897"
+           y="392.36218" />
+        <rect
+           y="544.37231"
+           x="-399.44894"
+           height="75"
+           width="75"
+           id="rect4556"
+           style="fill:none;stroke:#000000;stroke-width:3.99999976;stroke-miterlimit:4;stroke-dasharray:none" />
+        <text
+           xml:space="preserve"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+           x="-685.18335"
+           y="298.6778"
+           id="text4640"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan4642"
+             x="-685.18335"
+             y="298.6778"
+             style="font-size:56px">A</tspan></text>
+        <text
+           sodipodi:linespacing="125%"
+           id="text4644"
+           y="298.89655"
+           x="-608.08136"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+           xml:space="preserve"><tspan
+             style="font-size:56px"
+             y="298.89655"
+             x="-608.08136"
+             id="tspan4646"
+             sodipodi:role="line">B</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+           x="-530.46655"
+           y="298.4317"
+           id="text4648"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan4650"
+             x="-530.46655"
+             y="298.4317"
+             style="font-size:56px">C</tspan></text>
+        <text
+           sodipodi:linespacing="125%"
+           id="text4652"
+           y="298.63678"
+           x="-460.31656"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+           xml:space="preserve"><tspan
+             style="font-size:56px"
+             y="298.63678"
+             x="-460.31656"
+             id="tspan4654"
+             sodipodi:role="line">D</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+           x="-381.35443"
+           y="298.82819"
+           id="text4656"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan4658"
+             x="-381.35443"
+             y="298.82819"
+             style="font-size:56px">E</tspan></text>
+        <text
+           sodipodi:linespacing="125%"
+           id="text4660"
+           y="374.17273"
+           x="-681.17749"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+           xml:space="preserve"><tspan
+             style="font-size:56px"
+             y="374.17273"
+             x="-681.17749"
+             id="tspan4662"
+             sodipodi:role="line">F</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+           x="-608.91534"
+           y="374.39148"
+           id="text4664"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan4666"
+             x="-608.91534"
+             y="374.39148"
+             style="font-size:56px">G</tspan></text>
+        <text
+           sodipodi:linespacing="125%"
+           id="text4668"
+           y="373.92664"
+           x="-537.94507"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+           xml:space="preserve"><tspan
+             style="font-size:56px"
+             y="373.92664"
+             x="-537.94507"
+             id="tspan4670"
+             sodipodi:role="line">H</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+           x="-449.83023"
+           y="374.13171"
+           id="text4672"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan4674"
+             x="-449.83023"
+             y="374.13171"
+             style="font-size:56px">I</tspan></text>
+        <text
+           sodipodi:linespacing="125%"
+           id="text4676"
+           y="374.32312"
+           x="-375.70795"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+           xml:space="preserve"><tspan
+             style="font-size:56px"
+             y="374.32312"
+             x="-375.70795"
+             id="tspan4678"
+             sodipodi:role="line">J</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+           x="-685.36108"
+           y="450.17273"
+           id="text4680"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan4682"
+             x="-685.36108"
+             y="450.17273"
+             style="font-size:56px">K</tspan></text>
+        <text
+           sodipodi:linespacing="125%"
+           id="text4684"
+           y="450.39148"
+           x="-603.78839"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+           xml:space="preserve"><tspan
+             style="font-size:56px"
+             y="450.39148"
+             x="-603.78839"
+             id="tspan4686"
+             sodipodi:role="line">L</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+           x="-540.6521"
+           y="449.92664"
+           id="text4688"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan4690"
+             x="-540.6521"
+             y="449.92664"
+             style="font-size:56px">M</tspan></text>
+        <text
+           sodipodi:linespacing="125%"
+           id="text4692"
+           y="450.13171"
+           x="-457.69156"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+           xml:space="preserve"><tspan
+             style="font-size:56px"
+             y="450.13171"
+             x="-457.69156"
+             id="tspan4694"
+             sodipodi:role="line">N</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+           x="-382.59857"
+           y="450.32312"
+           id="text4696"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan4698"
+             x="-382.59857"
+             y="450.32312"
+             style="font-size:56px">O</tspan></text>
+        <text
+           sodipodi:linespacing="125%"
+           id="text4700"
+           y="526.17273"
+           x="-681.97046"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+           xml:space="preserve"><tspan
+             style="font-size:56px"
+             y="526.17273"
+             x="-681.97046"
+             id="tspan4702"
+             sodipodi:role="line">P</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+           x="-607.68488"
+           y="526.39148"
+           id="text4704"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan4706"
+             x="-607.68488"
+             y="526.39148"
+             style="font-size:56px">Q</tspan></text>
+        <text
+           sodipodi:linespacing="125%"
+           id="text4708"
+           y="525.92664"
+           x="-534.84155"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+           xml:space="preserve"><tspan
+             style="font-size:56px"
+             y="525.92664"
+             x="-534.84155"
+             id="tspan4710"
+             sodipodi:role="line">R</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+           x="-454.34195"
+           y="526.13171"
+           id="text4712"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan4714"
+             x="-454.34195"
+             y="526.13171"
+             style="font-size:56px">S</tspan></text>
+        <text
+           sodipodi:linespacing="125%"
+           id="text4716"
+           y="526.32312"
+           x="-384.29388"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+           xml:space="preserve"><tspan
+             style="font-size:56px"
+             y="526.32312"
+             x="-384.29388"
+             id="tspan4718"
+             sodipodi:role="line">T</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+           x="-683.32397"
+           y="602.6778"
+           id="text4720"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan4722"
+             x="-683.32397"
+             y="602.6778"
+             style="font-size:56px">U</tspan></text>
+        <text
+           sodipodi:linespacing="125%"
+           id="text4724"
+           y="602.89655"
+           x="-610.36456"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+           xml:space="preserve"><tspan
+             style="font-size:56px"
+             y="602.89655"
+             x="-610.36456"
+             id="tspan4726"
+             sodipodi:role="line">V</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+           x="-548.67749"
+           y="602.4317"
+           id="text4728"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan4730"
+             x="-548.67749"
+             y="602.4317"
+             style="font-size:56px">W</tspan></text>
+        <text
+           sodipodi:linespacing="125%"
+           id="text4732"
+           y="602.63678"
+           x="-460.60367"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+           xml:space="preserve"><tspan
+             style="font-size:56px"
+             y="602.63678"
+             x="-460.60367"
+             id="tspan4734"
+             sodipodi:role="line">X</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+           x="-382.66693"
+           y="602.82819"
+           id="text4736"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan4738"
+             x="-382.66693"
+             y="602.82819"
+             style="font-size:56px">Y</tspan></text>
+        <text
+           sodipodi:linespacing="125%"
+           id="text4744"
+           y="678.34973"
+           x="-532.21655"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+           xml:space="preserve"><tspan
+             style="font-size:56px"
+             y="678.34973"
+             x="-532.21655"
+             id="tspan4746"
+             sodipodi:role="line">Z</tspan></text>
+        <path
+           style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m -698.65997,618.15665 373.75644,2.02031"
+           id="path4748"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m -549.54328,621.10605 0,75.60346"
+           id="path4750"
+           inkscape:connector-curvature="0" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path4752"
+           d="m -473.58388,621.0797 0,74.64596"
+           style="fill:none;stroke:#000000;stroke-width:3.99999976;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+        <text
+           xml:space="preserve"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+           x="-694.21655"
+           y="678.34973"
+           id="text4754"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan4756"
+             x="-694.21655"
+             y="678.34973"
+             style="font-size:56px">back</tspan></text>
+        <text
+           sodipodi:linespacing="125%"
+           id="text4758"
+           y="678.34973"
+           x="-458.21655"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+           xml:space="preserve"><tspan
+             style="font-size:56px"
+             y="678.34973"
+             x="-458.21655"
+             id="tspan4760"
+             sodipodi:role="line">quit</tspan></text>
+        <text
+           sodipodi:linespacing="125%"
+           id="text5110"
+           y="748.34973"
+           x="-609.25757"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+           xml:space="preserve"><tspan
+             style="font-size:56px"
+             y="748.34973"
+             x="-609.25757"
+             id="tspan5112"
+             sodipodi:role="line">Accept</tspan></text>
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none"
+           id="rect5114"
+           width="375"
+           height="76"
+           x="-699.30176"
+           y="696.06262" />
+      </g>
+    </g>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4891"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+       transform="translate(-7.1757813,779.2948)"><flowRegion
+         id="flowRegion4893"><rect
+           id="rect4895"
+           width="725.28949"
+           height="129.29953"
+           x="28.284271"
+           y="30.009903"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara4897">Hold and drag across the blanks you want to fill.</flowPara></flowRoot>    <rect
+       style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4899"
+       width="746.12634"
+       height="115.15739"
+       x="10.936829"
+       y="800.19269"
+       ry="24.24366"
+       rx="22.223356"
+       inkscape:export-filename="C:\xampp\htdocs\javascript\criss-crosswords\img\message_pane.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <g
+       id="g4937"
+       style="opacity:0.81730772"
+       transform="matrix(0.89579844,0.89579844,-0.89579844,0.89579844,-1080.0722,-35.93615)">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4901"
+         d="m 110.30429,528.09115 c -17.8525,10e-6 -32.3437,13.55636 -32.34373,30.29324 0,16.73692 14.4912,30.32257 32.3437,30.32258 0.2737,-10e-6 0.5404,-0.023 0.8125,-0.0292 l 0,-60.58655 c -0.272,-0.007 -0.5389,0 -0.8125,10e-6 z"
+         style="fill:#00ff00;stroke:none" />
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:#00ff00;stroke:none"
+         d="m 653.371,528.09114 c 17.8525,0 32.3437,13.55635 32.34373,30.29325 0,16.73692 -14.49121,30.32257 -32.3437,30.32257 -0.2737,0 -0.5404,-0.0229 -0.8125,-0.0292 l 0,-60.58653 c 0.27199,-0.006 0.5389,0 0.8125,-10e-6 z"
+         id="path4907" />
+      <rect
+         y="527.08289"
+         x="111.11676"
+         height="62.629456"
+         width="541.44177"
+         id="rect4935"
+         style="fill:#00ff00;fill-opacity:1;stroke:none" />
+    </g>
     <rect
-       style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none"
-       id="rect3263"
-       width="531"
-       height="533.36053"
-       x="-600.05103"
-       y="28.067503" />
+       style="opacity:0.8;fill:#00ff00;fill-opacity:1;stroke:#008000;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect4944"
+       width="100"
+       height="100"
+       x="439.05591"
+       y="1421.1193"
+       inkscape:export-filename="C:\xampp\htdocs\javascript\criss-crosswords\img\ss_square.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <g
+       id="g4966"
+       transform="translate(-1542,-560)">
+      <rect
+         y="406.06705"
+         x="227.09338"
+         height="103.97289"
+         width="103.97289"
+         id="rect4954"
+         style="opacity:0.8;fill:#00ff00;fill-opacity:1;stroke:none" />
+      <rect
+         style="opacity:0.8;fill:#00ff00;fill-opacity:1;stroke:none"
+         id="rect4956"
+         width="103.97289"
+         height="103.97289"
+         x="123.12049"
+         y="302.06705" />
+      <rect
+         style="opacity:0.8;fill:#00ff00;fill-opacity:1;stroke:none"
+         id="rect4958"
+         width="103.97289"
+         height="103.97289"
+         x="329.09338"
+         y="510.06705" />
+      <rect
+         y="614.06702"
+         x="433.09338"
+         height="103.97289"
+         width="103.97289"
+         id="rect4960"
+         style="opacity:0.8;fill:#00ff00;fill-opacity:1;stroke:none" />
+      <rect
+         style="opacity:0.8;fill:#00ff00;fill-opacity:1;stroke:none"
+         id="rect4962"
+         width="103.97289"
+         height="103.97289"
+         x="537.09338"
+         y="718.06702" />
+      <rect
+         y="822.06702"
+         x="639.09338"
+         height="103.97289"
+         width="103.97289"
+         id="rect4964"
+         style="opacity:0.8;fill:#00ff00;fill-opacity:1;stroke:none" />
+    </g>
+    <flowRoot
+       transform="translate(-773.68361,18.446888)"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+       id="flowRoot5194"
+       xml:space="preserve"><flowRegion
+         id="flowRegion5196"><rect
+           style="text-align:center;text-anchor:middle"
+           y="30.009903"
+           x="28.284271"
+           height="129.29953"
+           width="725.28949"
+           id="rect5198" /></flowRegion><flowPara
+         id="flowPara5200">Boy flipped for Indian stew. (3)</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5202"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:School Book New;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:School Book New;font-stretch:normal;font-variant:normal"><flowRegion
+         id="flowRegion5204"><rect
+           id="rect5206"
+           width="402.04071"
+           height="40.406101"
+           x="-688.92401"
+           y="21.928682" /></flowRegion><flowPara
+         id="flowPara5208"></flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5210"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:School Book New;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:School Book New;font-stretch:normal;font-variant:normal"><flowRegion
+         id="flowRegion5212"><rect
+           id="rect5214"
+           width="519.21838"
+           height="48.48732"
+           x="-791.95959"
+           y="23.948988" /></flowRegion><flowPara
+         id="flowPara5216"></flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5218"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+       transform="translate(-773.68361,98.446888)"><flowRegion
+         id="flowRegion5220"><rect
+           id="rect5222"
+           width="725.28949"
+           height="129.29953"
+           x="28.284271"
+           y="30.009903"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara5224">Circular, constant pre-nuptials captivate Betty Page. (5)</flowPara></flowRoot>    <flowRoot
+       transform="translate(-773.68361,238.44689)"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+       id="flowRoot5253"
+       xml:space="preserve"><flowRegion
+         id="flowRegion5255"><rect
+           style="text-align:center;text-anchor:middle"
+           y="30.009903"
+           x="28.284271"
+           height="147.48227"
+           width="729.33008"
+           id="rect5257" /></flowRegion><flowPara
+         id="flowPara5259">Dead body with no behind and a bloating midsection festers on Venezuala's coast. (7)</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5261"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+       transform="translate(-773.68361,418.44689)"><flowRegion
+         id="flowRegion5263"><rect
+           id="rect5265"
+           width="729.33008"
+           height="147.48227"
+           x="28.284271"
+           y="30.009903"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara5267">Sergeant and Corporal took first bite of hot dogs. (5)</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5283"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+       transform="translate(-773.68361,538.44689)"><flowRegion
+         id="flowRegion5285"><rect
+           id="rect5287"
+           width="725.28949"
+           height="129.29953"
+           x="28.284271"
+           y="30.009903"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara5289">What I heard of small island. (3)</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5291"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+       transform="translate(-773.68361,718.44689)"><flowRegion
+         id="flowRegion5293"><rect
+           id="rect5295"
+           width="725.28949"
+           height="129.29953"
+           x="28.284271"
+           y="30.009903"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara5297">Little dance in Tampa square? (3)</flowPara></flowRoot>    <flowRoot
+       transform="translate(-773.68361,798.44689)"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+       id="flowRoot5299"
+       xml:space="preserve"><flowRegion
+         id="flowRegion5301"><rect
+           style="text-align:center;text-anchor:middle"
+           y="30.009903"
+           x="28.284271"
+           height="129.29953"
+           width="725.28949"
+           id="rect5303" /></flowRegion><flowPara
+         id="flowPara5305">Carradine near miss tenuously linked to Quantum Mechanics. (5)</flowPara></flowRoot>    <rect
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="C:\xampp\htdocs\javascript\criss-crosswords\img\highlight.png"
+       y="950.12109"
+       x="-752.69116"
+       height="132.25716"
+       width="744.40961"
+       id="rect5344"
+       style="opacity:0.8;fill:#00ff00;fill-opacity:1;stroke:none" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5307"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+       transform="translate(-773.68361,938.44689)"><flowRegion
+         id="flowRegion5309"><rect
+           id="rect5311"
+           width="729.33008"
+           height="147.48227"
+           x="28.284271"
+           y="30.009903"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara5313">Cowboy scarves missing low-grade herbs. (7)</flowPara></flowRoot>    <flowRoot
+       transform="translate(-773.68361,1098.4469)"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+       id="flowRoot5315"
+       xml:space="preserve"><flowRegion
+         id="flowRegion5317"><rect
+           style="text-align:center;text-anchor:middle"
+           y="30.009903"
+           x="28.284271"
+           height="147.48227"
+           width="729.33008"
+           id="rect5319" /></flowRegion><flowPara
+         id="flowPara5321">Director Besson visits Kentucky, wins lottery. (5)</flowPara></flowRoot>    <flowRoot
+       transform="translate(-773.68361,1238.4469)"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+       id="flowRoot5323"
+       xml:space="preserve"><flowRegion
+         id="flowRegion5325"><rect
+           style="text-align:center;text-anchor:middle"
+           y="30.009903"
+           x="28.284271"
+           height="129.29953"
+           width="725.28949"
+           id="rect5327" /></flowRegion><flowPara
+         id="flowPara5329">Listened to average talk show</flowPara><flowPara
+         id="flowPara5331">host. (3)</flowPara></flowRoot>    <g
+       id="g5383"
+       transform="translate(-0.90872192,-24.67504)">
+      <path
+         transform="translate(0,28.362183)"
+         d="m 448.50772,980.56342 c 0,32.91558 -26.68338,59.59898 -59.599,59.59898 -32.91562,0 -59.599,-26.6834 -59.599,-59.59898 0,-32.91562 26.68338,-59.599 59.599,-59.599 32.91562,0 59.599,26.68338 59.599,59.599 z"
+         sodipodi:ry="59.598999"
+         sodipodi:rx="59.598999"
+         sodipodi:cy="980.56342"
+         sodipodi:cx="388.90872"
+         id="path5377"
+         style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         sodipodi:type="arc" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text5379"
+         y="1058.1444"
+         x="361.45169"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+         xml:space="preserve"><tspan
+           style="font-size:144px"
+           y="1058.1444"
+           x="361.45169"
+           id="tspan5381"
+           sodipodi:role="line">?</tspan></text>
+    </g>
+    <g
+       id="g5485">
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:none;stroke:#000000;stroke-width:3.99999976;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         d="m 682.00067,930.22551 37.53125,27.08469 37.53125,27.0847 -37.59375,26.9404 -37.59375,26.9404 0.0312,-25.2566 -204.125,0 0,-57.537 204.1875,0 0.0312,-25.25659 z"
+         id="path5451" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+         x="520.651"
+         y="996.14703"
+         id="text5453"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan5455"
+           x="520.651"
+           y="996.14703">Up Clues</tspan></text>
+    </g>
+    <g
+       id="g5503"
+       transform="translate(-458.84507,608.20077)"
+       inkscape:export-filename="C:\xampp\htdocs\javascript\criss-crosswords\img\ss_arrows.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <path
+         id="path5492"
+         d="m 682.00067,930.22551 37.53125,27.08469 37.53125,27.0847 -37.59375,26.9404 -37.59375,26.9404 0.0312,-25.2566 -204.125,0 0,-57.537 204.1875,0 0.0312,-25.25659 z"
+         style="fill:none;stroke:#000000;stroke-width:3.99999976;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         inkscape:connector-curvature="0" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text5494"
+         y="996.14703"
+         x="492.651"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+         xml:space="preserve"><tspan
+           y="996.14703"
+           x="492.651"
+           id="tspan5496"
+           sodipodi:role="line">Word Grid</tspan></text>
+    </g>
+    <g
+       id="g5519"
+       transform="translate(-458.84507,580.25097)"
+       inkscape:export-filename="C:\xampp\htdocs\javascript\criss-crosswords\img\ss_arrows.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:none;stroke:#000000;stroke-width:3.99999976;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         d="m 552.84437,1070.2255 -37.53125,27.0847 -37.53125,27.0847 37.59375,26.9404 37.59375,26.9404 -0.0312,-25.2566 204.125,0 0,-57.537 -204.1875,0 -0.0312,-25.2566 z"
+         id="path5510" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+         x="508.651"
+         y="1136.147"
+         id="text5512"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan5514"
+           x="508.651"
+           y="1136.147">Word Grid</tspan></text>
+    </g>
+    <g
+       id="g5475">
+      <text
+         sodipodi:linespacing="125%"
+         id="text5447"
+         y="996.14703"
+         x="47.805969"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+         xml:space="preserve"><tspan
+           y="996.14703"
+           x="47.805969"
+           id="tspan5449"
+           sodipodi:role="line">Down Clues</tspan></text>
+      <path
+         id="path5473"
+         d="m 93.999304,930.22551 -37.53125,27.08469 -37.53125,27.0847 37.59375,26.9404 37.59375,26.9404 -0.0312,-25.2566 204.124996,0 0,-57.537 -204.187496,0 -0.0312,-25.25659 z"
+         style="fill:none;stroke:#000000;stroke-width:3.99999976;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       id="g5582"
+       inkscape:export-filename="C:\xampp\htdocs\javascript\criss-crosswords\img\ss_arrows.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+         x="27.805969"
+         y="1156.147"
+         id="text5526"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan5528"
+           x="27.805969"
+           y="1156.147">Down Clues</tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:none;stroke:#000000;stroke-width:3.99999976;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         d="m 223.1556,1090.2255 37.53125,27.0847 37.53125,27.0847 -37.59375,26.9404 -37.59375,26.9404 0.0312,-25.2566 -204.124996,0 0,-57.537 204.187496,0 0.0312,-25.2566 z"
+         id="path5530" />
+    </g>
+    <g
+       id="g5572"
+       transform="translate(-458.84507,56.15058)"
+       inkscape:export-filename="C:\xampp\htdocs\javascript\criss-crosswords\img\ss_arrows.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <path
+         id="path5563"
+         d="m 552.84437,1370.2255 -37.53125,27.0847 -37.53125,27.0847 37.59375,26.9404 37.59375,26.9404 -0.0312,-25.2566 204.125,0 0,-57.537 -204.1875,0 -0.0312,-25.2566 z"
+         style="fill:none;stroke:#000000;stroke-width:3.99999976;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         inkscape:connector-curvature="0" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text5565"
+         y="1436.147"
+         x="536.651"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+         xml:space="preserve"><tspan
+           y="1436.147"
+           x="536.651"
+           id="tspan5567"
+           sodipodi:role="line">Up Clues</tspan></text>
+    </g>
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:0.8;fill:#00ff00;stroke:#008000;stroke-width:3.99999976;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       d="m 223.1557,1762.5267 37.5312,27.0847 37.5313,27.0847 -37.5938,26.9404 -37.5937,26.9404 0.031,-25.2566 -204.125,0 0,-57.537 204.1875,0 0.031,-25.2566 z"
+       id="path5580"
+       inkscape:export-filename="C:\xampp\htdocs\javascript\criss-crosswords\img\ss_arrows.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       id="path5587"
+       d="m 93.9992,1874.5769 -37.5312,27.0847 -37.5313,27.0847 37.5938,26.9404 37.5937,26.9404 -0.031,-25.2566 204.125,0 0,-57.537 -204.1875,0 -0.031,-25.2566 z"
+       style="opacity:0.8;fill:#00ff00;stroke:#008000;stroke-width:3.99999976;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\xampp\htdocs\javascript\criss-crosswords\img\ss_arrows.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       transform="translate(99.091278,286.88514)"
+       d="m 448.50772,980.56342 a 59.598999,59.598999 0 1 1 -119.198,0 59.598999,59.598999 0 1 1 119.198,0 z"
+       sodipodi:ry="59.598999"
+       sodipodi:rx="59.598999"
+       sodipodi:cy="980.56342"
+       sodipodi:cx="388.90872"
+       id="path5591"
+       style="opacity:0.8;fill:#00ff00;stroke:#008000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       sodipodi:type="arc"
+       inkscape:export-filename="C:\xampp\htdocs\javascript\criss-crosswords\img\ss_circleButton.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <g
+       id="g5600"
+       transform="translate(0,272.05019)"
+       inkscape:export-filename="C:\xampp\htdocs\javascript\criss-crosswords\img\ss_arrows.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+         x="47.805969"
+         y="996.14703"
+         id="text5602"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan5604"
+           x="47.805969"
+           y="996.14703">Down Clues</tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:none;stroke:#000000;stroke-width:3.99999976;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         d="m 93.999304,930.22551 -37.53125,27.08469 -37.53125,27.0847 37.59375,26.9404 37.59375,26.9404 -0.0312,-25.2566 204.124996,0 0,-57.537 -204.187496,0 -0.0312,-25.25659 z"
+         id="path5606" />
+    </g>
+    <g
+       id="g5608"
+       transform="translate(-458.84507,384.10038)"
+       inkscape:export-filename="C:\xampp\htdocs\javascript\criss-crosswords\img\ss_arrows.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <path
+         id="path5610"
+         d="m 682.00067,930.22551 37.53125,27.08469 37.53125,27.0847 -37.59375,26.9404 -37.59375,26.9404 0.0312,-25.2566 -204.125,0 0,-57.537 204.1875,0 0.0312,-25.25659 z"
+         style="fill:none;stroke:#000000;stroke-width:3.99999976;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         inkscape:connector-curvature="0" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text5612"
+         y="996.14703"
+         x="520.651"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+         xml:space="preserve"><tspan
+           y="996.14703"
+           x="520.651"
+           id="tspan5614"
+           sodipodi:role="line">Up Clues</tspan></text>
+    </g>
+    <g
+       transform="translate(99.091278,135.32496)"
+       id="g5616"
+       inkscape:export-filename="C:\xampp\htdocs\javascript\criss-crosswords\img\ss_circleButton.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <path
+         sodipodi:type="arc"
+         style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="path5618"
+         sodipodi:cx="388.90872"
+         sodipodi:cy="980.56342"
+         sodipodi:rx="59.598999"
+         sodipodi:ry="59.598999"
+         d="m 448.50772,980.56342 c 0,32.91558 -26.68338,59.59898 -59.599,59.59898 -32.91562,0 -59.599,-26.6834 -59.599,-59.59898 0,-32.91562 26.68338,-59.599 59.599,-59.599 32.91562,0 59.599,26.68338 59.599,59.599 z"
+         transform="translate(0,28.362183)" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:School Book New;-inkscape-font-specification:School Book New"
+         x="361.45169"
+         y="1058.1444"
+         id="text5620"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan5622"
+           x="361.45169"
+           y="1058.1444"
+           style="font-size:144px">?</tspan></text>
+    </g>
     <rect
-       y="28.362183"
-       x="-598"
-       height="76"
-       width="76"
-       id="rect3178"
-       style="fill:#000000;fill-opacity:1;stroke:none" />
-    <rect
-       style="fill:#000000;fill-opacity:1;stroke:none"
-       id="rect3180"
-       width="76"
-       height="76"
-       x="-448"
-       y="28.362183" />
-    <rect
-       style="fill:#000000;fill-opacity:1;stroke:none"
-       id="rect3186"
-       width="76"
-       height="76"
-       x="-524"
-       y="104.36218" />
-    <rect
-       y="104.36218"
-       x="-372"
-       height="76"
-       width="76"
-       id="rect3188"
-       style="fill:#000000;fill-opacity:1;stroke:none" />
-    <rect
-       style="fill:#000000;fill-opacity:1;stroke:none"
-       id="rect3203"
-       width="76"
-       height="76"
-       x="-598"
-       y="180.36218" />
-    <rect
-       y="180.36218"
-       x="-448"
-       height="76"
-       width="76"
-       id="rect3205"
-       style="fill:#000000;fill-opacity:1;stroke:none" />
-    <rect
-       y="256.36218"
-       x="-524"
-       height="76"
-       width="76"
-       id="rect3211"
-       style="fill:#000000;fill-opacity:1;stroke:none" />
-    <rect
-       style="fill:#000000;fill-opacity:1;stroke:none"
-       id="rect3213"
-       width="76"
-       height="76"
-       x="-372"
-       y="256.36218" />
-    <rect
-       y="332.36218"
-       x="-598"
-       height="76"
-       width="76"
-       id="rect3219"
-       style="fill:#000000;fill-opacity:1;stroke:none" />
-    <rect
-       style="fill:#000000;fill-opacity:1;stroke:none"
-       id="rect3221"
-       width="76"
-       height="76"
-       x="-448"
-       y="332.36218" />
-    <rect
-       style="fill:#000000;fill-opacity:1;stroke:none"
-       id="rect3227"
-       width="76"
-       height="76"
-       x="-524"
-       y="408.36218" />
-    <rect
-       y="408.36218"
-       x="-372"
-       height="76"
-       width="76"
-       id="rect3229"
-       style="fill:#000000;fill-opacity:1;stroke:none" />
-    <rect
-       style="fill:#000000;fill-opacity:1;stroke:none"
-       id="rect3240"
-       width="76"
-       height="76"
-       x="-598"
-       y="484.36218" />
-    <rect
-       y="484.36218"
-       x="-448"
-       height="76"
-       width="76"
-       id="rect3242"
-       style="fill:#000000;fill-opacity:1;stroke:none" />
-    <rect
-       y="28.362183"
-       x="-298"
-       height="76"
-       width="76"
-       id="rect3182"
-       style="fill:#000000;fill-opacity:1;stroke:none" />
-    <rect
-       style="fill:#000000;fill-opacity:1;stroke:none"
-       id="rect3184"
-       width="76"
-       height="76"
-       x="-146"
-       y="28.362183" />
-    <rect
-       style="fill:#000000;fill-opacity:1;stroke:none"
-       id="rect3190"
-       width="76"
-       height="76"
-       x="-222"
-       y="104.36218" />
-    <rect
-       style="fill:#000000;fill-opacity:1;stroke:none"
-       id="rect3207"
-       width="76"
-       height="76"
-       x="-298"
-       y="180.36218" />
-    <rect
-       y="180.36218"
-       x="-146"
-       height="76"
-       width="76"
-       id="rect3209"
-       style="fill:#000000;fill-opacity:1;stroke:none" />
-    <rect
-       y="256.36218"
-       x="-222"
-       height="76"
-       width="76"
-       id="rect3215"
-       style="fill:#000000;fill-opacity:1;stroke:none" />
-    <rect
-       y="332.36218"
-       x="-298"
-       height="76"
-       width="76"
-       id="rect3223"
-       style="fill:#000000;fill-opacity:1;stroke:none" />
-    <rect
-       style="fill:#000000;fill-opacity:1;stroke:none"
-       id="rect3225"
-       width="76"
-       height="76"
-       x="-146"
-       y="332.36218" />
-    <rect
-       style="fill:#000000;fill-opacity:1;stroke:none"
-       id="rect3231"
-       width="76"
-       height="76"
-       x="-222"
-       y="408.36218" />
-    <rect
-       style="fill:#000000;fill-opacity:1;stroke:none"
-       id="rect3244"
-       width="76"
-       height="76"
-       x="-298"
-       y="484.36218" />
-    <rect
-       y="484.36218"
-       x="-146"
-       height="76"
-       width="76"
-       id="rect3246"
-       style="fill:#000000;fill-opacity:1;stroke:none" />
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="C:\xampp\htdocs\javascript\criss-crosswords\img\message_pane.png"
+       rx="22.223356"
+       ry="24.24366"
+       y="1460.1926"
+       x="-755.57098"
+       height="115.15739"
+       width="746.12634"
+       id="rect5624"
+       style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
   </g>
 </svg>

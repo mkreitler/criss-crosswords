@@ -22,7 +22,7 @@ ccw.StateTitleClass = new joe.ClassEx({
   },
 
   draw: function(gfx) {
-    joe.Graphics.clearToColor("#FFFFFF");
+    joe.Graphics.clearToColor(ccw.STRINGS.GAME_BACK_COLOR);
     gfx.drawImage(ccw.game.titleBack, 0, 0);
 
     if (ccw.game.sysFontLarge) {
