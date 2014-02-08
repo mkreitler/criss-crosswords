@@ -77,6 +77,11 @@ joe.GUI.Label = new joe.ClassEx(
       x = x - dx * (anchorX || 0);
       y = y - dy * (anchorY || 0);
 
+      x = Math.round(x);
+      y = Math.round(y);
+      dx = Math.round(dx);
+      dy = Math.round(dy);
+
       this.AABBset(x, y, dx, dy);
 
       this.buffer = joe.Graphics.createOffscreenBuffer(dx, dy);
@@ -85,7 +90,11 @@ joe.GUI.Label = new joe.ClassEx(
 
       for (i=0; i<substrings.length; ++i) {
         // Render the text into the buffer.
-        font.draw(context, substrings[i], dx * anchorX - font.measureText(substrings[i]).width * anchorX, i * font.height * (1 + spaceFactorY), 0, 1);
+        font.draw(context,
+                  substrings[i],
+                  Math.round(dx * anchorX - font.measureText(substrings[i]).width * anchorX),
+                  Math.round(i * font.height * (1 + spaceFactorY)),
+                  0, 1);
       }
     },
 

@@ -8,21 +8,21 @@ ccw.STRINGS = {
   DOWN_CLUE_TITLE: "Down Clues",
 
   DOWN_CLUES: [
-    {clue: "Cowboy's scarves missing low-grade herbs. (7)", hint:"Deletion"},
-    {clue: "Director Besson visits Kentucky, wins lottery. (5)", hint:"Charade"},
-    {clue: "Little dance in Tampa square? (3)", hint:"Hidden"},
-    {clue: "Carradine near miss confused Quantum Mechanic. (5)", hint:"Deletion and anagram"},
-    {clue: "Listened to average talk show host. (3)", hint:"Homophone"},
+    {clue: "1. Cowboy's scarves missing low-grade herbs. (7)", hint:"Deletion"},
+    {clue: "2. Director Besson visits Kentucky, wins lottery. (5)", hint:"Charade"},
+    {clue: "3. Little dance in Tampa square? (3)", hint:"Hidden"},
+    {clue: "4. Carradine near miss confused Quantum Mechanic. (5)", hint:"Deletion and anagram"},
+    {clue: "5. Listened to average talk show host. (3)", hint:"Homophone"},
   ],
 
   UP_CLUE_TITLE: "Up Clues",
 
   UP_CLUES: [
-    {clue: "Boy flipped for Indian stew. (3)", hint:"Reversal"},
-    {clue: "Constant pre-nuptials captivate Betty Page. (3-2)", hint:"Container"},
-    {clue: "Cadaver with scarred back and a bloating middle sprawls on Venezualan coast. (7)", hint:"Container and deletion"},
-    {clue: "Sergeant and Corporal take first bite of hot dogs. (5)", hint:"Deletion"},
-    {clue: "What I heard was 'small island.' (3)", hint:"Homophone"}],
+    {clue: "4. Boy flipped for Indian stew. (3)", hint:"Reversal"},
+    {clue: "5. Constant pre-nuptials captivate Betty Page. (3-2)", hint:"Container"},
+    {clue: "6. Cadaver with scarred back and a bloating midsection sprawls on Venezualan coast. (7)", hint:"Container and deletion"},
+    {clue: "7. Sergeant and Corporal take first bite of hot dogs. (5)", hint:"Deletion"},
+    {clue: "8. What I heard was 'small island.' (3)", hint:"Homophone"}],
 
   ASSERT_INVALID_GAME_VIEW: "Invalid game view!",
 }

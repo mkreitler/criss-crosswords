@@ -9,6 +9,12 @@ joe.GuiClass = new joe.ClassEx(
     
     widgets: [],
     focusWidget: null,
+    viewOffset: {x:0, y:0},
+
+    setViewOffset: function(x, y) {
+      this.viewOffset.x = x;
+      this.viewOffset.y = y;
+    },
 
     addWidget: function(widget, toFront) {
       toFront ? this.widgets.unshift(widget) : this.widgets.push(widget);
@@ -33,6 +39,10 @@ joe.GuiClass = new joe.ClassEx(
       }
     },
 
+    drawClipped: function(context, srcRect, scale) {
+
+    },
+
     draw: function(context) {
       // Draw widgets.
       var i = 0;
@@ -52,7 +62,7 @@ joe.GuiClass = new joe.ClassEx(
       for (i=0; i<this.widgets.length; ++i) {
         if (this.widgets[i].AABBcontainsPoint(x, y)) {
           bounds = this.widgets[i].AABBgetRef();
-          widget = this.widgets[i].widgetGetChildAt(x - bounds.x, y - bounds.y);
+          widget = this.widgets[i].widgetGetChildAt(x - bounds.x - this.viewOffset.x, y - bounds.y - this.viewOffset.y);
           break;
         }
       }

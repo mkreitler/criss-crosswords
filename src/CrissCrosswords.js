@@ -4,10 +4,13 @@ ccw.GameClass = new joe.ClassEx({
            BOARD_HEIGHT: 150},
 
   IMAGES: {WORD_GRID: 0,
-           SS_ARROWS: 1,
-           SS_CIRCLES: 2,
-           SS_SQUARE: 3,
-           MSG_PANE: 4,
+           PANEL_CENTER: 1,
+           PANEL_RIGHT: 2,
+           PANEL_LEFT: 3,
+           HIGHLIGHT_SQUARE: 4,
+           HIGHLIGHT_CIRCLE: 5,
+           HIGHLIGHT_ARROW_RIGHT: 6,
+           HIGHLIGHT_ARROW_LEFT: 7,
           },
 
   Z_ORDER: {
@@ -23,6 +26,12 @@ ccw.GameClass = new joe.ClassEx({
   titleState: null,
   playState: null,
   images: [],
+
+  getImage: function(whichImage) {
+    var index = ccw.GameClass.IMAGES[whichImage];
+
+    return index >= 0 && index < this.images.length ? this.images[index] : null;
+  },
 
   init: function() {
     this.sysFont = joe.Resources.loader.loadBitmapFont(["fonts/book_01.png",
@@ -47,19 +56,45 @@ ccw.GameClass = new joe.ClassEx({
                                                     ccw.onResourceLoaded,
                                                     ccw.onResourceLoadFailed,
                                                     this));
-    this.images.push(joe.Resources.loader.loadImage("img/ss_arrows.png",
+    if (joe.Utility.isMobile()) {
+      this.images.push(joe.Resources.loader.loadImage("img/panel_center_tablet.png",
+                                                      ccw.onResourceLoaded,
+                                                      ccw.onResourceLoadFailed,
+                                                      this));
+    }
+    else {
+      this.images.push(joe.Resources.loader.loadImage("img/panel_center.png",
+                                                      ccw.onResourceLoaded,
+                                                      ccw.onResourceLoadFailed,
+                                                      this));
+    }
+
+    this.images.push(joe.Resources.loader.loadImage("img/panel_right.png",
                                                     ccw.onResourceLoaded,
                                                     ccw.onResourceLoadFailed,
                                                     this));
-    this.images.push(joe.Resources.loader.loadImage("img/ss_circles.png",
+
+    this.images.push(joe.Resources.loader.loadImage("img/panel_left.png",
                                                     ccw.onResourceLoaded,
                                                     ccw.onResourceLoadFailed,
                                                     this));
-    this.images.push(joe.Resources.loader.loadImage("img/ss_square.png",
+
+    this.images.push(joe.Resources.loader.loadImage("img/highlight_square.png",
                                                     ccw.onResourceLoaded,
                                                     ccw.onResourceLoadFailed,
                                                     this));
-    this.images.push(joe.Resources.loader.loadImage("img/message_pane.png",
+
+    this.images.push(joe.Resources.loader.loadImage("img/highlight_circle.png",
+                                                    ccw.onResourceLoaded,
+                                                    ccw.onResourceLoadFailed,
+                                                    this));
+
+    this.images.push(joe.Resources.loader.loadImage("img/highlight_arrowRight.png",
+                                                    ccw.onResourceLoaded,
+                                                    ccw.onResourceLoadFailed,
+                                                    this));
+
+    this.images.push(joe.Resources.loader.loadImage("img/highlight_arrowLeft.png",
                                                     ccw.onResourceLoaded,
                                                     ccw.onResourceLoadFailed,
                                                     this));
@@ -82,7 +117,7 @@ ccw.GameClass = new joe.ClassEx({
   },
 
   startPlayState: function() {
-    this.playState = new ccw.StatePlayClass(this.images[ccw.GameClass.IMAGES.WORD_GRID]);
+    this.playState = new ccw.StatePlayClass(this.images[ccw.GameClass.IMAGES.WORD_GRID], this.images[ccw.GameClass.IMAGES.PANEL_CENTER]);
     this.setState(this.playState);
   }
 });

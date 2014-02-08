@@ -9,11 +9,18 @@ ccw.WordGridClass = new joe.ClassEx({
   gridImage: null,
   top: 0,
   left: 0,
+  panelImage: null,
+  panelLeft: 0,
+  panelTop: 0,
 
-  init: function(gridImage, left, top) {
+  init: function(gridImage, left, top, panelImage, panelLeft, panelTop) {
     this.gridImage = gridImage;
     this.top = top;
     this.left = left;
+
+    this.panelImage = panelImage;
+    this.panelTop = panelTop;
+    this.panelLeft = panelLeft;
 
     this.bounds.x = left;
     this.bounds.y = top;
@@ -31,6 +38,7 @@ ccw.WordGridClass = new joe.ClassEx({
     if (this.gridImage) {
 
       gfx.drawImage(this.gridImage, this.left, this.top);
+      gfx.drawImage(this.panelImage, this.panelLeft, this.panelTop);
     }
   },
 

@@ -8,7 +8,7 @@ ccw.StatePlayClass = new joe.ClassEx({
   gameView: null,
   playLayer: null,
 
-  init: function(gridImage) {
+  init: function(gridImage, panelImage) {
     var state = this;
 
     this.gameView = new joe.Scene.View(joe.Graphics.getWidth(),
@@ -16,20 +16,12 @@ ccw.StatePlayClass = new joe.ClassEx({
                                        joe.Graphics.getWidth() * ccw.StatePlayClass.GAME_VIEW_WIDTH_FACTOR,
                                        joe.Graphics.getHeight() * ccw.StatePlayClass.GAME_VIEW_HEIGHT_FACTOR);
 
-    this.playLayer = new ccw.PlayLayerClass(gridImage);
+    this.playLayer = new ccw.PlayLayerClass(gridImage, panelImage);
     this.gameView.addLayer(this.playLayer);
     this.gameView.setSourcePos(this.playLayer.getPaneOffsetX("CENTER"), 0);
     joe.Scene.addView(this.gameView);
 
-    this.commands = {
-                      mouseUp: function(x, y) {
-                        state.slideLayerRight();
-                      },
-
-                      touchDown: function(id, x, y) {
-                        state.slideLayerRight();
-                      }
-                    };
+    this.commands = new ccw.PlayCommandsClass(this);
   },
 
   slideLayerLeft: function() {
