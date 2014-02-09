@@ -15,7 +15,9 @@ ccw.InputLayerClass = new joe.ClassEx({
                  "QWERTYUIOP",
                  "ASDFGHJKL1",
                  "2ZXCVBNM31"
-               ]},
+               ],
+               charList: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+                          'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']},
   EXIT_HOLD_TIME: 500,
 
   backImage: null,
@@ -39,8 +41,8 @@ ccw.InputLayerClass = new joe.ClassEx({
         xMid = joe.Graphics.getWidth() * 0.5,
         widgets = [],
         self = this,
-        vkeyDownHandler = function(x, y) { self.onVKeyDown(x, y); return true; },
-        vkeyUpHandler = function(x, y) { self.onVKeyUp(x, y); return true; };
+        vkeyDownHandler = function(x, y) { self.onVKeyDown(self.resolveVKeyFromPoint(x, y)); return true; },
+        vkeyUpHandler = function(x, y) { self.onVKeyUp(self.resolveVKeyFromPoint(x, y)); return true; };
 
     this.backImage = ccw.game.getImage("KEYBOARD");
 
@@ -88,6 +90,49 @@ ccw.InputLayerClass = new joe.ClassEx({
 
   updateAnswerAndClose: function() {
     this.commands.hideInput(this.answerLabel.getText());
+  },
+
+  getCharFromKeyCode: function(key) {
+    var charOut = null;
+
+    switch (key) {
+      case joe.KeyInput.KEYS.ENTER:
+        charOut = '1';
+      break;
+
+      case joe.KeyInput.KEYS.ESC:
+        charOut = '2';
+      break;
+
+      case joe.KeyInput.KEYS.BACKSPACE:
+        charOut = '3';
+      break;
+
+      default:
+        if (key >= joe.KeyInput.KEYS.A && key <= joe.KeyInput.KEYS.Z) {
+          charOut = this.KEY_LAYOUT.charList[key - joe.KeyInput.KEYS.A];
+        }
+      break;
+    }
+
+    return charOut;
+  },
+
+  keyPress: function(key) {
+    var charOut = this.getCharFromKeyCode(key);
+
+    if (charOut) {
+      this.onVKeyDown(charOut);
+    }
+  },
+
+  keyRelease: function(key) {
+    charOut = this.getCharFromKeyCode(key);
+
+    if (charOut) {
+      this.vkeyPressTime = 0; // Don't require a delay for the 'ESC' key.
+      this.onVKeyUp(charOut);
+    }
   },
 
   exit: function() {
@@ -183,10 +228,10 @@ ccw.InputLayerClass = new joe.ClassEx({
     }
   },
 
-  onVKeyDown: function(x, y) {
+  onVKeyDown: function(char) {
     var highlightPos = null;
 
-    this.vkeyStart = this.resolveVKeyFromPoint(x, y);
+    this.vkeyStart = char;
     this.vkeyPressTime = Date.now();
 
     this.highlightImage = null;
@@ -227,8 +272,8 @@ ccw.InputLayerClass = new joe.ClassEx({
     }
   },
 
-  onVKeyUp: function(x, y) {
-    var vkeyEnd = this.resolveVKeyFromPoint(x, y),
+  onVKeyUp: function(char) {
+    var vkeyEnd = char,
         newAnswer = null;
 
     this.highlightImage = null;

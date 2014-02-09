@@ -149,6 +149,8 @@ joe.KeyInput = new joe.ClassEx([
   
   // Key codes
   KEYS: {
+  BACKSPACE: 8,
+  ENTER: 13,
   SHIFT: 16,
   CTRL: 17,
   ALT: 18,
@@ -158,6 +160,7 @@ joe.KeyInput = new joe.ClassEx([
   UP: 38,
   RIGHT: 39,
   DOWN: 40,
+  DELETE: 46,
   0: 48,
   1: 49,
   2: 50,

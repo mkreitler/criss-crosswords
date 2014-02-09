@@ -79,11 +79,13 @@ ccw.StatePlayClass = new joe.ClassEx({
 
   showInput: function() {
     this.inputView.setWorldTransition(0, 0, 0, 0, ccw.StatePlayClass.SLIDE_TIME);
+    joe.KeyInput.addListener(this.inputLayer);
   },
 
   hideInput: function() {
     this.inputView.setWorldTransition(-joe.Graphics.getWidth(), 0, 0, 0, ccw.StatePlayClass.SLIDE_TIME);
     this.playLayer.unselectWordGrid();
+    joe.KeyInput.removeListener(this.inputLayer);
   },
 
   showInstructions: function() {
