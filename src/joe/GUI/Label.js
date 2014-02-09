@@ -19,6 +19,7 @@ joe.GUI.Label = new joe.ClassEx(
     vSpacing: 0,
     anchorX: 0,
     anchorY: 0,
+    text: null,
 
     init: function(text, font, x, y, inputCallbacks, anchorX, anchorY, maxWidth, vSpacing) {
       this.font = font;
@@ -59,6 +60,7 @@ joe.GUI.Label = new joe.ClassEx(
       anchorX = anchorX || 0;
       anchorY = anchorY || 0;
 
+      this.text = text;
       this.vSpacing = vSpacing;
       this.font = font;
       this.maxWidth = maxWidth;

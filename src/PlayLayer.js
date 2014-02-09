@@ -26,6 +26,12 @@ ccw.PlayLayerClass = new joe.ClassEx({
   guiManager: null,
   curContext: "CENTER",
 
+  updateSelectedAnswer: function(newAnswer) {
+    if (this.wordGrid) {
+      this.wordGrid.updateSelectedAnswer(newAnswer);
+    }
+  },
+
   getSelectedClueText: function() {
     return this.wordGrid ? this.wordGrid.getSelectedClueText() : "";
   },

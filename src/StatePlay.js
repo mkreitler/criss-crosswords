@@ -65,6 +65,10 @@ ccw.StatePlayClass = new joe.ClassEx({
     this.playLayer.setGuiContext(whichPanel);
   },
 
+  updateSelectedAnswer: function(newAnswer) {
+    this.playLayer.updateSelectedAnswer(newAnswer);
+  },
+
   refreshInputClueText: function() {
     this.inputLayer.setClueText(this.playLayer.getSelectedClueText());
   },

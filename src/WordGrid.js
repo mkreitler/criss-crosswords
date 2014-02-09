@@ -63,6 +63,53 @@ ccw.WordGridClass = new joe.ClassEx({
     this.selection.clueDir = this.DRAG_DIR.NONE;
   },
 
+  updateSelectedAnswer: function(newAnswer) {
+    // Write the new clue back into the grid.
+    var i = 0,
+        row = 0,
+        col = 0,
+        answerChar = null,
+        gridStart = this.getGridStartForClue(this.selection.clueNum);
+
+    if (this.selection.clueDir && gridStart) {
+      switch(this.selection.clueDir) {
+        case this.DRAG_DIR.UP:
+          // Build up to find the answer.
+          for (i=0; i<Math.min(newAnswer.length, this.grid.length); ++i) {
+            row = gridStart.row - i;
+            col = gridStart.col + i;
+            if (row < 0 || col >= this.grid[0].length) {
+              break;
+            }
+            else {
+              answerChar = newAnswer.charAt(i);
+              answerChar = answerChar === "_" ? "." : answerChar;
+
+              this.grid[row] = this.grid[row].slice(0, col) + answerChar + this.grid[row].slice(col + 1);
+            }
+          }
+        break;
+
+        case this.DRAG_DIR.DOWN:
+          // Build down to find the answer.
+          for (i=0; i<Math.min(newAnswer.length, this.grid.length); ++i) {
+            row = gridStart.row + i;
+            col = gridStart.col + i;
+            if (row >= this.grid.length || col >= this.grid[0].length) {
+              break;
+            }
+            else {
+              answerChar = newAnswer.charAt(i);
+              answerChar = answerChar === "_" ? "." : answerChar;
+
+              this.grid[row] = this.grid[row].slice(0, col) + answerChar + this.grid[row].slice(col + 1);
+            }
+          }
+        break;
+      }
+    }
+  },
+
   getGridStartForClue: function(clueNum) {
     var iRow = 0,
         iCol = 0,
@@ -167,6 +214,18 @@ ccw.WordGridClass = new joe.ClassEx({
     var localX = x - this.left - this.BORDER_WIDTH;
 
     return Math.floor(this.grid[0].length * localX / (this.gridImage.width - 2 * this.BORDER_WIDTH));
+  },
+
+  getXCoordinateForCol: function(col) {
+    var toCenterX = (this.gridImage.width - 2 * this.BORDER_WIDTH) / this.grid[0].length * 0.5;
+
+    return Math.round(col * (this.gridImage.width - 2 * this.BORDER_WIDTH) / this.grid[0].length + this.left + this.BORDER_WIDTH + toCenterX);
+  },
+
+  getYCoordinateForRow: function(row) {
+    var toCenterY = (this.gridImage.height - 2 * this.BORDER_WIDTH) / this.grid.length * 0.5;
+
+    return Math.round(row * (this.gridImage.height - 2 * this.BORDER_WIDTH) / this.grid.length + this.top + this.BORDER_WIDTH + toCenterY);
   },
 
   getGridLeft: function(col) {
@@ -314,6 +373,30 @@ ccw.WordGridClass = new joe.ClassEx({
     return true;
   },
 
+  drawLetters: function(gfx) {
+    var iRow = 0,
+        iCol = 0,
+        x = 0,
+        y = 0;
+
+    for (iRow=0; iRow<this.grid.length; ++iRow) {
+      for (iCol=0; iCol<this.grid[0].length; ++iCol) {
+        if (this.grid[iRow][iCol] === this.block ||
+            this.grid[iRow][iCol] === '.') {
+          continue;
+        }
+        else {
+          x = this.getXCoordinateForCol(iCol);
+          y = this.getYCoordinateForRow(iRow);
+
+          ccw.game.sysFontLarge.draw(gfx, this.grid[iRow].charAt(iCol), x, y, joe.Resources.BitmapFont.ALIGN.CENTER, 0.5);
+
+          // TODO: if displaying the solution, add highlights for correct and incorrect answers.
+        }
+      }
+    }
+  },
+
   draw: function(gfx) {
     var row = this.selection.startRow,
         col = this.selection.startCol,
@@ -323,6 +406,9 @@ ccw.WordGridClass = new joe.ClassEx({
 
       gfx.drawImage(this.gridImage, this.left, this.top);
       gfx.drawImage(this.panelImage, this.panelLeft, this.panelTop);
+
+      // Draw the letters in the grid.
+      this.drawLetters(gfx);
 
       if (this.selection.clueDir !== this.DRAG_DIR.NONE) {
         selectImage = ccw.game.getImage("HIGHLIGHT_SQUARE");

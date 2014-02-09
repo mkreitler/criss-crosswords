@@ -64,7 +64,11 @@ ccw.PlayCommandsClass = new joe.ClassEx({
     this.state.showInput();
   },
 
-  hideInput: function() {
+  hideInput: function(newAnswer) {
+    if (newAnswer) {
+      this.state.updateSelectedAnswer(newAnswer);
+    }
+
     this.state.hideInput();
   },
 
