@@ -9,7 +9,8 @@ ccw.InputLayerClass = new joe.ClassEx({
 	// Instance Definition ////////////////////////////////////////////////////	
   requires: joe.Scene.LayerInterface,
 
-  WIDGET_OFFSETS_Y: [305, 527],
+  WIDGET_OFFSETS_Y: [255, 527, 391],
+  HINT_BUTTON_OFFSET_X: 651,
   KEY_CAPTURE_BOUNDS: {x:6, y:800, w:760, h:224},
   KEY_LAYOUT: {chars: [
                  "QWERTYUIOP",
@@ -26,6 +27,7 @@ ccw.InputLayerClass = new joe.ClassEx({
   widgets: null,
   clueLabel: null,
   answerLabel: null,
+  hintLabel: null,
   keyBox: null,
   vkeyStart: null,
   vkeyPressTime: 0,
@@ -34,6 +36,10 @@ ccw.InputLayerClass = new joe.ClassEx({
   highlightPos: {x:0, y:0},
   gridPos: {row:0, col:0},
   coords: {x:0, y:0},
+  clueText: null,
+  hintText: null,
+  nHints: 3,  // Normally, we would retrieve this from the server, as it is something you can buy.
+  bHinted: false,
 
   init: function(commands) {
     var i = 0,
@@ -70,7 +76,34 @@ ccw.InputLayerClass = new joe.ClassEx({
                                                  0.5,
                                                  0.5,
                                                  joe.Graphics.getWidth() * 0.9));
+
+    this.hintLabel = this.guiManager.addWidget(new joe.GUI.Label(ccw.STRINGS.HINT_LABEL_HINT,
+                                               ccw.game.sysFont,
+                                               this.HINT_BUTTON_OFFSET_X,
+                                               this.WIDGET_OFFSETS_Y[2],
+                                               {mouseDown: function(x, y) {return false;},
+                                                mouseUp: function(x, y) {return false;}},
+                                               0.5,
+                                               0.5,
+                                               joe.Graphics.getWidth() * 0.9));
     this.answerLabel.setCursor(-1, "^");
+
+    highlightImage = ccw.game.getImage("HIGHLIGHT_MENU_SMALL");
+    lastWidget = this.guiManager.addWidget(new joe.GUI.HighlightBox(Math.round(this.HINT_BUTTON_OFFSET_X - highlightImage.width * 0.5),
+                                                                    Math.round(this.WIDGET_OFFSETS_Y[2] - highlightImage.height * 0.5),
+                                                                    highlightImage.width,
+                                                                    highlightImage.height,
+                                                                    highlightImage,
+                                                                    {
+                                                                      mouseDown: function(x, y) {
+                                                                       return true;
+                                                                      },
+                                                                      mouseUp: function(x, y) {
+                                                                       return self.flipClueText(x, y);
+                                                                      }
+                                                                    }
+                                                                    ), true);
+
 
     this.keyBox = this.guiManager.addWidget(new joe.GUI.CaptureBox(this.KEY_CAPTURE_BOUNDS.x,
                                                                    this.KEY_CAPTURE_BOUNDS.y,
@@ -87,6 +120,50 @@ ccw.InputLayerClass = new joe.ClassEx({
                                                                      }
                                                                    },
                                                                    null));   
+  },
+
+  buildHintText: function() {
+    var dynamicHint = null;
+
+    if (this.nHints > 0 || this.bHinted) {
+      if (!this.bHinted) {
+        this.nHints -= 1;
+        this.bHinted = true;
+      }
+
+      dynamicHint = ccw.STRINGS.HINT_PREAMBLE + this.hintText;
+      if (this.nHints > 1) {
+        dynamicHint +=  ccw.STRINGS.HINT_MIDAMBLE + this.nHints + ccw.STRINGS.HINT_POSTAMBLE_PLURAL;
+      }
+      else if (this.nHints === 0) {
+        dynamicHint +=  ccw.STRINGS.HINT_POSTAMBLE_ZERO;
+      }
+      else {
+        dynamicHint +=  ccw.STRINGS.HINT_MIDAMBLE + this.nHints + ccw.STRINGS.HINT_POSTAMBLE_SINGULAR;
+      }
+    }
+    else  {
+      dynamicHint = ccw.STRINGS.NO_MORE_HINTS;
+    }
+
+    return dynamicHint;
+  },
+
+  flipClueText: function(x, y) {
+    if (this.hintLabel.AABBcontainsPoint(x, y)) {
+      if (this.hintLabel.getText() === ccw.STRINGS.HINT_LABEL_HINT) {
+        // Flip from hint to clue.
+        this.hintLabel.setText(ccw.STRINGS.HINT_LABEL_CLUE);
+        this.clueLabel.setText(this.buildHintText());
+      }
+      else {
+        // Flip from clue to hint.
+        this.hintLabel.setText(ccw.STRINGS.HINT_LABEL_HINT);
+        this.clueLabel.setText(this.clueText);
+      }
+    }
+
+    return true;
   },
 
   updateAnswerAndClose: function() {
@@ -309,9 +386,17 @@ ccw.InputLayerClass = new joe.ClassEx({
     }
   },
 
-  setClueText: function(text) {
+  setClueText: function(clueText, hintText) {
+    this.clueText = clueText;
+    this.hintText = hintText;
+    this.bHinted = false;
+
     if (this.clueLabel) {
-      this.clueLabel.setText(text);
+      this.clueLabel.setText(clueText);
+    }
+
+    if (this.hintLabel) {
+      this.hintLabel.setText(ccw.STRINGS.HINT_LABEL_HINT);
     }
   },
 

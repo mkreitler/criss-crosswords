@@ -212,6 +212,11 @@ ccw.WordGridClass = new joe.ClassEx({
 
     return clue ? clue.clue : "";
   },
+  getSelectedHintText: function() {
+    var clue = this.getSelectedClue();
+
+    return clue ? clue.hint : "";
+  },
 
   getSelectedHintText: function() {
     var clue = this.getSelectedClue();

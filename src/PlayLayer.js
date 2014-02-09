@@ -42,6 +42,10 @@ ccw.PlayLayerClass = new joe.ClassEx({
     return this.wordGrid ? this.wordGrid.getSelectedClueText() : "";
   },
 
+  getSelectedHintText: function() {
+    return this.wordGrid ? this.wordGrid.getSelectedHintText() : "";
+  },
+
   getSelectedAnswerText: function() {
     return this.wordGrid ? this.wordGrid.getSelectedAnswerText() : "";
   },

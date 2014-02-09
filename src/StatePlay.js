@@ -72,7 +72,7 @@ ccw.StatePlayClass = new joe.ClassEx({
   },
 
   refreshInputClueText: function() {
-    this.inputLayer.setClueText(this.playLayer.getSelectedClueText());
+    this.inputLayer.setClueText(this.playLayer.getSelectedClueText(), this.playLayer.getSelectedHintText());
   },
 
   refreshInputAnswerText: function() {

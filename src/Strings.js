@@ -8,23 +8,33 @@ ccw.STRINGS = {
   DOWN_CLUE_TITLE: "Down Clues",
 
   DOWN_CLUES: [
-    {clue: "1. Cowboy's scarves missing low-grade herbs. (7)", hint:"Deletion"},
-    {clue: "2. Director Besson moves to Kentucky, wins lottery. (5)", hint:"Charade"},
-    {clue: "3. Little dance in Tampa square? (3)", hint:"Hidden"},
-    {clue: "4. Carradine near miss confused Quantum Mechanic. (5)", hint:"Deletion and anagram"},
-    {clue: "5. Listened to average talk show host. (3)", hint:"Homophone"},
+    {clue: "1. Cowboy's scarves missing low-grade herbs. (7)", hint:"deletion"},
+    {clue: "2. Director Besson moves to Kentucky, wins lottery. (5)", hint:"charade"},
+    {clue: "3. Little dance in Tampa square? (3)", hint:"hidden"},
+    {clue: "4. Carradine near miss confused Quantum Mechanic. (5)", hint:"deletion and anagram"},
+    {clue: "5. Listened to average talk show host. (3)", hint:"homophone"},
   ],
 
   UP_CLUE_TITLE: "Up Clues",
 
   UP_CLUES: [
-    {clue: "4. Boy flipped for Indian stew. (3)", hint:"Reversal"},
-    {clue: "5. Constant pre-nuptials captivate Betty Page. (3-2)", hint:"Container"},
-    {clue: "6. Cadaver with scarred back and a bloating midsection sprawls on Venezualan coast. (7)", hint:"Container and deletion"},
-    {clue: "7. Sergeant and Corporal take first bite of hot dogs. (5)", hint:"Deletion"},
-    {clue: "8. What I heard was 'small island.' (3)", hint:"Homophone"}],
+    {clue: "4. Boy flipped for Indian stew. (3)", hint:"reversal"},
+    {clue: "5. Constant pre-nuptials captivate Betty Page. (3-2)", hint:"container"},
+    {clue: "6. Cadaver with scarred back and a bloating midsection sprawls on Venezuala's coast. (7)", hint:"container and deletion"},
+    {clue: "7. Sergeant and Corporal take first bite of hot dogs. (5)", hint:"deletion"},
+    {clue: "8. What I heard was 'small island.' (3)", hint:"homophone"}],
 
   ASSERT_INVALID_GAME_VIEW: "Invalid game view!",
   ASSERT_IMAGE_NOT_FOUND: "Image not found!",
-}
+
+  HINT_LABEL_HINT: "HINT",
+  HINT_LABEL_CLUE: "CLUE",
+  NO_MORE_HINTS: "You are out of hints. Please use the help menu to get more.",
+  HINT_PREAMBLE: "This is a ",
+  HINT_MIDAMBLE: " clue. You have ",
+  HINT_POSTAMBLE_SINGULAR: " hint left.",
+  HINT_POSTAMBLE_PLURAL: " hints left.",
+  HINT_POSTAMBLE_ZERO: " clue. This is your last hint.",
+};
+
 
