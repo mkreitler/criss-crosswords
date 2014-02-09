@@ -125,6 +125,8 @@ joe.Scene.View = new joe.ClassEx({
       this.layers.push({layer:layer, zOrder:zOrder});
       layer.setParent(this);
     }
+
+    return layer;
   }
 });
 

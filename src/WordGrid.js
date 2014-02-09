@@ -11,6 +11,7 @@ ccw.WordGridClass = new joe.ClassEx({
              DOWN:1},
   UP_CLUES: "45678",
   DOWN_CLUES: "12345",
+  HIGHLIGHT_DELAY: 250,
 
   commands: null,
   gridImage: null,
@@ -41,8 +42,120 @@ ccw.WordGridClass = new joe.ClassEx({
     ".*.*.*.",
   ],
 
+  clues: {
+    up: {"4": ccw.STRINGS.UP_CLUES[0],
+         "5": ccw.STRINGS.UP_CLUES[1],
+         "6": ccw.STRINGS.UP_CLUES[2],
+         "7": ccw.STRINGS.UP_CLUES[3],
+         "8": ccw.STRINGS.UP_CLUES[4]},
+    down: {"1": ccw.STRINGS.DOWN_CLUES[0],
+           "2": ccw.STRINGS.DOWN_CLUES[1],
+           "3": ccw.STRINGS.DOWN_CLUES[2],
+           "4": ccw.STRINGS.DOWN_CLUES[3],
+           "5": ccw.STRINGS.DOWN_CLUES[4]},
+  },
+
   block: '*',
   selection: {startRow: -1, startCol: -1, clueDir: 0, clueNum: -1},  // clueDir = DRAG_DIR.NONE
+  gridPos: {row:-1, col:-1},
+
+  unselect: function() {
+    this.selection.clueDir = this.DRAG_DIR.NONE;
+  },
+
+  getGridStartForClue: function(clueNum) {
+    var iRow = 0,
+        iCol = 0,
+        gridStart = this.gridPos;
+
+    for (iRow=0; iRow<this.cleanGrid.length; ++iRow) {
+      for (iCol=0; iCol<this.cleanGrid[0].length; ++iCol) {
+        if (this.cleanGrid[iRow][iCol] === clueNum) {
+          gridStart.row = iRow;
+          gridStart.col = iCol;
+          gridStart = this.gridPos;
+          iRow = this.cleanGrid.length;
+          break;
+        }
+      }
+    }
+
+    return gridStart;
+  },
+
+  getSelectedAnswerText: function() {
+    var answerText = "",
+        i = 0,
+        row = 0,
+        col = 0,
+        gridStart = this.getGridStartForClue(this.selection.clueNum);
+
+    if (this.selection.clueDir && gridStart) {
+      switch(this.selection.clueDir) {
+        case this.DRAG_DIR.UP:
+          // Build up to find the answer.
+          for (i=0; i<this.grid.length; ++i) {
+            row = gridStart.row - i;
+            col = gridStart.col + i;
+            if (row < 0 || col >= this.grid[0].length) {
+              break;
+            }
+            else {
+              answerText += this.grid[row][col] === '.' ? "_" : this.grid[row][col];
+            }
+          }
+        break;
+
+        case this.DRAG_DIR.DOWN:
+          // Build down to find the answer.
+          for (i=0; i<this.grid.length; ++i) {
+            row = gridStart.row + i;
+            col = gridStart.col + i;
+            if (row >= this.grid.length || col >= this.grid[0].length) {
+              break;
+            }
+            else {
+              answerText += this.grid[row][col] === '.' ? "_" : this.grid[row][col];
+            }
+          }
+        break;
+      }
+    }
+
+    return answerText;
+  },
+
+  getSelectedClue: function() {
+    var clue = "";
+
+    switch(this.selection.clueDir) {
+      case this.DRAG_DIR.UP:
+        clue = this.clues.up.hasOwnProperty(this.selection.clueNum) ? this.clues.up[this.selection.clueNum] : null;
+      break;
+
+      case this.DRAG_DIR.DOWN:
+        clue = this.clues.down.hasOwnProperty(this.selection.clueNum) ? this.clues.down[this.selection.clueNum] : null;
+      break;
+
+      default:
+        // Invalid. Leave clue blank.
+      break;
+    }
+
+    return clue;
+  },
+
+  getSelectedClueText: function() {
+    var clue = this.getSelectedClue();
+
+    return clue ? clue.clue : "";
+  },
+
+  getSelectedHintText: function() {
+    var clue = this.getSelectedClue();
+
+    return clue ? clue.hint : "";
+  },
 
   resolveRow: function(y) {
     var localY = y - this.top - this.BORDER_WIDTH;
@@ -91,7 +204,7 @@ ccw.WordGridClass = new joe.ClassEx({
     this.bounds.height = gridImage.height;
   },
 
-  selectClue: function() {
+  selectClue: function(commands) {
     // Select a clue based on the starting row/col
     // and the drag direction.
     var dRow = this.dragDir === this.DRAG_DIR.DOWN ? -1 : +1.
@@ -100,7 +213,8 @@ ccw.WordGridClass = new joe.ClassEx({
         col = this.dragStart.col,
         clueNum = null,
         newRow = 0,
-        newCol = 0;
+        newCol = 0,
+        inputCallback = commands.showInput;
 
     this.selection.clueDir = this.DRAG_DIR.NONE;
 
@@ -120,12 +234,17 @@ ccw.WordGridClass = new joe.ClassEx({
     if (this.isValidSquare(row, col)) {
       clueNum = /[1-9]/.exec(this.cleanGrid[row][col]);
 
-      if ((this.dragDir === this.DRAG_DIR.UP && this.UP_CLUES.indexOf(clueNum) >= 0) ||
+      clueNum = clueNum && clueNum.length === 1 ? clueNum[0] : null;
+
+      if (clueNum &&
+          (this.dragDir === this.DRAG_DIR.UP && this.UP_CLUES.indexOf(clueNum) >= 0) ||
           (this.dragDir === this.DRAG_DIR.DOWN && this.DOWN_CLUES.indexOf(clueNum) >= 0)) {
         this.selection.startRow = row;
         this.selection.startCol = col;
         this.selection.clueDir = this.dragDir;
         this.selection.clueNum = clueNum;
+        this.commands = commands;
+        setTimeout(function() {inputCallback.call(commands)}, this.HIGHLIGHT_DELAY);
       }
     }
   },
@@ -176,7 +295,7 @@ ccw.WordGridClass = new joe.ClassEx({
       }
 
       if (this.bDragged) {
-        this.selectClue();
+        this.selectClue(commands);
       }
     }
 

@@ -26,11 +26,25 @@ ccw.PlayLayerClass = new joe.ClassEx({
   guiManager: null,
   curContext: "CENTER",
 
+  getSelectedClueText: function() {
+    return this.wordGrid ? this.wordGrid.getSelectedClueText() : "";
+  },
+
+  getSelectedAnswerText: function() {
+    return this.wordGrid ? this.wordGrid.getSelectedAnswerText() : "";
+  },
+
   setGuiContext: function(whichContext) {
     joe.assert(this.guiManager && ccw.PlayLayerClass.PANES.hasOwnProperty(whichContext), joe.Strings.ASSERT_INVALID_ARGS);
 
     this.guiManager.setContext(this.widgets[ccw.PlayLayerClass.PANES[whichContext]]);
     this.curContext = whichContext;
+  },
+
+  unselectWordGrid: function() {
+    if (this.wordGrid) {
+      this.wordGrid.unselect();
+    }
   },
 
   mouseDown: function(x, y) {

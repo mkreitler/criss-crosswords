@@ -15,7 +15,8 @@ ccw.GameClass = new joe.ClassEx({
            HELP: 9,
            HIGHLIGHT_MENU_LARGE: 10,
            HIGHLIGHT_MENU_MEDIUM: 11,
-           HIGHLIGHT_MENU_SMALL: 12
+           HIGHLIGHT_MENU_SMALL: 12,
+           KEYBOARD: 13,
           },
 
   Z_ORDER: {
@@ -137,6 +138,10 @@ ccw.GameClass = new joe.ClassEx({
                                                     ccw.onResourceLoadFailed,
                                                     this));
 
+    this.images.push(joe.Resources.loader.loadImage("img/keyboard.png",
+                                                    ccw.onResourceLoaded,
+                                                    ccw.onResourceLoadFailed,
+                                                    this));
     joe.MouseInput.addListener(this);
     joe.KeyInput.addListener(this);
   },

@@ -12,7 +12,7 @@ joe.Scene.Camera = new joe.ClassEx({
   destPos: {x:0, y:0},            // Position in the output buffer.
   viewRect: {x:0, y:0, w:0, h:0}, // Window into the layer, determines size of off-screen buffer.
   srcRect: {x:0, y:0, w:0, h:0},  // Window defining region of layer source to render into view buffer.
-  drawRect: {x:0, y:0, w:0, h:0}, // Window we will draw: overlap between viewRect and screen buffer.
+  drawRect: {x:0, y:0, w:0, h:0, srcOffset: {x:0, y:0}}, // Window we will draw: overlap between viewRect and screen buffer.
   magnification: 1,
   workPoint: {x:0, y:0},
   srcTransInfo: {bTransitioning: false, wantX:0, wantY:0, startX:0, startY:0, elapsedTime:0, duration:0},
@@ -38,11 +38,8 @@ joe.Scene.Camera = new joe.ClassEx({
     // TODO: add transition type.
     // TODO: allow transitions to interrupt transitions.
     if (!this.destTransInfo.bTransitioning) {
-      // Update draw rect.
-      this.clipToScreen();
-
-      this.destTransInfo.startX = this.drawRect.x;
-      this.destTransInfo.startY = this.drawRect.y;
+      this.destTransInfo.startX = this.destPos.x;
+      this.destTransInfo.startY = this.destPos.y;
       this.destTransInfo.wantX = wantX - (wantAnchorX || 0);
       this.destTransInfo.wantY = wantY - (wantAnchorY || 0);
       this.destTransInfo.elapsedTime = 0;
@@ -123,6 +120,8 @@ joe.Scene.Camera = new joe.ClassEx({
     this.drawRect.y = clipRect.y;
     this.drawRect.w = clipRect.w;
     this.drawRect.h = clipRect.h;
+    this.drawRect.srcOffset.x = this.drawRect.x - this.destPos.x;
+    this.drawRect.srcOffset.y = this.drawRect.y - this.destPos.y;
   },
 
   getViewRect: function() {
@@ -178,7 +177,7 @@ joe.Scene.Camera = new joe.ClassEx({
   draw: function(gfx) {
     if (gfx && this.canvas && this.drawRect.w >= 0 && this.drawRect.h >= 0) {
       gfx.drawImage(this.canvas,
-                    this.viewRect.x, this.viewRect.y, this.drawRect.w, this.drawRect.h,
+                    this.viewRect.x + this.drawRect.srcOffset.x, this.viewRect.y + this.drawRect.srcOffset.y, this.drawRect.w, this.drawRect.h,
                     this.drawRect.x, this.drawRect.y, this.drawRect.w, this.drawRect.h);
     }
   }

@@ -4,15 +4,18 @@ ccw.StatePlayClass = new joe.ClassEx({
   SLIDE_TIME: 0.25,
 
   VIEW_ORDER: { GAME: 100,
-                HELP: 90,
-                INSTRUCTIONS: 80 },
+                INPUT: 90,
+                HELP: 80,
+                INSTRUCTIONS: 70 },
 },
 {
   commands: null,
   gameView: null,
   playLayer: null,
+  inputLayer: null,
   instructionsView: null,
   helpView: null,
+  inputView: null,
 
   init: function(gridImage, panelImage) {
     var state = this;
@@ -41,8 +44,16 @@ ccw.StatePlayClass = new joe.ClassEx({
     this.helpView.addLayer(new ccw.HelpLayerClass(this.commands));
     this.helpView.setWorldPos(joe.Graphics.getWidth(), 0);
 
+    this.inputView = new joe.Scene.View(joe.Graphics.getWidth(),
+                                       joe.Graphics.getHeight(),
+                                       joe.Graphics.getWidth(),
+                                       joe.Graphics.getHeight());
+    this.inputLayer = this.inputView.addLayer(new ccw.InputLayerClass(this.commands));
+    this.inputView.setWorldPos(-joe.Graphics.getWidth(), 0);
+
     // Add views to the scene.    
     joe.Scene.addView(this.gameView, ccw.StatePlayClass.VIEW_ORDER.GAME);
+    joe.Scene.addView(this.inputView, ccw.StatePlayClass.VIEW_ORDER.INPUT);
     joe.Scene.addView(this.helpView, ccw.StatePlayClass.VIEW_ORDER.HELP);
     joe.Scene.addView(this.instructionsView, ccw.StatePlayClass.VIEW_ORDER.INSTRUCTIONS);
   },
@@ -52,6 +63,23 @@ ccw.StatePlayClass = new joe.ClassEx({
 
     this.gameView.setSourcePos(this.playLayer.getPaneOffsetX(whichPanel), 0);
     this.playLayer.setGuiContext(whichPanel);
+  },
+
+  refreshInputClueText: function() {
+    this.inputLayer.setClueText(this.playLayer.getSelectedClueText());
+  },
+
+  refreshInputAnswerText: function() {
+    this.inputLayer.setAnswerText(this.playLayer.getSelectedAnswerText());
+  },
+
+  showInput: function() {
+    this.inputView.setWorldTransition(0, 0, 0, 0, ccw.StatePlayClass.SLIDE_TIME);
+  },
+
+  hideInput: function() {
+    this.inputView.setWorldTransition(-joe.Graphics.getWidth(), 0, 0, 0, ccw.StatePlayClass.SLIDE_TIME);
+    this.playLayer.unselectWordGrid();
   },
 
   showInstructions: function() {

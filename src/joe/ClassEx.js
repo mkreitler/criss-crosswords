@@ -4,9 +4,9 @@
 joe.assert = function(condition, message) {
   if (!condition) {
     if (joe.Utility.isMobile()) {
-      console.log(message || joe.STRINGS.ASSERT_DEFAULT_MESSAGE);
+      console.log(message || joe.Strings.ASSERT_DEFAULT_MESSAGE);
     }
-    else if (confirm(message + joe.STRINGS.ASSERT_DISMISSAL)) {
+    else if (confirm(message + joe.Strings.ASSERT_DISMISSAL)) {
       debugger;
     }
   }
