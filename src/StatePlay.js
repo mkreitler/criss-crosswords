@@ -2,26 +2,72 @@ ccw.StatePlayClass = new joe.ClassEx({
   GAME_VIEW_WIDTH_FACTOR: 4, // Want 3 panes with wraparound, so we'll fake it with 4 panes.
   GAME_VIEW_HEIGHT_FACTOR: 1,
   SLIDE_TIME: 0.25,
+
+  VIEW_ORDER: { GAME: 100,
+                HELP: 90,
+                INSTRUCTIONS: 80 },
 },
 {
   commands: null,
   gameView: null,
   playLayer: null,
+  instructionsView: null,
+  helpView: null,
 
   init: function(gridImage, panelImage) {
     var state = this;
+
+    this.commands = new ccw.PlayCommandsClass(this);
 
     this.gameView = new joe.Scene.View(joe.Graphics.getWidth(),
                                        joe.Graphics.getHeight(),
                                        joe.Graphics.getWidth() * ccw.StatePlayClass.GAME_VIEW_WIDTH_FACTOR,
                                        joe.Graphics.getHeight() * ccw.StatePlayClass.GAME_VIEW_HEIGHT_FACTOR);
-
-    this.playLayer = new ccw.PlayLayerClass(gridImage, panelImage);
+    this.playLayer = new ccw.PlayLayerClass(this.commands);
     this.gameView.addLayer(this.playLayer);
-    this.gameView.setSourcePos(this.playLayer.getPaneOffsetX("CENTER"), 0);
-    joe.Scene.addView(this.gameView);
+    this.syncViewToPanel("CENTER");
 
-    this.commands = new ccw.PlayCommandsClass(this);
+    this.instructionsView = new joe.Scene.View(joe.Graphics.getWidth(),
+                                               joe.Graphics.getHeight(),
+                                               joe.Graphics.getWidth(),
+                                               joe.Graphics.getHeight());
+    this.instructionsView.addLayer(new ccw.InstructionsLayerClass(this.commands));
+    this.instructionsView.setWorldPos(joe.Graphics.getWidth(), 0);
+
+    this.helpView = new joe.Scene.View(joe.Graphics.getWidth(),
+                                       joe.Graphics.getHeight(),
+                                       joe.Graphics.getWidth(),
+                                       joe.Graphics.getHeight());
+    this.helpView.addLayer(new ccw.HelpLayerClass(this.commands));
+    this.helpView.setWorldPos(joe.Graphics.getWidth(), 0);
+
+    // Add views to the scene.    
+    joe.Scene.addView(this.gameView, ccw.StatePlayClass.VIEW_ORDER.GAME);
+    joe.Scene.addView(this.helpView, ccw.StatePlayClass.VIEW_ORDER.HELP);
+    joe.Scene.addView(this.instructionsView, ccw.StatePlayClass.VIEW_ORDER.INSTRUCTIONS);
+  },
+
+  syncViewToPanel: function(whichPanel) {
+    joe.assert(this.gameView && this.playLayer, joe.Strings.ASSERT_INVALID_ARGS);
+
+    this.gameView.setSourcePos(this.playLayer.getPaneOffsetX(whichPanel), 0);
+    this.playLayer.setGuiContext(whichPanel);
+  },
+
+  showInstructions: function() {
+    this.instructionsView.setWorldTransition(0, 0, 0, 0, ccw.StatePlayClass.SLIDE_TIME);
+  },
+
+  hideInstructions: function() {
+    this.instructionsView.setWorldTransition(joe.Graphics.getWidth(), 0, 0, 0, ccw.StatePlayClass.SLIDE_TIME);
+  },
+
+  showHelp: function() {
+    this.helpView.setWorldTransition(0, 0, 0, 0, ccw.StatePlayClass.SLIDE_TIME);
+  },
+
+  hideHelp: function() {
+    this.helpView.setWorldTransition(joe.Graphics.getWidth(), 0, 0, 0, ccw.StatePlayClass.SLIDE_TIME);
   },
 
   slideLayerLeft: function() {
@@ -40,8 +86,11 @@ ccw.StatePlayClass = new joe.ClassEx({
 
       // Snap to the wraparound frame.
       this.gameView.setSourcePos(newViewX, viewRect.y);
+      this.playLayer.setGuiContext("LEFT_REPEAT");
       newViewX -= joe.Graphics.getWidth();
     }
+
+    this.playLayer.shiftGuiContextLeft();
 
     this.gameView.setSourceTransition(newViewX, viewRect.y, 0, 0, ccw.StatePlayClass.SLIDE_TIME);
   },
@@ -62,8 +111,11 @@ ccw.StatePlayClass = new joe.ClassEx({
 
       // Snap to the wraparound frame.
       this.gameView.setSourcePos(newViewX, viewRect.y);
+      this.playLayer.setGuiContext("LEFT_REPEAT");
       newViewX += joe.Graphics.getWidth();
     }
+
+    this.playLayer.shiftGuiContextRight();
 
     this.gameView.setSourceTransition(newViewX, viewRect.y, 0, 0, ccw.StatePlayClass.SLIDE_TIME);
   },

@@ -66,6 +66,9 @@ joe.Multitouch = new joe.ClassEx([
         x = touch.pageX - winOffsetX;
         y = touch.pageY - winOffsetY;
       }
+
+      x = Math.round(x / joe.Graphics.globalScale);
+      y = Math.round(y / joe.Graphics.globalScale);
       
       joe.Multitouch.pointInfo.clientX = x;
       joe.Multitouch.pointInfo.clientY = y;

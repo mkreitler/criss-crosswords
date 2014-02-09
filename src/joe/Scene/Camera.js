@@ -15,39 +15,84 @@ joe.Scene.Camera = new joe.ClassEx({
   drawRect: {x:0, y:0, w:0, h:0}, // Window we will draw: overlap between viewRect and screen buffer.
   magnification: 1,
   workPoint: {x:0, y:0},
-  transInfo: {bTransitioning: false, wantX:0, wantY:0, startX:0, startY:0, elapsedTime:0, duration:0},
+  srcTransInfo: {bTransitioning: false, wantX:0, wantY:0, startX:0, startY:0, elapsedTime:0, duration:0},
+  destTransInfo: {bTransitioning: false, wantX:0, wantY:0, startX:0, startY:0, elapsedTime:0, duration:0},
 
   setSourceTransition: function(wantX, wantY, wantAnchorX, wantAnchorY, transDuration) {
     // TODO: add transition type.
     // TODO: allow transitions to interrupt transitions.
-    if (!this.transInfo.bTransitioning) {
-      this.transInfo.startX = this.viewRect.x;
-      this.transInfo.startY = this.viewRect.y;
-      this.transInfo.wantX = wantX - (wantAnchorX || 0);
-      this.transInfo.wantY = wantY - (wantAnchorY || 0);
-      this.transInfo.elapsedTime = 0;
-      this.transInfo.duration = Math.abs(transDuration || joe.Scene.Camera.DEFAULT_TRANSITION_TIME);
-      this.transInfo.bTransitioning = true;
+    if (!this.srcTransInfo.bTransitioning) {
+      this.srcTransInfo.startX = this.viewRect.x;
+      this.srcTransInfo.startY = this.viewRect.y;
+      this.srcTransInfo.wantX = wantX - (wantAnchorX || 0);
+      this.srcTransInfo.wantY = wantY - (wantAnchorY || 0);
+      this.srcTransInfo.elapsedTime = 0;
+      this.srcTransInfo.duration = Math.abs(transDuration || joe.Scene.Camera.DEFAULT_TRANSITION_TIME);
+      this.srcTransInfo.bTransitioning = true;
 
       joe.UpdateLoop.addListener(this);
     }
   },
 
+  setDestTransition: function(wantX, wantY, wantAnchorX, wantAnchorY, transDuration) {
+    // TODO: add transition type.
+    // TODO: allow transitions to interrupt transitions.
+    if (!this.destTransInfo.bTransitioning) {
+      // Update draw rect.
+      this.clipToScreen();
+
+      this.destTransInfo.startX = this.drawRect.x;
+      this.destTransInfo.startY = this.drawRect.y;
+      this.destTransInfo.wantX = wantX - (wantAnchorX || 0);
+      this.destTransInfo.wantY = wantY - (wantAnchorY || 0);
+      this.destTransInfo.elapsedTime = 0;
+      this.destTransInfo.duration = Math.abs(transDuration || joe.Scene.Camera.DEFAULT_TRANSITION_TIME);
+      this.destTransInfo.bTransitioning = true;
+
+      joe.UpdateLoop.addListener(this);
+    }
+  },
+
+  isTransitioning: function() {
+    return this.srcTransInfo.bTransitioning;
+  },
+
   update: function(dt, gameTime) {
     var param = 0;
 
-    if (this.transInfo.bTransitioning) {
-      this.transInfo.elapsedTime += dt * 0.001;
-      param = this.transInfo.elapsedTime / this.transInfo.duration;
-      this.transInfo.bTransitioning = 1 - param > joe.MathEx.EPSILON;
+    if (this.srcTransInfo.bTransitioning) {
+      this.srcTransInfo.elapsedTime += dt * 0.001;
+      param = this.srcTransInfo.elapsedTime / this.srcTransInfo.duration;
+      this.srcTransInfo.bTransitioning = 1 - param > joe.MathEx.EPSILON;
 
-      if (this.transInfo.bTransitioning) {
-        this.setSourcePosition(this.transInfo.startX * (1 - param) + this.transInfo.wantX * param,
-                               this.transInfo.startY * (1 - param) + this.transInfo.wantY * param);
+      if (this.srcTransInfo.bTransitioning) {
+        this.setSourcePosition(this.srcTransInfo.startX * (1 - param) + this.srcTransInfo.wantX * param,
+                               this.srcTransInfo.startY * (1 - param) + this.srcTransInfo.wantY * param);
       }
       else {
-        this.setSourcePosition(this.transInfo.wantX, this.transInfo.wantY);
-        joe.UpdateLoop.removeListener(this);
+        this.setSourcePosition(this.srcTransInfo.wantX, this.srcTransInfo.wantY);
+
+        if (!this.destTransInfo.bTransitioning) {
+          joe.UpdateLoop.removeListener(this);
+        }
+      }
+    }
+
+    if (this.destTransInfo.bTransitioning) {
+      this.destTransInfo.elapsedTime += dt * 0.001;
+      param = this.destTransInfo.elapsedTime / this.destTransInfo.duration;
+      this.destTransInfo.bTransitioning = 1 - param > joe.MathEx.EPSILON;
+
+      if (this.destTransInfo.bTransitioning) {
+        this.setDestPosition(this.destTransInfo.startX * (1 - param) + this.destTransInfo.wantX * param,
+                             this.destTransInfo.startY * (1 - param) + this.destTransInfo.wantY * param);
+      }
+      else {
+        this.setDestPosition(this.destTransInfo.wantX, this.destTransInfo.wantY);
+
+        if (!this.srcTransInfo.bTransitioning) {
+          joe.UpdateLoop.removeListener(this);
+        }
       }
     }
   },
@@ -85,6 +130,7 @@ joe.Scene.Camera = new joe.ClassEx({
   },
 
   getScreenRect: function() {
+    this.clipToScreen();
     return this.drawRect;
   },
 

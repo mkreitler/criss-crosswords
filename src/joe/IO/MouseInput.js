@@ -32,11 +32,11 @@ joe.Listeners, {
   },
   
   getClientX: function(e) {
-    return e.srcElement ? e.clientX - e.srcElement.offsetLeft : e.clientX;
+    return Math.round((e.srcElement ? e.clientX - e.srcElement.offsetLeft : e.clientX) / joe.Graphics.globalScale);
   },
   
   getClientY: function(e) {
-    return e.srcElement ? e.clientY - e.srcElement.offsetTop : e.clientY;
+    return Math.round((e.srcElement ? e.clientY - e.srcElement.offsetTop : e.clientY) / joe.Graphics.globalScale);
   },
   
   mouseUp: function(e) {

@@ -37,6 +37,42 @@ joe.GUI.CaptureBox = new joe.ClassEx(
       joe.GUI.CaptureBox.addCaptureBox(this);
     },
 
+    press: function() {
+      this.bIsOn = true;
+    },
+
+    release: function() {
+      this.bIsOn = false;
+    },
+
+    mouseDown: function(x, y) {
+      var bConsumed = false;
+
+      if (this.widgetActive() && this.widgetVisible()) {
+        this.press();
+
+        this.widgetInputHandlers.mouseDown.call(this, x, y);
+
+        bConsumed = true;
+      }
+
+      return bConsumed;
+    },
+
+    mouseUp: function(x, y) {
+      var bConsumed = false;
+
+      if (this.widgetActive() && this.widgetVisible()) {
+        this.release();
+
+        this.widgetInputHandlers.mouseUp.call(this, x, y);
+
+        bConsumed = true;
+      }
+
+      return bConsumed;
+    },
+    
     destroy: function() {
       joe.GUI.CaptureBox.removeCaptureBox(this);
     },

@@ -93,6 +93,13 @@ joe.MathEx.rect2 = function(x, y, w, h) {
   this.h = h;
 };
 
+joe.MathEx.rectContainsPoint = function(r, x, y) {
+  return (x >= r.x &&
+          x <= r.x + r.w &&
+          y >= r.y &&
+          y <= r.y + r.h);
+},
+
 joe.MathEx.clip = function(r1, r2) {
   var rt = null,
       result = joe.MathEx.resultRect;

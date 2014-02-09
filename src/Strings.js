@@ -9,7 +9,7 @@ ccw.STRINGS = {
 
   DOWN_CLUES: [
     {clue: "1. Cowboy's scarves missing low-grade herbs. (7)", hint:"Deletion"},
-    {clue: "2. Director Besson visits Kentucky, wins lottery. (5)", hint:"Charade"},
+    {clue: "2. Director Besson moves to Kentucky, wins lottery. (5)", hint:"Charade"},
     {clue: "3. Little dance in Tampa square? (3)", hint:"Hidden"},
     {clue: "4. Carradine near miss confused Quantum Mechanic. (5)", hint:"Deletion and anagram"},
     {clue: "5. Listened to average talk show host. (3)", hint:"Homophone"},
@@ -25,5 +25,6 @@ ccw.STRINGS = {
     {clue: "8. What I heard was 'small island.' (3)", hint:"Homophone"}],
 
   ASSERT_INVALID_GAME_VIEW: "Invalid game view!",
+  ASSERT_IMAGE_NOT_FOUND: "Image not found!",
 }
 

@@ -254,7 +254,7 @@ joe.GUI.WidgetModule = {
         }
       }
 
-      if (!bHandled) {
+      if (!bHandled && this.AABBcontainsPoint(x, y)) {
         bHandled = this.inputCallbacks ? (this.inputCallbacks.mouseUp ? this.inputCallbacks.mouseUp(x, y) : true) : false;
       }
 
@@ -354,7 +354,7 @@ joe.GUI.WidgetModule = {
         }
       }
 
-      if (!bHandled) {
+      if (!bHandled && this.AABBcontainsPoint(x, y)) {
         bHandled = this.inputCallbacks ? (this.inputCallbacks.mouseClick ? this.inputCallbacks.mouseClick(x, y) : true) : false;
       }
 

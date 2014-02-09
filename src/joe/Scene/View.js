@@ -24,6 +24,14 @@ joe.Scene.View = new joe.ClassEx({
     this.setSourcePos(0, 0);
   },
 
+  getLayer: function(index) {
+    return index >= 0 && index < this.layers.length ? this.layers[index].layer : null;
+  },
+
+  isTransitioning: function() {
+    return this.camera.isTransitioning();
+  },
+
   getViewport: function() {
     return this.camera;
   },
@@ -32,6 +40,12 @@ joe.Scene.View = new joe.ClassEx({
     joe.assert(this.camera, joe.Strings.ASSERT_VIEW_NO_CAMERA_AVAILABLE);
 
     this.camera.setSourceTransition(wantX, wantY, wantAnchorX, wantAnchorY, transDuration);
+  },
+
+  setWorldTransition: function(wantX, wantY, wantAnchorX, wantAnchorY, transDuration) {
+    joe.assert(this.camera, joe.Strings.ASSERT_VIEW_NO_CAMERA_AVAILABLE);
+
+    this.camera.setDestTransition(wantX, wantY, wantAnchorX, wantAnchorY, transDuration);
   },
 
   setWorldPos: function(x, y) {
@@ -45,6 +59,10 @@ joe.Scene.View = new joe.ClassEx({
     this.workPos.y = y;
     
     return this.camera.viewToWorldPos(this.workPos);
+  },
+
+  getWorldRect: function() {
+    return this.camera.getScreenRect();
   },
 
   setSourcePos: function(x, y) {

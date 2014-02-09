@@ -14,9 +14,56 @@ ccw.PlayCommandsClass = new joe.ClassEx({
   gesturePosStart: {id:-1, x:0, y:0},
   gesturePos: {id:-1, x:0, y:0},
   bDragging: false,
+  bCanDrag: true,
+  focusLayer: null,   // The layer currently receiving I/O events
 
   init: function(state) {
     this.state = state;
+  },
+
+  checkSolution: function() {
+    window.alert("CheckSolution");
+  },
+
+  startNewPuzzle: function() {
+    window.alert("StartNewPuzzle");
+  },
+
+  buyHints: function() {
+    window.alert("BuyHints");
+  },
+
+  buySolutions: function() {
+    window.alert("BuySolution");
+  },
+
+  buyPuzzles: function() {
+    window.alert("BuyPuzzles");
+  },
+
+  showHelp: function() {
+    this.state.showHelp();
+  },
+
+  hideHelp: function() {
+    this.state.hideHelp();
+  },
+
+  showInstructions: function() {
+    this.state.hideHelp();
+    this.state.showInstructions();
+  },
+
+  hideInstructions: function() {
+    this.state.hideInstructions();
+  },
+
+  slideLeft: function() {
+    this.state.slideLayerLeft();
+  },
+
+  slideRight: function() {
+    this.state.slideLayerRight();
   },
 
   checkForSwipe: function(dx, dy, magnitude) {
@@ -43,26 +90,54 @@ ccw.PlayCommandsClass = new joe.ClassEx({
     return swipeType;
   },
 
-  mouseDown: function(x, y) {
+  startGesture: function(x, y) {
     this.gesturePosStart.x = x;
     this.gesturePosStart.y = y;
 
     this.gesturePos.x = x;
     this.gesturePos.y = y;
+  },
 
-    this.bDragging = false;
+  mouseDown: function(x, y) {
+    var focusView = joe.Scene.getFirstViewContainingPoint(x, y);
+    this.focusLayer = focusView ? focusView.getLayer(0) : null;
+
+    if (this.focusLayer) {
+      // Check: is the user interacting with a GUI element in the play layer?
+      this.bCanDrag = !this.focusLayer.mouseDown(x, y);
+
+      if (this.bCanDrag) {
+        this.startGesture(x, y);
+      }
+      
+      this.bDragging = false;
+    }
   },
 
   mouseDrag: function(x, y) {
-    this.checkDrag(x, y);
+    if (this.bCanDrag) {
+      this.executeDrag(this.checkDrag(x, y));
+    }
+    else if (this.focusLayer) {
+      this.focusLayer.mouseDrag(x, y);
+    }
   },
 
   mouseUp: function(x, y) {
+    if (!this.bCanDrag && this.focusLayer) {
+      this.focusLayer.mouseUp(x, y);
+    }
+
+    this.focusLayer = null;
     this.bDragging = false;
+    this.bCanDrag = true;
   },
 
   touchDown: function(id, x, y) {
-    if (this.gesturePosStart.id < 0) {
+    var focusView = joe.Scene.getFirstViewContainingPoint(x, y);
+    this.focusLayer = focusView ? focusView.getLayer(0) : null;
+
+    if (this.focusLayer && this.gesturePosStart.id < 0) {
       this.gesturePosStart.id = id;
       this.gesturePosStart.x = x;
       this.gesturePosStart.y = y;
@@ -70,25 +145,55 @@ ccw.PlayCommandsClass = new joe.ClassEx({
       this.gesturePos.id = id;
       this.gesturePos.x = x;
       this.gesturePos.y = y;
+
+      this.bCanDrag = !this.focusLayer.mouseDown(x, y);
+    }
+    else {
+      this.focusLayer = null;
     }
   },
 
   touchMove: function(id, x, y) {
-    if (this.gesturePosStart.id >= 0 && id === this.gesturePosStart.id) {
-      this.checkDrag(x, y);
+    if (this.bCanDrag && this.gesturePosStart.id >= 0 && id === this.gesturePosStart.id) {
+      this.executeDrag(this.checkDrag(x, y));
+    }
+    else if (this.focusLayer) {
+      this.focusLayer.mouseDrag(x, y);
     }
   },
 
   touchUp: function(id, x, y) {
-    this.gesturePosStart.id = -1;
-    this.gesturePos.id = -1;
+    if (this.focusLayer && id === this.gesturePosStart.id) {
+      this.gesturePosStart.id = -1;
+      this.gesturePos.id = -1;
 
-    this.bDragging = false;
+      this.focusLayer.mouseUp(x, y);
+
+      this.bCanDrag = true;
+      this.bDragging = false;
+      this.focusLayer = null;
+    }
+  },
+
+  executeDrag: function(dragType) {
+    switch(dragType) {
+      case ccw.PlayCommandsClass.SWIPE_TYPE.LEFT:
+        this.state.slideLayerRight();
+      break;
+
+      case ccw.PlayCommandsClass.SWIPE_TYPE.RIGHT:
+        this.state.slideLayerLeft();
+      break;
+
+      default:
+      break;
+    }
   },
 
   checkDrag: function(x, y) {
     var dx = 0,
-        dy = 0;
+        dy = 0,
+        dragType = ccw.PlayCommandsClass.SWIPE_TYPE.NONE;
 
     if (!this.bDragging) {
       this.gesturePos.x = x;
@@ -100,20 +205,11 @@ ccw.PlayCommandsClass = new joe.ClassEx({
       if (dx * dx + dy * dy > ccw.PlayCommandsClass.SWIPE_THRESHOLD_SQ) {
         this.bDragging = true;
 
-        switch(this.checkForSwipe(dx, dy, Math.sqrt(dx * dx + dy * dy))) {
-          case ccw.PlayCommandsClass.SWIPE_TYPE.LEFT:
-            this.state.slideLayerRight();
-          break;
-
-          case ccw.PlayCommandsClass.SWIPE_TYPE.RIGHT:
-            this.state.slideLayerLeft();
-          break;
-
-          default:
-          break;
-        }
+        dragType = this.checkForSwipe(dx, dy, Math.sqrt(dx * dx + dy * dy));
       }
     }
+
+    return dragType;
   },
 });
 

@@ -6,6 +6,30 @@ joe.Scene = {
             },
 
   views: [],
+  viewPort: {x:0, y:0, w:joe.Graphics.getWidth(), h:joe.Graphics.getHeight()},
+  ioIndex: 0,
+
+  getFirstViewContainingPoint: function(x, y) {
+    var i=0;
+
+    this.ioIndex = -1;
+    return this.getNextViewContainingPoint(x, y);
+  },
+
+  getNextViewContainingPoint: function(x, y) {
+    var i=0,
+        view = null;
+
+    for (i=this.ioIndex+1; i<this.views.length; ++i) {
+      if (joe.MathEx.rectContainsPoint(this.views[i].view.getWorldRect(), x, y)) {
+        this.ioIndex = i;
+        view = this.views[i].view;
+        break;
+      }
+    }
+
+    return view;
+  },
 
   addView: function(view, zOrder) {
     var i = 0,
@@ -44,10 +68,14 @@ joe.Scene = {
   },
 
   draw: function(gfx) {
-    var i = 0;
+    var i = 0,
+        clippedRect = null;
 
     for (i=this.views.length - 1; i>=0; --i) {
-      this.views[i].view.draw(gfx);
+      clippedRect = joe.MathEx.clip(this.viewPort, this.views[i].view.getWorldRect());
+      if (clippedRect && clippedRect.w && clippedRect.h) {
+        this.views[i].view.draw(gfx);
+      }
     }
   }, 
 
@@ -60,6 +88,39 @@ joe.Scene = {
 
     drawClipped: function(gfx) {
       // Override to provide custom functionality.
+    },
+
+    // Default IO handlers.
+    mouseDown: function(x, y) {
+      return true;
+    },
+
+    mouseOver: function(x, y) {
+      return true;
+    },
+
+    mouseHold: function(x, y) {
+      return true;
+    },
+
+    mouseDrag: function(x, y) {
+      return true;
+    },
+
+    mouseUp: function(x, y) {
+      return true;
+    },
+
+    touchDown: function(id, x, y) {
+      return true;
+    },
+
+    touchMove: function(id, x, y) {
+      return true;
+    },
+
+    touchDown: function(id, x, y) {
+      return true;
     }
   } 
 };

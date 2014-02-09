@@ -11,6 +11,11 @@ ccw.GameClass = new joe.ClassEx({
            HIGHLIGHT_CIRCLE: 5,
            HIGHLIGHT_ARROW_RIGHT: 6,
            HIGHLIGHT_ARROW_LEFT: 7,
+           INSTRUCTIONS: 8,
+           HELP: 9,
+           HIGHLIGHT_MENU_LARGE: 10,
+           HIGHLIGHT_MENU_MEDIUM: 11,
+           HIGHLIGHT_MENU_SMALL: 12
           },
 
   Z_ORDER: {
@@ -18,7 +23,7 @@ ccw.GameClass = new joe.ClassEx({
 },
 {
   // Instance Definition //////////////////////////////////////////////////////
-  requires: joe.GameStateClass.stateMachine,
+  requires: joe.GameState.stateMachine,
   
   sysFont: null,
   sysFontLarge: null,
@@ -95,6 +100,39 @@ ccw.GameClass = new joe.ClassEx({
                                                     this));
 
     this.images.push(joe.Resources.loader.loadImage("img/highlight_arrowLeft.png",
+                                                    ccw.onResourceLoaded,
+                                                    ccw.onResourceLoadFailed,
+                                                    this));
+
+    if (joe.Utility.isMobile()) {
+      this.images.push(joe.Resources.loader.loadImage("img/instructions_tablet.png",
+                                                      ccw.onResourceLoaded,
+                                                      ccw.onResourceLoadFailed,
+                                                      this));
+    }
+    else {
+      this.images.push(joe.Resources.loader.loadImage("img/instructions_web.png",
+                                                      ccw.onResourceLoaded,
+                                                      ccw.onResourceLoadFailed,
+                                                      this));
+    }
+
+    this.images.push(joe.Resources.loader.loadImage("img/menu_help.png",
+                                                    ccw.onResourceLoaded,
+                                                    ccw.onResourceLoadFailed,
+                                                    this));
+
+    this.images.push(joe.Resources.loader.loadImage("img/highlight_menuLarge.png",
+                                                    ccw.onResourceLoaded,
+                                                    ccw.onResourceLoadFailed,
+                                                    this));    
+
+    this.images.push(joe.Resources.loader.loadImage("img/highlight_menuMedium.png",
+                                                    ccw.onResourceLoaded,
+                                                    ccw.onResourceLoadFailed,
+                                                    this));
+
+    this.images.push(joe.Resources.loader.loadImage("img/highlight_menuSmall.png",
                                                     ccw.onResourceLoaded,
                                                     ccw.onResourceLoadFailed,
                                                     this));

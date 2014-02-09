@@ -28,6 +28,41 @@ ccw.WordGridClass = new joe.ClassEx({
     this.bounds.height = gridImage.height;
   },
 
+  mouseDown: function(x, y, commands) {
+    if (commands) {
+      commands.startGesture(x, y);
+    }
+    
+    return true;
+  },
+
+  mouseDrag: function(x, y, commands) {
+    var dragType = ccw.PlayCommandsClass.SWIPE_TYPE.NONE;
+
+    if (commands) {
+      dragType = commands.checkDrag(x, y);
+
+      switch(dragType) {
+        case ccw.PlayCommandsClass.SWIPE_TYPE.LEFT:
+        case ccw.PlayCommandsClass.SWIPE_TYPE.RIGHT:
+          commands.executeDrag(dragType);
+        break;
+
+        case ccw.PlayCommandsClass.SWIPE_TYPE.UP_RIGHT:
+        break;
+
+        case ccw.PlayCommandsClass.SWIPE_TYPE.DOWN_RIGHT:
+        break;
+      }
+    }
+
+    return true;
+  },
+
+  mouseUp: function(x, y, commands) {
+    return true;
+  },
+
   enter: function() {
   },
 

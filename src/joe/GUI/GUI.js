@@ -10,14 +10,38 @@ joe.GuiClass = new joe.ClassEx(
     widgets: [],
     focusWidget: null,
     viewOffset: {x:0, y:0},
+    clipRect: null,
+    curTouchID: -1,
+
+    getContext: function() {
+      return this.widgets;
+    },
+
+    setContext: function(widgetList) {
+      this.widgets = widgetList;
+    },
+
+    newContext: function() {
+      var oldContext = this.widgets;
+
+      this.widgets = [];
+
+      return oldContext;
+    },
 
     setViewOffset: function(x, y) {
       this.viewOffset.x = x;
       this.viewOffset.y = y;
     },
 
+    setClipRect: function(clipRect) {
+      this.clipRect = clipRect;
+    },
+
     addWidget: function(widget, toFront) {
       toFront ? this.widgets.unshift(widget) : this.widgets.push(widget);
+
+      return widget;
     },
 
     removeWidget: function(widget) {
@@ -39,17 +63,15 @@ joe.GuiClass = new joe.ClassEx(
       }
     },
 
-    drawClipped: function(context, srcRect, scale) {
-
-    },
-
     draw: function(context) {
       // Draw widgets.
       var i = 0;
 
       for (i=0; i<this.widgets.length; ++i) {
         if (this.widgets[i].widgetVisible()) {
-          this.widgets[i].drawWidget(context, 0, 0);
+          if (!this.clipRect || joe.MathEx.clip(this.clipRect, this.widgets[i].AABBgetRef())) {
+            this.widgets[i].drawWidget(context, 0, 0);
+          }
         }
       }
     },
@@ -62,7 +84,7 @@ joe.GuiClass = new joe.ClassEx(
       for (i=0; i<this.widgets.length; ++i) {
         if (this.widgets[i].AABBcontainsPoint(x, y)) {
           bounds = this.widgets[i].AABBgetRef();
-          widget = this.widgets[i].widgetGetChildAt(x - bounds.x - this.viewOffset.x, y - bounds.y - this.viewOffset.y);
+          widget = this.widgets[i].widgetGetChildAt(x - bounds.x, y - bounds.y);
           break;
         }
       }
@@ -70,9 +92,29 @@ joe.GuiClass = new joe.ClassEx(
       return widget;
     },
 
+    touchDown: function(id, x, y) {
+      if (this.curTouchID < 0) {
+        this.curTouchID = id;
+        this.mouseDown(x, y);
+      }
+    },
+
+    touchMove: function(id, x, y) {
+      if (this.curTouchID === id) {
+        this.mouseDrag(x, y);
+      }
+    },
+
+    touchUp: function(id, x, y) {
+      if (this.curTouchID === id) {
+        this.mouseUp(x, y);
+        this.curTouchID = -1;
+      }
+    },
+
     mouseUp: function(x, y) {
       var widget = this.focusWidget,
-          bConsumed = widget ? widget.mouseUp(x, y) : false,
+          bConsumed = widget ? widget.mouseUp(x + this.viewOffset.x, y + this.viewOffset.y) : false,
           newFocusWidget = bConsumed ? widget : null;
 
       this.setFocusWidget(newFocusWidget);
@@ -81,8 +123,8 @@ joe.GuiClass = new joe.ClassEx(
     },
 
     mouseDown: function(x, y) {
-      var widget = this.getWidgetAt(x, y),
-          bConsumed = widget ? widget.mouseDown(x, y) : false,
+      var widget = this.getWidgetAt(x + this.viewOffset.x, y + this.viewOffset.y),
+          bConsumed = widget ? widget.mouseDown(x + this.viewOffset.x, y + this.viewOffset.y) : false,
           newFocusWidget = bConsumed ? widget : null;
 
       this.setFocusWidget(newFocusWidget);
@@ -92,29 +134,29 @@ joe.GuiClass = new joe.ClassEx(
 
     mouseDrag: function(x, y) {
       var widget = this.focusWidget,
-          bConsumed = widget ? widget.mouseDrag(x, y) : false,
+          bConsumed = widget ? widget.mouseDrag(x + this.viewOffset.x, y + this.viewOffset.y) : false,
           newFocusWidget = widget;
 
       return bConsumed;
     },
 
     mouseOver: function(x, y) {
-      var widget = this.getWidgetAt(x, y),
-          bConsumed = widget && (!this.focusWidget || this.focusWidget === widget) ? widget.mouseOver(x, y) : false;
+      var widget = this.getWidgetAt(x + this.viewOffset.x, y + this.viewOffset.y),
+          bConsumed = widget && (!this.focusWidget || this.focusWidget === widget) ? widget.mouseOver(x + this.viewOffset.x, y + this.viewOffset.y) : false;
 
       return bConsumed;
     },
 
     mouseHold: function(x, y) {
       var widget = this.focusWidget,
-          bConsumed = widget ? widget.mouseHold(x, y) : false;
+          bConsumed = widget ? widget.mouseHold(x + this.viewOffset.x, y + this.viewOffset.y) : false;
 
       return bConsumed;
     },
 
     mouseClick: function(x, y) {
-      var widget = this.getWidgetAt(x, y),
-          bConsumed = widget ? widget.mouseClick(x, y) : false,
+      var widget = this.getWidgetAt(x + this.viewOffset.x, y + this.viewOffset.y),
+          bConsumed = widget ? widget.mouseClick(x + this.viewOffset.x, y + this.viewOffset.y) : false,
           newFocusWidget = bConsumed ? widget : null;
 
       this.setFocusWidget(newFocusWidget);
@@ -123,8 +165,8 @@ joe.GuiClass = new joe.ClassEx(
     },
 
     mouseDoubleClick: function(x, y) {
-      var widget = this.getWidgetAt(x, y),
-          bConsumed = widget ? widget.mouseDoubleClick(x, y) : false,
+      var widget = this.getWidgetAt(x + this.viewOffset.x, y + this.viewOffset.y),
+          bConsumed = widget ? widget.mouseDoubleClick(x + this.viewOffset.x, y + this.viewOffset.y) : false,
           newFocusWidget = bConsumed ? widget : null;
 
       this.setFocusWidget(newFocusWidget);
