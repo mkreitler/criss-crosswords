@@ -318,6 +318,19 @@ ccw.InputLayerClass = new joe.ClassEx({
     }
   },
 
+  advanceEditCursor: function() {
+    var answerText = this.answerLabel.getText(),
+        i = 0;
+
+    for (i=0; i<answerText.length; ++i) {
+      this.curEditChar = i;
+
+      if (answerText.charAt(i) === "_") {
+        break;
+      }
+    }
+  },
+
   drawClipped: function(gfx, clipRect, scale) {
     gfx.save();
 

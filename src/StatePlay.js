@@ -75,6 +75,7 @@ ccw.StatePlayClass = new joe.ClassEx({
 
   refreshInputAnswerText: function() {
     this.inputLayer.setAnswerText(this.playLayer.getSelectedAnswerText());
+    this.inputLayer.advanceEditCursor();
   },
 
   showInput: function() {
