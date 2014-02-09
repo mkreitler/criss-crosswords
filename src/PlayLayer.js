@@ -224,8 +224,8 @@ ccw.PlayLayerClass = new joe.ClassEx({
                                                                   y,
                                                                   buttonImage.width,
                                                                   buttonImage.height,
-                                                                  "#0000ff",
-                                                                  "#000000",
+                                                                  null,
+                                                                  null,
                                                                   {
                                                                     mouseDown: function(x, y) {
                                                                       return theWordGrid.mouseDown(x, y, commandHandler);

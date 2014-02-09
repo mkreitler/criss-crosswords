@@ -28,8 +28,8 @@ joe.GUI.CaptureBox = new joe.ClassEx(
     init: function(x, y, width, height, onColor, offColor, inputCallbacks, customDraw) {
       this.AABBset(x, y, width, height);
 
-      this.onColor = onColor || "#ffff00";
-      this.offColor = offColor || "#0000ff";
+      this.onColor = onColor;
+      this.offColor = offColor;
 
       this.inputCallbacks = inputCallbacks || null;
       this.customDraw = customDraw;
@@ -87,18 +87,20 @@ joe.GUI.CaptureBox = new joe.ClassEx(
     	if (this.widgetVisible()) {
     		this.AABBoffset(worldX, worldY);
 
-      	context.save();
+        if ((this.isOn() && this.onColor) || this.offColor) {
+        	context.save();
 
-      	this.AABBdraw(context, color);
+        	this.AABBdraw(context, color);
 
-      	this.strokeStyle = color;
+        	this.strokeStyle = color;
 
-      	if (this.customDraw) {
-      		this.customDraw(context, worldX, worldY);
-      	}
+        	context.restore();
+        }
 
-      	context.restore();
-
+        if (this.customDraw) {
+          this.customDraw(context, worldX, worldY);
+        }
+        
       	this.AABBoffset(-worldX, -worldY);
      }
     }

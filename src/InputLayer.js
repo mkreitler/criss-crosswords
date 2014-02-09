@@ -28,6 +28,10 @@ ccw.InputLayerClass = new joe.ClassEx({
   vkeyStart: null,
   vkeyPressTime: 0,
   curEditChar: 0,
+  highlightImage: null,
+  highlightPos: {x:0, y:0},
+  gridPos: {row:0, col:0},
+  coords: {x:0, y:0},
 
   init: function(commands) {
     var i = 0,
@@ -69,8 +73,8 @@ ccw.InputLayerClass = new joe.ClassEx({
                                                                    this.KEY_CAPTURE_BOUNDS.y,
                                                                    this.KEY_CAPTURE_BOUNDS.w,
                                                                    this.KEY_CAPTURE_BOUNDS.h,
-                                                                   "#0000ff",
-                                                                   "#000000",
+                                                                   null,
+                                                                   null,
                                                                    {
                                                                      mouseDown: function(x, y) {
                                                                        return vkeyDownHandler(x, y);
@@ -89,6 +93,42 @@ ccw.InputLayerClass = new joe.ClassEx({
   exit: function() {
     // Close the view without updating the answer.
     this.commands.hideInput(null);
+  },
+
+  getCellForKey: function(char) {
+    var iRow = 0,
+        iCol = 0;
+
+    this.gridPos.row = -1;
+    this.gridPos.col = -1;
+
+    for (iRow=0; iRow<this.KEY_LAYOUT.chars.length; ++iRow) {
+      for (iCol=0; iCol<this.KEY_LAYOUT.chars[iRow].length; ++iCol) {
+        if (this.KEY_LAYOUT.chars[iRow].charAt(iCol) === char) {
+          this.gridPos.row = iRow;
+          this.gridPos.col = iCol;
+          iRow = this.KEY_LAYOUT.chars.length;
+          break;
+        }
+      }
+    }
+
+    return this.gridPos;
+  },
+
+  getTopLeftForKey: function(char) {
+    var gridPos = this.getCellForKey(char),
+        bounds = this.keyBox.AABBgetRef();
+
+    this.coords.x = 0;
+    this.coords.y = 0;
+
+    if (gridPos.row >= 0 && gridPos.col >= 0) {
+      this.coords.x = Math.round(gridPos.col * bounds.width / this.KEY_LAYOUT.chars[0].length) + this.KEY_CAPTURE_BOUNDS.x;
+      this.coords.y = Math.round(gridPos.row * bounds.height / this.KEY_LAYOUT.chars.length) + this.KEY_CAPTURE_BOUNDS.y;
+    }
+
+    return this.coords;
   },
 
   resolveVKeyFromPoint: function(x, y) {
@@ -144,13 +184,54 @@ ccw.InputLayerClass = new joe.ClassEx({
   },
 
   onVKeyDown: function(x, y) {
+    var highlightPos = null;
+
     this.vkeyStart = this.resolveVKeyFromPoint(x, y);
     this.vkeyPressTime = Date.now();
+
+    this.highlightImage = null;
+    this.highlightPos.x = 0;
+    this.highlightPos.y = 0;
+
+    if (this.vkeyStart) {
+      switch(this.vkeyStart) {
+        case "1":
+          // 'Done' key.
+          this.highlightImage = ccw.game.getImage("HIGHLIGHT_KEY_LARGE");
+          highlightPos = this.getTopLeftForKey(this.vkeyStart);
+        break;
+
+        case "2":
+          // 'Exit' key.
+          this.highlightImage = ccw.game.getImage("HIGHLIGHT_KEY_SMALL");
+          highlightPos = this.getTopLeftForKey(this.vkeyStart);
+        break;
+
+        case "3":
+          // 'Del' key.
+          this.highlightImage = ccw.game.getImage("HIGHLIGHT_KEY_SMALL");
+          highlightPos = this.getTopLeftForKey(this.vkeyStart);
+        break;
+
+        default:
+          // A normal letter key.
+          this.highlightImage = ccw.game.getImage("HIGHLIGHT_KEY_SMALL");
+          highlightPos = this.getTopLeftForKey(this.vkeyStart);
+        break;
+      }
+
+      if (highlightPos) {
+        this.highlightPos.x = highlightPos.x;
+        this.highlightPos.y = highlightPos.y;
+      }
+    }
   },
 
   onVKeyUp: function(x, y) {
     var vkeyEnd = this.resolveVKeyFromPoint(x, y),
         newAnswer = null;
+
+    this.highlightImage = null;
 
     if (this.vkeyStart === vkeyEnd) {
       switch(vkeyEnd) {
@@ -201,6 +282,10 @@ ccw.InputLayerClass = new joe.ClassEx({
 
     gfx.clearRect(0, 0, joe.Graphics.getWidth(), joe.Graphics.getHeight());
     gfx.drawImage(this.backImage, 0, 0);
+
+    if (this.highlightImage) {
+      gfx.drawImage(this.highlightImage, this.highlightPos.x, this.highlightPos.y);
+    }
 
     this.guiManager.setClipRect(clipRect);
     this.guiManager.draw(gfx);

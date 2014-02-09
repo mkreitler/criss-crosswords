@@ -17,6 +17,8 @@ ccw.GameClass = new joe.ClassEx({
            HIGHLIGHT_MENU_MEDIUM: 11,
            HIGHLIGHT_MENU_SMALL: 12,
            KEYBOARD: 13,
+           HIGHLIGHT_KEY_LARGE: 14,
+           HIGHLIGHT_KEY_SMALL: 15,
           },
 
   Z_ORDER: {
@@ -40,6 +42,8 @@ ccw.GameClass = new joe.ClassEx({
   },
 
   init: function() {
+    // TODO: consolidate into sprite sheets to reduce download overhead on server.
+    
     this.sysFont = joe.Resources.loader.loadBitmapFont(["fonts/book_01.png",
                                                         "fonts/book_02.png"],
                                                         ccw.onResourceLoaded,
@@ -139,6 +143,16 @@ ccw.GameClass = new joe.ClassEx({
                                                     this));
 
     this.images.push(joe.Resources.loader.loadImage("img/keyboard.png",
+                                                    ccw.onResourceLoaded,
+                                                    ccw.onResourceLoadFailed,
+                                                    this));
+
+    this.images.push(joe.Resources.loader.loadImage("img/highlight_keyLarge.png",
+                                                    ccw.onResourceLoaded,
+                                                    ccw.onResourceLoadFailed,
+                                                    this));
+
+    this.images.push(joe.Resources.loader.loadImage("img/highlight_keySmall.png",
                                                     ccw.onResourceLoaded,
                                                     ccw.onResourceLoadFailed,
                                                     this));
