@@ -6,6 +6,7 @@ joe.GUI.Label = new joe.ClassEx(
   // Static Definitions ////////////////////////////////////////////////////////
   {
     DEFAULT_V_SPACE_FACTOR: 0.1,
+    DEFAULT_CURSOR_SPACING: 0.75,
   },
 
   // Instance Definitions ///////////////////////////////////////////////////////
@@ -20,14 +21,26 @@ joe.GUI.Label = new joe.ClassEx(
     anchorX: 0,
     anchorY: 0,
     text: null,
+    cursorChar: null,
+    cursorPos: 0,
+    cursorSpacing: 0,
 
-    init: function(text, font, x, y, inputCallbacks, anchorX, anchorY, maxWidth, vSpacing) {
+    init: function(text, font, x, y, inputCallbacks, anchorX, anchorY, maxWidth, vSpacing, cursorChar, cursorPos, cursorSpacing) {
       this.font = font;
       this.inputCallbacks = inputCallbacks || null;
       this.maxWidth = maxWidth || joe.Graphics.getWidth();
       this.vSpacing = vSpacing || joe.GUI.Label.DEFAULT_V_SPACE_FACTOR;
+      this.cursorChar = cursorChar || null;
+      this.cursorPos = cursorPos || 0;
+      this.cursorSpacing = cursorSpacing || joe.GUI.Label.DEFAULT_CURSOR_SPACING;
 
       this.setText(text, font, x, y, anchorX, anchorY, maxWidth, vSpacing);
+    },
+
+    setCursor: function(pos, char, spacing) {
+      this.cursorPos = pos || 0;
+      this.cursorChar = char || this.cursorChar;
+      this.cursorSpacing = spacing || this.cursorSpacing;
     },
 
     getText: function() {
@@ -139,7 +152,27 @@ joe.GUI.Label = new joe.ClassEx(
     },
 
     draw: function(context, parentX, parentY) {
+      var cursorSize = null,
+          bounds = null,
+          cursorX = 0,
+          cursorY = 0,
+          foreString = null,
+          atString = null;
+
       context.drawImage(this.buffer, parentX + this.bounds.x, parentY + this.bounds.y);
+
+      if (this.cursorChar && this.cursorPos >= 0 && this.cursorPos < this.text.length) {
+        // TODO: fix to work with multi-line text.
+        cursorSize = this.font.measureText(this.cursorChar);
+        bounds = this.AABBgetRef();
+        cursorY = bounds.y + bounds.height + cursorSize.height * this.vSpacing;
+
+        foreString = this.font.measureText(this.text.substr(0, this.cursorPos)).width;
+        atString = this.font.measureText(this.text.substr(0, this.cursorPos + 1)).width
+
+        cursorX = Math.round(bounds.x + foreString + (atString - foreString) * 0.5);
+        this.font.draw(context, this.cursorChar, cursorX, cursorY, joe.Resources.BitmapFont.ALIGN.CENTER, this.cursorSpacing);
+      }
     }
   }
 );

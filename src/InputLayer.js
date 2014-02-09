@@ -63,13 +63,14 @@ ccw.InputLayerClass = new joe.ClassEx({
                                                joe.Graphics.getWidth() * 0.9));
 
     this.answerLabel = this.guiManager.addWidget(new joe.GUI.Label('_______',
-                                                 ccw.game.sysFont,
+                                                 ccw.game.sysFontLarge,
                                                  joe.Graphics.getWidth() * 0.5,
                                                  this.WIDGET_OFFSETS_Y[1],
                                                  null,
                                                  0.5,
                                                  0.5,
                                                  joe.Graphics.getWidth() * 0.9));
+    this.answerLabel.setCursor(-1, "^");
 
     this.keyBox = this.guiManager.addWidget(new joe.GUI.CaptureBox(this.KEY_CAPTURE_BOUNDS.x,
                                                                    this.KEY_CAPTURE_BOUNDS.y,
@@ -203,6 +204,7 @@ ccw.InputLayerClass = new joe.ClassEx({
     if (this.curEditChar < editText.length) {
       this.answerLabel.setText(foreString + letter + aftString);
       this.curEditChar = Math.min(this.curEditChar + 1, editText.length);
+      this.answerLabel.setCursor(this.curEditChar);
     }
   },
 
@@ -226,6 +228,8 @@ ccw.InputLayerClass = new joe.ClassEx({
     else {
       this.curEditChar = 0;
     }
+
+    this.answerLabel.setCursor(this.curEditChar);
   },
 
   onVKeyDown: function(char) {
@@ -315,6 +319,7 @@ ccw.InputLayerClass = new joe.ClassEx({
     if (this.answerLabel) {
       this.answerLabel.setText(text);
       this.curEditChar = 0;
+      this.answerLabel.setCursor(this.curEditChar);
     }
   },
 
@@ -329,6 +334,8 @@ ccw.InputLayerClass = new joe.ClassEx({
         break;
       }
     }
+    
+    this.answerLabel.setCursor(this.curEditChar);
   },
 
   drawClipped: function(gfx, clipRect, scale) {

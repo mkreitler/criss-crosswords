@@ -7,6 +7,7 @@ joe.MathEx.AABB_BOUNDS_KEY_MAP = {"0":"x", "1":"y", "2":"width", "3":"height"};
 
 joe.MathEx.AABBmodule = {
   bounds: {x:0, y:0, width:0, height: 0},
+  boundRect: {x:0, y:0, w:0, h:0},
 
   // Set bounds directly.
   AABBset: function(x, y, w, h) {
@@ -77,6 +78,17 @@ joe.MathEx.AABBmodule = {
   // DANGEROUS: allows other objects to overwrite the bounds.
   AABBgetRef: function() {
     return this.bounds;
+  },
+
+  // HACK: return a rect, rather than a bounds. Useful for clipping
+  // TODO: resolve the differences between rect and bounds.
+  AABBgetRectRef: function() {
+    this.boundRect.x = this.bounds.x;
+    this.boundRect.y = this.bounds.y;
+    this.boundRect.w = this.bounds.width;
+    this.boundRect.h = this.bounds.height;
+
+    return this.boundRect;
   },
 
   // Returns a copy of the bounds in a shared static object.

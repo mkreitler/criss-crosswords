@@ -17,6 +17,10 @@ ccw.PlayLayerClass = new joe.ClassEx({
 {
   requires: joe.Scene.LayerInterface,
 
+  CLUE_HIGHLIGHT_ALPHA: 0.8,
+  CLUE_HIGHLIGHT_COLOR: "#008080",
+  CLUE_HIGHLIGHT_LINEWIDTH: 8,
+
   wordGrid: null,
   paneIndex: 0, // Corresponds to PANES.CENTER
   widgets: [],
@@ -25,6 +29,8 @@ ccw.PlayLayerClass = new joe.ClassEx({
   newLabel: null,
   guiManager: null,
   curContext: "CENTER",
+  selectedClueLabel: null,
+  bDragged: false,
 
   updateSelectedAnswer: function(newAnswer) {
     if (this.wordGrid) {
@@ -51,6 +57,12 @@ ccw.PlayLayerClass = new joe.ClassEx({
     if (this.wordGrid) {
       this.wordGrid.unselect();
     }
+
+    this.unselectClueLabel();
+  },
+
+  unselectClueLabel: function() {
+    this.selectedClueLabel = null;
   },
 
   mouseDown: function(x, y) {
@@ -66,6 +78,8 @@ ccw.PlayLayerClass = new joe.ClassEx({
   },
 
   shiftGuiContextLeft: function() {
+    this.unselectClueLabel();
+
     switch(this.curContext) {
       case "CENTER":
         this.setGuiContext("LEFT");
@@ -86,6 +100,8 @@ ccw.PlayLayerClass = new joe.ClassEx({
   },
 
   shiftGuiContextRight: function() {
+    this.unselectClueLabel();
+    
     switch(this.curContext) {
       case "LEFT":
         this.setGuiContext("CENTER");
@@ -115,7 +131,9 @@ ccw.PlayLayerClass = new joe.ClassEx({
 
   drawClipped: function(gfx, srcRect, scale) {
     var i = 0,
-        curWidgets = this.widgets[ccw.PlayLayerClass.PANES[this.curContext]];
+        curWidgets = this.widgets[ccw.PlayLayerClass.PANES[this.curContext]],
+        clueBounds = null,
+        screenWidth = joe.Graphics.getWidth();
 
     joe.assert(gfx && srcRect, joe.Strings.ASSERT_INVALID_ARGS);
 
@@ -151,7 +169,76 @@ ccw.PlayLayerClass = new joe.ClassEx({
       this.guiManager.setContext(curWidgets);
     }
 
+    if (this.selectedClueLabel) {
+      clueBounds = this.selectedClueLabel.AABBgetRectRef();
+      if (joe.MathEx.clip(clueBounds, srcRect)) {
+        gfx.globalAlpha = this.CLUE_HIGHLIGHT_ALPHA;
+        gfx.strokeStyle = this.CLUE_HIGHLIGHT_COLOR;
+        gfx.lineWidth = this.CLUE_HIGHLIGHT_LINEWIDTH;
+        gfx.beginPath();
+        gfx.rect(Math.floor(clueBounds.x + clueBounds.w * 0.5 - screenWidth * 0.5), clueBounds.y, screenWidth + 1, clueBounds.h);
+        gfx.stroke();
+        gfx.globalAlpha = 1;
+      }
+    }
+
     gfx.restore();
+  },
+
+  highlightClue: function(x, y, commands) {
+    if (commands) {
+      commands.startGesture(x, y);
+    }
+
+    if (this.wordGrid && this.guiManager) {
+      this.selectedClueLabel = this.guiManager.getWidgetAt(x, y);
+    }
+
+    this.bDragged = false;
+
+    return true;
+  },
+
+  clueListDrag: function(x, y, commands) {
+    var dragType = ccw.PlayCommandsClass.SWIPE_TYPE.NONE;
+
+    if (!this.bDragged) {
+      if (commands) {
+        dragType = commands.checkDrag(x, y);
+
+        switch(dragType) {
+          case ccw.PlayCommandsClass.SWIPE_TYPE.LEFT:
+          case ccw.PlayCommandsClass.SWIPE_TYPE.RIGHT:
+            commands.executeDrag(dragType);
+            this.bDragged = true;
+            this.unselectClueLabel();
+          break;
+        }
+      }
+    }
+
+    return true;
+  },
+
+  selectClue: function(x, y, bUp, clueIndex, commandHandler) {
+    var endClue = null;
+
+    this.bDragged = false;
+
+    if (this.wordGrid && this.guiManager) {
+      endClue = this.guiManager.getWidgetAt(x, y);
+
+      if (endClue === this.selectedClueLabel) {
+        if (!this.wordGrid.selectFromClueList(bUp, clueIndex, commandHandler)) {
+          this.unselectClueLabel();
+        }
+      }
+      else {
+        this.unselectClueLabel();
+      }
+    }
+
+    return true;
   },
 
   addWidgets: function(commandHandler) {
@@ -167,7 +254,42 @@ ccw.PlayLayerClass = new joe.ClassEx({
         panelOffsets = [],
         lastWidget = null,
         buttonImg = null,
-        theWordGrid = null;
+        theWordGrid = null,
+        self = this,
+        downClueHandlers = [
+          {mouseDown: function(x, y) {return self.highlightClue(x, y, commandHandler);},
+           mouseDrag: function(x, y) {return self.clueListDrag(x, y, commandHandler);},
+           mouseUp: function(x, y) {return self.selectClue(x, y, false, ccw.StatePlayClass.DOWN_CLUES.charAt(0), commandHandler);}},
+          {mouseDown: function(x, y) {return self.highlightClue(x, y, commandHandler);},
+           mouseDrag: function(x, y) {return self.clueListDrag(x, y, commandHandler);},
+           mouseUp: function(x, y) {return self.selectClue(x, y, false, ccw.StatePlayClass.DOWN_CLUES.charAt(1), commandHandler);}},
+          {mouseDown: function(x, y) {return self.highlightClue(x, y, commandHandler);},
+           mouseDrag: function(x, y) {return self.clueListDrag(x, y, commandHandler);},
+           mouseUp: function(x, y) {return self.selectClue(x, y, false, ccw.StatePlayClass.DOWN_CLUES.charAt(2), commandHandler);}},
+          {mouseDown: function(x, y) {return self.highlightClue(x, y, commandHandler);},
+           mouseDrag: function(x, y) {return self.clueListDrag(x, y, commandHandler);},
+           mouseUp: function(x, y) {return self.selectClue(x, y, false, ccw.StatePlayClass.DOWN_CLUES.charAt(3), commandHandler);}},
+          {mouseDown: function(x, y) {return self.highlightClue(x, y, commandHandler);},
+           mouseDrag: function(x, y) {return self.clueListDrag(x, y, commandHandler);},
+           mouseUp: function(x, y) {return self.selectClue(x, y, false, ccw.StatePlayClass.DOWN_CLUES.charAt(4), commandHandler);}}
+        ],
+        upClueHandlers = [
+          {mouseDown: function(x, y) {return self.highlightClue(x, y, commandHandler);},
+           mouseDrag: function(x, y) {return self.clueListDrag(x, y, commandHandler);},
+           mouseUp: function(x, y) {return self.selectClue(x, y, true, ccw.StatePlayClass.UP_CLUES.charAt(0), commandHandler);}},
+          {mouseDown: function(x, y) {return self.highlightClue(x, y, commandHandler);},
+           mouseDrag: function(x, y) {return self.clueListDrag(x, y, commandHandler);},
+           mouseUp: function(x, y) {return self.selectClue(x, y, true, ccw.StatePlayClass.UP_CLUES.charAt(1), commandHandler);}},
+          {mouseDown: function(x, y) {return self.highlightClue(x, y, commandHandler);},
+           mouseDrag: function(x, y) {return self.clueListDrag(x, y, commandHandler);},
+           mouseUp: function(x, y) {return self.selectClue(x, y, true, ccw.StatePlayClass.UP_CLUES.charAt(2), commandHandler);}},
+          {mouseDown: function(x, y) {return self.highlightClue(x, y, commandHandler);},
+           mouseDrag: function(x, y) {return self.clueListDrag(x, y, commandHandler);},
+           mouseUp: function(x, y) {return self.selectClue(x, y, true, ccw.StatePlayClass.UP_CLUES.charAt(3), commandHandler);}},
+          {mouseDown: function(x, y) {return self.highlightClue(x, y, commandHandler);},
+           mouseDrag: function(x, y) {return self.clueListDrag(x, y, commandHandler);},
+           mouseUp: function(x, y) {return self.selectClue(x, y, true, ccw.StatePlayClass.UP_CLUES.charAt(4), commandHandler);}}
+        ];
 
     this.guiManager = new joe.GuiClass();
 
@@ -183,7 +305,7 @@ ccw.PlayLayerClass = new joe.ClassEx({
 
     // The clues.
     for (i=0; i<ccw.STRINGS.DOWN_CLUES.length; ++i) {
-      lastWidget = this.guiManager.addWidget(new joe.GUI.Label(ccw.STRINGS.DOWN_CLUES[i].clue, ccw.game.sysFont, midPane, curY, null, 0.5, 0, ccw.PlayLayerClass.MAX_WIDTH));
+      lastWidget = this.guiManager.addWidget(new joe.GUI.Label(ccw.STRINGS.DOWN_CLUES[i].clue, ccw.game.sysFont, midPane, curY, downClueHandlers[i], 0.5, 0, ccw.PlayLayerClass.MAX_WIDTH));
       curY += ccw.PlayLayerClass.VERTICAL_SPACING + lastWidget.AABBgetRef().height;
     }
 
@@ -251,7 +373,7 @@ ccw.PlayLayerClass = new joe.ClassEx({
 
     // The clues.
     for (i=0; i<ccw.STRINGS.DOWN_CLUES.length; ++i) {
-      lastWidget = this.guiManager.addWidget(new joe.GUI.Label(ccw.STRINGS.UP_CLUES[i].clue, ccw.game.sysFont, midPane, curY, null, 0.5, 0, ccw.PlayLayerClass.MAX_WIDTH));
+      lastWidget = this.guiManager.addWidget(new joe.GUI.Label(ccw.STRINGS.UP_CLUES[i].clue, ccw.game.sysFont, midPane, curY, upClueHandlers[i], 0.5, 0, ccw.PlayLayerClass.MAX_WIDTH));
       curY += ccw.PlayLayerClass.VERTICAL_SPACING + lastWidget.AABBgetRef().height;
     }
 
@@ -277,7 +399,7 @@ ccw.PlayLayerClass = new joe.ClassEx({
 
     // The clues.
     for (i=0; i<ccw.STRINGS.DOWN_CLUES.length; ++i) {
-      lastWidget = this.guiManager.addWidget(new joe.GUI.Label(ccw.STRINGS.DOWN_CLUES[i].clue, ccw.game.sysFont, midPane, curY, null, 0.5, 0, ccw.PlayLayerClass.MAX_WIDTH));
+      lastWidget = this.guiManager.addWidget(new joe.GUI.Label(ccw.STRINGS.DOWN_CLUES[i].clue, ccw.game.sysFont, midPane, curY, downClueHandlers[i], 0.5, 0, ccw.PlayLayerClass.MAX_WIDTH));
       curY += ccw.PlayLayerClass.VERTICAL_SPACING + lastWidget.AABBgetRef().height;
     }
 

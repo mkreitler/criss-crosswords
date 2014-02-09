@@ -69,7 +69,7 @@ joe.GuiClass = new joe.ClassEx(
 
       for (i=0; i<this.widgets.length; ++i) {
         if (this.widgets[i].widgetVisible()) {
-          if (!this.clipRect || joe.MathEx.clip(this.clipRect, this.widgets[i].AABBgetRef())) {
+          if (!this.clipRect || joe.MathEx.clip(this.clipRect, this.widgets[i].AABBgetRectRef())) {
             this.widgets[i].drawWidget(context, 0, 0);
           }
         }

@@ -9,8 +9,7 @@ ccw.WordGridClass = new joe.ClassEx({
   DRAG_DIR: {NONE:0,
              UP: -1,
              DOWN:1},
-  UP_CLUES: "45678",
-  DOWN_CLUES: "12345",
+
   HIGHLIGHT_DELAY: 250,
 
   commands: null,
@@ -61,6 +60,22 @@ ccw.WordGridClass = new joe.ClassEx({
 
   unselect: function() {
     this.selection.clueDir = this.DRAG_DIR.NONE;
+  },
+
+  selectFromClueList: function(bUp, selectNum, commands) {
+    var clueList = bUp ? this.clues.up : this.clues.down;
+        inputCallback = commands.showInput,
+        bSuccess = false;
+
+    if (clueList.hasOwnProperty(selectNum)) {
+      this.selection.clueDir = bUp ? this.DRAG_DIR.UP : this.DRAG_DIR.DOWN;
+      this.selection.clueNum = selectNum;
+      this.commands = commands;
+      setTimeout(function() {inputCallback.call(commands)}, this.HIGHLIGHT_DELAY);
+      bSuccess = true;
+    }
+
+    return bSuccess;
   },
 
   updateSelectedAnswer: function(newAnswer) {
@@ -296,8 +311,8 @@ ccw.WordGridClass = new joe.ClassEx({
       clueNum = clueNum && clueNum.length === 1 ? clueNum[0] : null;
 
       if (clueNum &&
-          (this.dragDir === this.DRAG_DIR.UP && this.UP_CLUES.indexOf(clueNum) >= 0) ||
-          (this.dragDir === this.DRAG_DIR.DOWN && this.DOWN_CLUES.indexOf(clueNum) >= 0)) {
+          (this.dragDir === this.DRAG_DIR.UP && ccw.StatePlayClass.UP_CLUES.indexOf(clueNum) >= 0) ||
+          (this.dragDir === this.DRAG_DIR.DOWN && ccw.StatePlayClass.DOWN_CLUES.indexOf(clueNum) >= 0)) {
         this.selection.startRow = row;
         this.selection.startCol = col;
         this.selection.clueDir = this.dragDir;

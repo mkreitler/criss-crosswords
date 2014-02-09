@@ -2,6 +2,8 @@ ccw.StatePlayClass = new joe.ClassEx({
   GAME_VIEW_WIDTH_FACTOR: 4, // Want 3 panes with wraparound, so we'll fake it with 4 panes.
   GAME_VIEW_HEIGHT_FACTOR: 1,
   SLIDE_TIME: 0.25,
+  UP_CLUES: "45678",
+  DOWN_CLUES: "12345",
 
   VIEW_ORDER: { GAME: 100,
                 INPUT: 90,
