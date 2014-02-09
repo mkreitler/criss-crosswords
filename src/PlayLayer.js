@@ -5,9 +5,11 @@ ccw.PlayLayerClass = new joe.ClassEx({
           LEFT_REPEAT: 3},
 
   FUDGE_HELP_Y: 2,
-  FUDGE_CENTER_ARROWS_X: 2,
+  FUDGE_LEFT_ARROWS_X: 1,
+  FUDGE_RIGHT_ARROWS_X: 0,
   FUDGE_CENTER_ARROWS_Y: 6,
   FUDGE_HELP_Y_SIDE_PANELS: 3,
+  FUDGE_BOTTOM_PANEL_Y: 3,
 
   VERTICAL_SPACING: 64,
   MAX_WIDTH: joe.Graphics.getWidth() * 0.9,
@@ -189,7 +191,7 @@ ccw.PlayLayerClass = new joe.ClassEx({
                                           topMargin,
                                           panelImage,
                                           midPane - panelImage.width * 0.5,
-                                          topMargin * 2 + gridImage.height);
+                                          topMargin * 2 + gridImage.height + ccw.PlayLayerClass.FUDGE_BOTTOM_PANEL_Y);
     this.labels.push(this.wordGrid);
 
     this.makeHelpButtons(midPane, topMargin, commandHandler);
@@ -202,7 +204,7 @@ ccw.PlayLayerClass = new joe.ClassEx({
                                                                   y,
                                                                   buttonImage.width,
                                                                   buttonImage.height,
-                                                                  "#00ff00",
+                                                                  "#0000ff",
                                                                   "#000000",
                                                                   {
                                                                     mouseDown: function(x, y) {
@@ -290,7 +292,7 @@ ccw.PlayLayerClass = new joe.ClassEx({
                                                                     }})); // TODO: <-- input callbacks here.
     // Left arrow.
     buttonImage = ccw.game.getImage("HIGHLIGHT_ARROW_LEFT");
-    x = Math.round(midPane - joe.Graphics.getWidth() * 0.5 + topMargin - ccw.PlayLayerClass.FUDGE_CENTER_ARROWS_X);
+    x = Math.round(midPane - joe.Graphics.getWidth() * 0.5 + topMargin - ccw.PlayLayerClass.FUDGE_LEFT_ARROWS_X);
     y +=  ccw.PlayLayerClass.FUDGE_CENTER_ARROWS_Y;
     lastWidget = this.guiManager.addWidget(new joe.GUI.HighlightBox(x,
                                                                     y,
@@ -302,7 +304,7 @@ ccw.PlayLayerClass = new joe.ClassEx({
                                                                     }})); // TODO: <-- input callbacks here.
     // Right arrow.
     buttonImage = ccw.game.getImage("HIGHLIGHT_ARROW_RIGHT");
-    x = Math.round(midPane + joe.Graphics.getWidth() * 0.5 - topMargin - buttonImage.width + ccw.PlayLayerClass.FUDGE_CENTER_ARROWS_X);
+    x = Math.round(midPane + joe.Graphics.getWidth() * 0.5 - topMargin - buttonImage.width + ccw.PlayLayerClass.FUDGE_RIGHT_ARROWS_X);
     lastWidget = this.guiManager.addWidget(new joe.GUI.HighlightBox(x,
                                                                     y,
                                                                     buttonImage.width,

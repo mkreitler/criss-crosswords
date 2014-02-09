@@ -1,8 +1,8 @@
 ccw.PlayCommandsClass = new joe.ClassEx({
-  SWIPE_THRESHOLD_SQ: 50 * 50,
-  SWIPE_RIGHT_THRESH: Math.sqrt(3) * 0.5,
+  SWIPE_THRESHOLD_SQ: 100 * 100,
+  SWIPE_RIGHT_THRESH: Math.sqrt(Math.sqrt(3) * 0.5),
   SWIPE_DIAG_TARGET: Math.sqrt(2) * 0.5,
-  SWIPE_DIAG_THRESH: Math.abs(Math.sqrt(3) * 0.5 - Math.sqrt(2) * 0.5) * 0.5,
+  SWIPE_DIAG_THRESH: 2 * Math.abs(Math.sqrt(3) * 0.5 - Math.sqrt(2) * 0.5),
   SWIPE_TYPE: {NONE: 0,
                RIGHT: 1,
                LEFT: 2,
@@ -78,8 +78,8 @@ ccw.PlayCommandsClass = new joe.ClassEx({
     else if (dirDot < -ccw.PlayCommandsClass.SWIPE_RIGHT_THRESH) {
       swipeType = ccw.PlayCommandsClass.SWIPE_TYPE.LEFT;
     }
-    else if (Math.abs(Math.abs(dirDot) - ccw.PlayCommandsClass.TARGET) < ccw.PlayCommandsClass.TARGET) {
-      if (dy < 0) {
+    else if (Math.abs(Math.abs(dirDot) - ccw.PlayCommandsClass.SWIPE_DIAG_TARGET) < ccw.PlayCommandsClass.SWIPE_DIAG_THRESH) {
+      if (dx * dy < 0) {
         swipeType = ccw.PlayCommandsClass.SWIPE_TYPE.UP_RIGHT;
       }
       else {
