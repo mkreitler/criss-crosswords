@@ -190,7 +190,7 @@ ccw.GameClass = new joe.ClassEx({
                                                     ccw.onResourceLoaded,
                                                     ccw.onResourceLoadFailed,
                                                     this,
-                                                    3,
+                                                    1,
                                                     0.1));
 
     this.sounds.push(joe.Resources.loader.loadSound("audio/music.mp3",
@@ -204,21 +204,21 @@ ccw.GameClass = new joe.ClassEx({
                                                     ccw.onResourceLoaded,
                                                     ccw.onResourceLoadFailed,
                                                     this,
-                                                    2,
+                                                    1,
                                                     0.1));
 
     this.sounds.push(joe.Resources.loader.loadSound("audio/slide.mp3",
                                                     ccw.onResourceLoaded,
                                                     ccw.onResourceLoadFailed,
                                                     this,
-                                                    2,
+                                                    1,
                                                     0.1));
 
     this.sounds.push(joe.Resources.loader.loadSound("audio/chirp.mp3",
                                                     ccw.onResourceLoaded,
                                                     ccw.onResourceLoadFailed,
                                                     this,
-                                                    2,
+                                                    1,
                                                     0.1));
 
     joe.MouseInput.addListener(this);

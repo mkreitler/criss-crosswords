@@ -150,7 +150,7 @@ ccw.InputLayerClass = new joe.ClassEx({
 
   flipClueText: function(x, y) {
     ccw.game.playSound("CLICK_HIGH");
-    
+
     if (this.hintLabel.getText() === ccw.STRINGS.HINT_LABEL_HINT) {
       // Flip from hint to clue.
       this.hintLabel.setText(ccw.STRINGS.HINT_LABEL_CLUE);
@@ -421,6 +421,11 @@ ccw.InputLayerClass = new joe.ClassEx({
       }
     }
     
+    // Advance past end if all letters are filled out.
+    if (this.curEditChar === answerText.length - 1 && answerText.charAt(answerText.length - 1) !== "_") {
+      this.curEditChar = answerText.length;
+    }
+
     this.answerLabel.setCursor(this.curEditChar);
   },
 
