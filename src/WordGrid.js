@@ -72,6 +72,7 @@ ccw.WordGridClass = new joe.ClassEx({
       this.selection.clueNum = selectNum;
       this.commands = commands;
       setTimeout(function() {inputCallback.call(commands)}, this.HIGHLIGHT_DELAY);
+      ccw.game.playSound("SWEEP");
       bSuccess = true;
     }
 
@@ -324,6 +325,7 @@ ccw.WordGridClass = new joe.ClassEx({
         this.selection.clueNum = clueNum;
         this.commands = commands;
         setTimeout(function() {inputCallback.call(commands)}, this.HIGHLIGHT_DELAY);
+        ccw.game.playSound("SWEEP");
       }
     }
   },

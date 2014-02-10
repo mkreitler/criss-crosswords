@@ -8,7 +8,8 @@ ccw.StatePlayClass = new joe.ClassEx({
   VIEW_ORDER: { GAME: 100,
                 INPUT: 90,
                 HELP: 80,
-                INSTRUCTIONS: 70 },
+                INSTRUCTIONS: 70,
+                DIALOG_BOX:50 },
 },
 {
   commands: null,
@@ -18,9 +19,13 @@ ccw.StatePlayClass = new joe.ClassEx({
   instructionsView: null,
   helpView: null,
   inputView: null,
+  dialogView: null,
+  dialogLayer: null,
 
   init: function(gridImage, panelImage) {
-    var state = this;
+    var state = this,
+        dialogFrame = null,
+        dialogWorldRect = null;
 
     this.commands = new ccw.PlayCommandsClass(this);
 
@@ -53,11 +58,23 @@ ccw.StatePlayClass = new joe.ClassEx({
     this.inputLayer = this.inputView.addLayer(new ccw.InputLayerClass(this.commands));
     this.inputView.setWorldPos(-joe.Graphics.getWidth(), 0);
 
+    dialogFrame = ccw.game.getImage("DIALOG_FRAME");
+    joe.assert(dialogFrame, ccw.STRINGS.ASSERT_IMAGE_NOT_FOUND);
+    this.dialogView = new joe.Scene.View(joe.Graphics.getWidth(),
+                                         dialogFrame.height,
+                                         joe.Graphics.getWidth(),
+                                         dialogFrame.height);
+    this.dialogLayer = this.dialogView.addLayer(new ccw.DialogLayerClass(this.commands));
+    this.dialogView.setWorldPos(-joe.Graphics.getWidth(), Math.round(joe.Graphics.getWidth() * 0.5 - dialogFrame.height * 0.5));
+    dialogWorldRect = this.dialogView.getWorldRect();
+    this.dialogLayer.setViewOffset(-dialogWorldRect.x, -dialogWorldRect.y);
+
     // Add views to the scene.    
     joe.Scene.addView(this.gameView, ccw.StatePlayClass.VIEW_ORDER.GAME);
     joe.Scene.addView(this.inputView, ccw.StatePlayClass.VIEW_ORDER.INPUT);
     joe.Scene.addView(this.helpView, ccw.StatePlayClass.VIEW_ORDER.HELP);
     joe.Scene.addView(this.instructionsView, ccw.StatePlayClass.VIEW_ORDER.INSTRUCTIONS);
+    joe.Scene.addView(this.dialogView, ccw.StatePlayClass.VIEW_ORDER.DIALOG_BOX);
   },
 
   syncViewToPanel: function(whichPanel) {
@@ -96,15 +113,22 @@ ccw.StatePlayClass = new joe.ClassEx({
   },
 
   hideInstructions: function() {
+    ccw.game.playSound("SLIDE");
     this.instructionsView.setWorldTransition(joe.Graphics.getWidth(), 0, 0, 0, ccw.StatePlayClass.SLIDE_TIME);
   },
 
   showHelp: function() {
+    ccw.game.playSound("SLIDE");
     this.helpView.setWorldTransition(0, 0, 0, 0, ccw.StatePlayClass.SLIDE_TIME);
   },
 
   hideHelp: function() {
+    ccw.game.playSound("SLIDE");
     this.helpView.setWorldTransition(joe.Graphics.getWidth(), 0, 0, 0, ccw.StatePlayClass.SLIDE_TIME);
+  },
+
+  isSliding: function() {
+    return this.gameView.isTransitioning();
   },
 
   slideLayerLeft: function() {
@@ -113,6 +137,8 @@ ccw.StatePlayClass = new joe.ClassEx({
         newViewY = 0;
 
     joe.assert(this.gameView, ccw.STRINGS.ASSERT_INVALID_GAME_VIEW);
+
+    ccw.game.playSound("SLIDE");
 
     viewRect = this.gameView.getSourceRect();
     newViewX = viewRect.x - joe.Graphics.getWidth();
@@ -138,6 +164,8 @@ ccw.StatePlayClass = new joe.ClassEx({
         newViewY = 0;
 
     joe.assert(this.gameView, ccw.STRINGS.ASSERT_INVALID_GAME_VIEW);
+
+    ccw.game.playSound("SLIDE");
 
     viewRect = this.gameView.getSourceRect();
     newViewX = viewRect.x + joe.Graphics.getWidth();

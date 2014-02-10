@@ -16,7 +16,34 @@
    inkscape:version="0.48.4 r9939"
    sodipodi:docname="scratch.svg">
   <defs
-     id="defs4" />
+     id="defs4">
+    <filter
+       id="filter10826"
+       inkscape:label="Feather"
+       inkscape:menu="ABCs"
+       inkscape:menu-tooltip="Blurred mask on the edge without altering the contents"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         id="feGaussianBlur10828"
+         result="result6"
+         stdDeviation="5" />
+      <feComposite
+         id="feComposite10830"
+         in2="result6"
+         operator="atop"
+         in="SourceGraphic"
+         result="result91" />
+      <feComposite
+         id="feComposite10832"
+         in2="result91"
+         operator="in"
+         result="result92" />
+      <feComposite
+         id="feComposite10834"
+         in2="result92"
+         operator="in" />
+    </filter>
+  </defs>
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -5973,735 +6000,787 @@
        inkscape:export-filename="C:\xampp\htdocs\javascript\criss-crosswords\img\highlight_keyLarge.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
-    <g
-       id="g10620">
-      <rect
-         style="opacity:0.8;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         id="rect10283"
-         width="764"
-         height="1024"
-         x="1640"
-         y="2285.5051"
-         rx="0"
-         ry="0"
-         inkscape:export-filename="C:\xampp\htdocs\javascript\criss-crosswords\img\keyboard.png"
-         inkscape:export-xdpi="90"
-         inkscape:export-ydpi="90" />
-      <rect
-         y="3084.0881"
-         x="1643.9095"
-         height="68.743721"
-         width="68.743721"
-         id="rect10107"
-         style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         ry="13.131984"
-         rx="13.131984" />
-      <rect
-         ry="13.131984"
-         style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         id="rect10249"
-         width="68.743721"
-         height="68.743721"
-         x="2254.9648"
-         y="3160.47"
-         rx="13.131984" />
-      <rect
-         rx="13.131984"
-         y="3160.47"
-         x="2178.583"
-         height="68.743721"
-         width="68.743721"
-         id="rect10251"
-         style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         ry="13.131984" />
-      <rect
-         ry="13.131984"
-         style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         id="rect10253"
-         width="68.743721"
-         height="68.743721"
-         x="2102.2009"
-         y="3160.47"
-         rx="13.131984" />
-      <rect
-         rx="13.131984"
-         y="3160.47"
-         x="2025.8191"
-         height="68.743721"
-         width="68.743721"
-         id="rect10255"
-         style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         ry="13.131984" />
-      <rect
-         ry="13.131984"
-         style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         id="rect10257"
-         width="68.743721"
-         height="68.743721"
-         x="1949.4371"
-         y="3160.47"
-         rx="13.131984" />
-      <rect
-         rx="13.131984"
-         y="3160.47"
-         x="1873.0553"
-         height="68.743721"
-         width="68.743721"
-         id="rect10259"
-         style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         ry="13.131984" />
-      <rect
-         ry="13.131984"
-         style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         id="rect10261"
-         width="68.743721"
-         height="68.743721"
-         x="1796.6733"
-         y="3160.47"
-         rx="13.131984" />
-      <rect
-         rx="13.131984"
-         y="3160.47"
-         x="1720.2915"
-         height="68.743721"
-         width="68.743721"
-         id="rect10263"
-         style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         ry="13.131984" />
-      <rect
-         ry="13.131984"
-         style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         id="rect10267"
-         width="68.743721"
-         height="68.743721"
-         x="1720.2915"
-         y="3236.8518"
-         rx="13.131984" />
-      <rect
-         ry="13.131984"
-         style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         id="rect10231"
-         width="68.743721"
-         height="68.743721"
-         x="1720.2915"
-         y="3084.0881"
-         rx="13.131984" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text10109"
-         y="3131.6851"
+    <rect
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="C:\xampp\htdocs\javascript\criss-crosswords\img\keyboard.png"
+       ry="0"
+       rx="0"
+       y="2285.5051"
+       x="1640"
+       height="1024"
+       width="764"
+       id="rect10283"
+       style="opacity:0.8;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       rx="13.131984"
+       ry="13.131984"
+       style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect10107"
+       width="68.743721"
+       height="68.743721"
+       x="1643.9095"
+       y="3084.0881" />
+    <rect
+       rx="13.131984"
+       y="3160.47"
+       x="2254.9648"
+       height="68.743721"
+       width="68.743721"
+       id="rect10249"
+       style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       ry="13.131984" />
+    <rect
+       ry="13.131984"
+       style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect10251"
+       width="68.743721"
+       height="68.743721"
+       x="2178.583"
+       y="3160.47"
+       rx="13.131984" />
+    <rect
+       rx="13.131984"
+       y="3160.47"
+       x="2102.2009"
+       height="68.743721"
+       width="68.743721"
+       id="rect10253"
+       style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       ry="13.131984" />
+    <rect
+       ry="13.131984"
+       style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect10255"
+       width="68.743721"
+       height="68.743721"
+       x="2025.8191"
+       y="3160.47"
+       rx="13.131984" />
+    <rect
+       rx="13.131984"
+       y="3160.47"
+       x="1949.4371"
+       height="68.743721"
+       width="68.743721"
+       id="rect10257"
+       style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       ry="13.131984" />
+    <rect
+       ry="13.131984"
+       style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect10259"
+       width="68.743721"
+       height="68.743721"
+       x="1873.0553"
+       y="3160.47"
+       rx="13.131984" />
+    <rect
+       rx="13.131984"
+       y="3160.47"
+       x="1796.6733"
+       height="68.743721"
+       width="68.743721"
+       id="rect10261"
+       style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       ry="13.131984" />
+    <rect
+       ry="13.131984"
+       style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect10263"
+       width="68.743721"
+       height="68.743721"
+       x="1720.2915"
+       y="3160.47"
+       rx="13.131984" />
+    <rect
+       rx="13.131984"
+       y="3236.8518"
+       x="1720.2915"
+       height="68.743721"
+       width="68.743721"
+       id="rect10267"
+       style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       ry="13.131984" />
+    <rect
+       rx="13.131984"
+       y="3084.0881"
+       x="1720.2915"
+       height="68.743721"
+       width="68.743721"
+       id="rect10231"
+       style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       ry="13.131984" />
+    <text
+       xml:space="preserve"
+       style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
+       x="1660.894"
+       y="3131.6851"
+       id="text10109"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan10111"
          x="1660.894"
-         style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
-         xml:space="preserve"><tspan
-           style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New"
-           y="3131.6851"
-           x="1660.894"
-           id="tspan10111"
-           sodipodi:role="line">Q</tspan></text>
-      <rect
-         rx="13.131984"
-         y="3084.0881"
-         x="1796.6733"
-         height="68.743721"
-         width="68.743721"
-         id="rect10233"
-         style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         ry="13.131984" />
-      <text
-         xml:space="preserve"
-         style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
-         x="1724.1963"
+         y="3131.6851"
+         style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New">Q</tspan></text>
+    <rect
+       ry="13.131984"
+       style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect10233"
+       width="68.743721"
+       height="68.743721"
+       x="1796.6733"
+       y="3084.0881"
+       rx="13.131984" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text10113"
+       y="3134.4038"
+       x="1724.1963"
+       style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
+       xml:space="preserve"><tspan
+         style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New"
          y="3134.4038"
-         id="text10113"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan10115"
-           x="1724.1963"
-           y="3134.4038"
-           style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New">W</tspan></text>
-      <rect
-         ry="13.131984"
-         style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         id="rect10235"
-         width="68.743721"
-         height="68.743721"
-         x="1873.0553"
-         y="3084.0881"
-         rx="13.131984" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text10117"
-         y="3134.7954"
+         x="1724.1963"
+         id="tspan10115"
+         sodipodi:role="line">W</tspan></text>
+    <rect
+       rx="13.131984"
+       y="3084.0881"
+       x="1873.0553"
+       height="68.743721"
+       width="68.743721"
+       id="rect10235"
+       style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       ry="13.131984" />
+    <text
+       xml:space="preserve"
+       style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
+       x="1815.1683"
+       y="3134.7954"
+       id="text10117"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan10119"
          x="1815.1683"
-         style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
-         xml:space="preserve"><tspan
-           style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New"
-           y="3134.7954"
-           x="1815.1683"
-           id="tspan10119"
-           sodipodi:role="line">E</tspan></text>
-      <rect
-         rx="13.131984"
-         y="3084.0881"
-         x="1949.4371"
-         height="68.743721"
-         width="68.743721"
-         id="rect10237"
-         style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         ry="13.131984" />
-      <text
-         xml:space="preserve"
-         style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
-         x="1888.2832"
+         y="3134.7954"
+         style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New">E</tspan></text>
+    <rect
+       ry="13.131984"
+       style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect10237"
+       width="68.743721"
+       height="68.743721"
+       x="1949.4371"
+       y="3084.0881"
+       rx="13.131984" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text10121"
+       y="3134.3367"
+       x="1888.2832"
+       style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
+       xml:space="preserve"><tspan
+         style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New"
          y="3134.3367"
-         id="text10121"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan10123"
-           x="1888.2832"
-           y="3134.3367"
-           style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New">R</tspan></text>
-      <rect
-         ry="13.131984"
-         style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         id="rect10239"
-         width="68.743721"
-         height="68.743721"
-         x="2025.8191"
-         y="3084.0881"
-         rx="13.131984" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text10125"
-         y="3134.5046"
+         x="1888.2832"
+         id="tspan10123"
+         sodipodi:role="line">R</tspan></text>
+    <rect
+       rx="13.131984"
+       y="3084.0881"
+       x="2025.8191"
+       height="68.743721"
+       width="68.743721"
+       id="rect10239"
+       style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       ry="13.131984" />
+    <text
+       xml:space="preserve"
+       style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
+       x="1965.5266"
+       y="3134.5046"
+       id="text10125"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan10127"
          x="1965.5266"
-         style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
-         xml:space="preserve"><tspan
-           style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New"
-           y="3134.5046"
-           x="1965.5266"
-           id="tspan10127"
-           sodipodi:role="line">T</tspan></text>
-      <rect
-         rx="13.131984"
-         y="3084.0881"
-         x="2102.2009"
-         height="68.743721"
-         width="68.743721"
-         id="rect10241"
-         style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         ry="13.131984" />
-      <text
-         xml:space="preserve"
-         style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
-         x="2043.24"
+         y="3134.5046"
+         style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New">T</tspan></text>
+    <rect
+       ry="13.131984"
+       style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect10241"
+       width="68.743721"
+       height="68.743721"
+       x="2102.2009"
+       y="3084.0881"
+       rx="13.131984" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text10129"
+       y="3134.5493"
+       x="2043.24"
+       style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
+       xml:space="preserve"><tspan
+         style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New"
          y="3134.5493"
-         id="text10129"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan10131"
-           x="2043.24"
-           y="3134.5493"
-           style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New">Y</tspan></text>
-      <rect
-         ry="13.131984"
-         style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         id="rect10243"
-         width="68.743721"
-         height="68.743721"
-         x="2178.583"
-         y="3084.0881"
-         rx="13.131984" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text10133"
-         y="3134.5269"
+         x="2043.24"
+         id="tspan10131"
+         sodipodi:role="line">Y</tspan></text>
+    <rect
+       rx="13.131984"
+       y="3084.0881"
+       x="2178.583"
+       height="68.743721"
+       width="68.743721"
+       id="rect10243"
+       style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       ry="13.131984" />
+    <text
+       xml:space="preserve"
+       style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
+       x="2118.6709"
+       y="3134.5269"
+       id="text10133"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan10135"
          x="2118.6709"
-         style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
-         xml:space="preserve"><tspan
-           style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New"
-           y="3134.5269"
-           x="2118.6709"
-           id="tspan10135"
-           sodipodi:role="line">U</tspan></text>
-      <rect
-         rx="13.131984"
-         y="3084.0881"
-         x="2254.9648"
-         height="68.743721"
-         width="68.743721"
-         id="rect10245"
-         style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         ry="13.131984" />
-      <text
-         xml:space="preserve"
-         style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
-         x="2202.0122"
+         y="3134.5269"
+         style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New">U</tspan></text>
+    <rect
+       ry="13.131984"
+       style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect10245"
+       width="68.743721"
+       height="68.743721"
+       x="2254.9648"
+       y="3084.0881"
+       rx="13.131984" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text10137"
+       y="3134.8738"
+       x="2202.0122"
+       style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
+       xml:space="preserve"><tspan
+         style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New"
          y="3134.8738"
-         id="text10137"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan10139"
-           x="2202.0122"
-           y="3134.8738"
-           style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New">I</tspan></text>
-      <rect
-         ry="13.131984"
-         style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         id="rect10247"
-         width="68.743721"
-         height="68.743721"
-         x="2331.3467"
-         y="3084.0881"
-         rx="13.131984" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text10141"
-         y="3134.594"
+         x="2202.0122"
+         id="tspan10139"
+         sodipodi:role="line">I</tspan></text>
+    <rect
+       rx="13.131984"
+       y="3084.0881"
+       x="2331.3467"
+       height="68.743721"
+       width="68.743721"
+       id="rect10247"
+       style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       ry="13.131984" />
+    <text
+       xml:space="preserve"
+       style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
+       x="2272.4417"
+       y="3134.594"
+       id="text10141"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan10143"
          x="2272.4417"
-         style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
-         xml:space="preserve"><tspan
-           style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New"
-           y="3134.594"
-           x="2272.4417"
-           id="tspan10143"
-           sodipodi:role="line">O</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
-         x="2348.9243"
+         y="3134.594"
+         style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New">O</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text10145"
+       y="3134.7842"
+       x="2348.9243"
+       style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
+       xml:space="preserve"><tspan
+         style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New"
          y="3134.7842"
-         id="text10145"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan10147"
-           x="2348.9243"
-           y="3134.7842"
-           style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New">P</tspan></text>
-      <rect
-         ry="13.131984"
-         style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         id="rect10265"
-         width="68.743721"
-         height="68.743721"
-         x="1643.9095"
-         y="3160.47"
-         rx="13.131984" />
-      <text
-         xml:space="preserve"
-         style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
-         x="1658.8577"
+         x="2348.9243"
+         id="tspan10147"
+         sodipodi:role="line">P</tspan></text>
+    <rect
+       rx="13.131984"
+       y="3160.47"
+       x="1643.9095"
+       height="68.743721"
+       width="68.743721"
+       id="rect10265"
+       style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       ry="13.131984" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text10149"
+       y="3211.0542"
+       x="1658.8577"
+       style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
+       xml:space="preserve"><tspan
+         style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New"
          y="3211.0542"
-         id="text10149"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan10151"
-           x="1658.8577"
-           y="3211.0542"
-           style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New">A</tspan></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text10153"
-         y="3211.2446"
+         x="1658.8577"
+         id="tspan10151"
+         sodipodi:role="line">A</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
+       x="1740.0284"
+       y="3211.2446"
+       id="text10153"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan10155"
          x="1740.0284"
-         style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
-         xml:space="preserve"><tspan
-           style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New"
-           y="3211.2446"
-           x="1740.0284"
-           id="tspan10155"
-           sodipodi:role="line">S</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
+         y="3211.2446"
+         style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New">S</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text10157"
+       y="3211.0208"
+       x="1811.5209"
+       style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
+       xml:space="preserve"><tspan
+         style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New"
+         y="3211.0208"
          x="1811.5209"
-         y="3211.0208"
-         id="text10157"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan10159"
-           x="1811.5209"
-           y="3211.0208"
-           style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New">D</tspan></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text10161"
-         y="3211.2893"
+         id="tspan10159"
+         sodipodi:role="line">D</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
+       x="1891.2817"
+       y="3211.2893"
+       id="text10161"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan10163"
          x="1891.2817"
-         style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
-         xml:space="preserve"><tspan
-           style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New"
-           y="3211.2893"
-           x="1891.2817"
-           id="tspan10163"
-           sodipodi:role="line">F</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
-         x="1965.4147"
+         y="3211.2893"
+         style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New">F</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text10165"
+       y="3211.2334"
+       x="1965.4147"
+       style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
+       xml:space="preserve"><tspan
+         style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New"
          y="3211.2334"
-         id="text10165"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan10167"
-           x="1965.4147"
-           y="3211.2334"
-           style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New">G</tspan></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text10169"
-         y="3211.3564"
+         x="1965.4147"
+         id="tspan10167"
+         sodipodi:role="line">G</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
+       x="2038.5072"
+       y="3211.3564"
+       id="text10169"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan10171"
          x="2038.5072"
-         style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
-         xml:space="preserve"><tspan
-           style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New"
-           y="3211.3564"
-           x="2038.5072"
-           id="tspan10171"
-           sodipodi:role="line">H</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
-         x="2125.3169"
+         y="3211.3564"
+         style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New">H</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text10173"
+       y="3206.7354"
+       x="2125.3169"
+       style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
+       xml:space="preserve"><tspan
+         style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New"
          y="3206.7354"
-         id="text10173"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan10175"
-           x="2125.3169"
-           y="3206.7354"
-           style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New">J</tspan></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text10177"
-         y="3211.0208"
+         x="2125.3169"
+         id="tspan10175"
+         sodipodi:role="line">J</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
+       x="2193.3857"
+       y="3211.0208"
+       id="text10177"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan10179"
          x="2193.3857"
-         style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
-         xml:space="preserve"><tspan
-           style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New"
-           y="3211.0208"
-           x="2193.3857"
-           id="tspan10179"
-           sodipodi:role="line">K</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
-         x="2275.1382"
          y="3211.0208"
-         id="text10181"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan10183"
-           x="2275.1382"
-           y="3211.0208"
-           style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New">L</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
-         x="1737.6676"
+         style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New">K</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text10181"
+       y="3211.0208"
+       x="2275.1382"
+       style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
+       xml:space="preserve"><tspan
+         style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New"
+         y="3211.0208"
+         x="2275.1382"
+         id="tspan10183"
+         sodipodi:role="line">L</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text10185"
+       y="3287.3804"
+       x="1737.6676"
+       style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
+       xml:space="preserve"><tspan
+         style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New"
          y="3287.3804"
-         id="text10185"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan10187"
-           x="1737.6676"
-           y="3287.3804"
-           style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New">Z</tspan></text>
-      <rect
-         rx="13.131984"
-         y="3236.8518"
-         x="1796.6733"
-         height="68.743721"
-         width="68.743721"
-         id="rect10269"
-         style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         ry="13.131984" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text10189"
-         y="3286.9998"
+         x="1737.6676"
+         id="tspan10187"
+         sodipodi:role="line">Z</tspan></text>
+    <rect
+       ry="13.131984"
+       style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect10269"
+       width="68.743721"
+       height="68.743721"
+       x="1796.6733"
+       y="3236.8518"
+       rx="13.131984" />
+    <text
+       xml:space="preserve"
+       style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
+       x="1811.2859"
+       y="3286.9998"
+       id="text10189"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan10191"
          x="1811.2859"
-         style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
-         xml:space="preserve"><tspan
-           style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New"
-           y="3286.9998"
-           x="1811.2859"
-           id="tspan10191"
-           sodipodi:role="line">X</tspan></text>
-      <rect
-         ry="13.131984"
-         style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         id="rect10271"
-         width="68.743721"
-         height="68.743721"
-         x="1873.0553"
-         y="3236.8518"
-         rx="13.131984" />
-      <text
-         xml:space="preserve"
-         style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
-         x="1891.8635"
+         y="3286.9998"
+         style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New">X</tspan></text>
+    <rect
+       rx="13.131984"
+       y="3236.8518"
+       x="1873.0553"
+       height="68.743721"
+       width="68.743721"
+       id="rect10271"
+       style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       ry="13.131984" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text10193"
+       y="3287.2349"
+       x="1891.8635"
+       style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
+       xml:space="preserve"><tspan
+         style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New"
          y="3287.2349"
-         id="text10193"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan10195"
-           x="1891.8635"
-           y="3287.2349"
-           style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New">C</tspan></text>
-      <rect
-         rx="13.131984"
-         y="3236.8518"
-         x="1949.4371"
-         height="68.743721"
-         width="68.743721"
-         id="rect10273"
-         style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         ry="13.131984" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text10197"
-         y="3287.1006"
+         x="1891.8635"
+         id="tspan10195"
+         sodipodi:role="line">C</tspan></text>
+    <rect
+       ry="13.131984"
+       style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect10273"
+       width="68.743721"
+       height="68.743721"
+       x="1949.4371"
+       y="3236.8518"
+       rx="13.131984" />
+    <text
+       xml:space="preserve"
+       style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
+       x="1964.2288"
+       y="3287.1006"
+       id="text10197"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan10199"
          x="1964.2288"
-         style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
-         xml:space="preserve"><tspan
-           style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New"
-           y="3287.1006"
-           x="1964.2288"
-           id="tspan10199"
-           sodipodi:role="line">V</tspan></text>
-      <rect
-         ry="13.131984"
-         style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         id="rect10275"
-         width="68.743721"
-         height="68.743721"
-         x="2025.8191"
-         y="3236.8518"
-         rx="13.131984" />
-      <text
-         xml:space="preserve"
-         style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
-         x="2042.4791"
+         y="3287.1006"
+         style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New">V</tspan></text>
+    <rect
+       rx="13.131984"
+       y="3236.8518"
+       x="2025.8191"
+       height="68.743721"
+       width="68.743721"
+       id="rect10275"
+       style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       ry="13.131984" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text10201"
+       y="3287.6152"
+       x="2042.4791"
+       style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
+       xml:space="preserve"><tspan
+         style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New"
          y="3287.6152"
-         id="text10201"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan10203"
-           x="2042.4791"
-           y="3287.6152"
-           style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New">B</tspan></text>
-      <rect
-         rx="13.131984"
-         y="3236.8518"
-         x="2102.2009"
-         height="68.743721"
-         width="68.743721"
-         id="rect10277"
-         style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         ry="13.131984" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text10205"
-         y="3287.1565"
+         x="2042.4791"
+         id="tspan10203"
+         sodipodi:role="line">B</tspan></text>
+    <rect
+       ry="13.131984"
+       style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect10277"
+       width="68.743721"
+       height="68.743721"
+       x="2102.2009"
+       y="3236.8518"
+       rx="13.131984" />
+    <text
+       xml:space="preserve"
+       style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
+       x="2119.1968"
+       y="3287.1565"
+       id="text10205"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan10207"
          x="2119.1968"
-         style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
-         xml:space="preserve"><tspan
-           style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New"
-           y="3287.1565"
-           x="2119.1968"
-           id="tspan10207"
-           sodipodi:role="line">N</tspan></text>
-      <rect
-         ry="13.131984"
-         style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         id="rect10279"
-         width="68.743721"
-         height="68.743721"
-         x="2178.583"
-         y="3236.8518"
-         rx="13.131984" />
-      <text
-         xml:space="preserve"
-         style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
-         x="2189.0557"
+         y="3287.1565"
+         style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New">N</tspan></text>
+    <rect
+       rx="13.131984"
+       y="3236.8518"
+       x="2178.583"
+       height="68.743721"
+       width="68.743721"
+       id="rect10279"
+       style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       ry="13.131984" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text10209"
+       y="3287.4697"
+       x="2189.0557"
+       style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
+       xml:space="preserve"><tspan
+         style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New"
          y="3287.4697"
-         id="text10209"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan10211"
-           x="2189.0557"
-           y="3287.4697"
-           style="font-size:45.82914734px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New">M</tspan></text>
-      <rect
-         rx="13.131984"
-         y="3236.8518"
-         x="1643.9095"
-         height="68.743721"
-         width="68.743721"
-         id="rect10213"
-         style="fill:#ff8080;stroke:#2b0000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         ry="13.131984" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text10215"
-         y="3282.9421"
+         x="2189.0557"
+         id="tspan10211"
+         sodipodi:role="line">M</tspan></text>
+    <rect
+       ry="13.131984"
+       style="fill:#ff8080;stroke:#2b0000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect10213"
+       width="68.743721"
+       height="68.743721"
+       x="1643.9095"
+       y="3236.8518"
+       rx="13.131984" />
+    <text
+       xml:space="preserve"
+       style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
+       x="1652.7487"
+       y="3282.9421"
+       id="text10215"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan10217"
          x="1652.7487"
-         style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
-         xml:space="preserve"><tspan
-           style="font-size:30.55276299px"
-           y="3282.9421"
-           x="1652.7487"
-           id="tspan10217"
-           sodipodi:role="line">Exit</tspan></text>
-      <rect
-         ry="13.131984"
-         style="fill:#ffe680;stroke:#2b2200;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         id="rect10219"
-         width="68.743721"
-         height="68.743721"
-         x="2254.9648"
-         y="3236.8518"
-         rx="13.131984" />
-      <text
-         xml:space="preserve"
-         style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
-         x="2268.4585"
          y="3282.9421"
-         id="text10221"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan10223"
-           x="2268.4585"
-           y="3282.9421"
-           style="font-size:30.55276299px">Del</tspan></text>
-      <rect
-         rx="13.131984"
-         y="3160.47"
-         x="2331.3467"
-         height="145.12563"
-         width="68.743721"
-         id="rect10225"
-         style="fill:#b3ff80;stroke:#112b00;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         ry="13.131984" />
-      <text
-         xml:space="preserve"
-         style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:-5.54723597px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
-         x="2365.7112"
-         y="3173.5786"
-         id="text10227"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan10229"
-           x="3117.3496"
-           y="2421.9399"
-           style="font-size:30.55276299px;letter-spacing:-8.7839222px;writing-mode:tb-rl">Done</tspan></text>
-      <rect
-         rx="13.131984"
-         y="3236.8518"
-         x="2254.9648"
-         height="68.743721"
-         width="68.743721"
-         id="rect10281"
-         style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         ry="13.131984" />
-      <rect
-         style="fill:#999999;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         id="rect10495"
-         width="746.12634"
-         height="288.90363"
-         x="1648.9368"
-         y="2435.9265"
-         ry="24.24366"
-         rx="22.223356"
-         inkscape:export-filename="C:\xampp\htdocs\javascript\criss-crosswords\img\keyboard.png"
-         inkscape:export-xdpi="90"
-         inkscape:export-ydpi="90" />
-      <rect
-         inkscape:export-ydpi="90"
-         inkscape:export-xdpi="90"
-         inkscape:export-filename="C:\xampp\htdocs\javascript\criss-crosswords\img\keyboard.png"
-         rx="22.223356"
-         ry="24.24366"
-         y="2745.9265"
-         x="1648.9368"
-         height="119.198"
-         width="746.12634"
-         id="rect10505"
-         style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
-      <rect
-         rx="11.428571"
-         ry="15.714286"
-         y="2315.5049"
-         x="1797.9529"
-         height="88.571426"
-         width="452.09418"
-         id="rect10507"
-         style="fill:#ffdd55;fill-opacity:1;stroke:#000000;stroke-width:3.99999976;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         inkscape:export-filename="C:\xampp\htdocs\javascript\criss-crosswords\img\keyboard.png"
-         inkscape:export-xdpi="90"
-         inkscape:export-ydpi="90" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text10509"
-         y="2387.1948"
+         style="font-size:30.55276299px">Exit</tspan></text>
+    <rect
+       rx="13.131984"
+       y="3236.8518"
+       x="2254.9648"
+       height="68.743721"
+       width="68.743721"
+       id="rect10219"
+       style="fill:#ffe680;stroke:#2b2200;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       ry="13.131984" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text10221"
+       y="3282.9421"
+       x="2268.4585"
+       style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
+       xml:space="preserve"><tspan
+         style="font-size:30.55276299px"
+         y="3282.9421"
+         x="2268.4585"
+         id="tspan10223"
+         sodipodi:role="line">Del</tspan></text>
+    <rect
+       ry="13.131984"
+       style="fill:#b3ff80;stroke:#112b00;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect10225"
+       width="68.743721"
+       height="145.12563"
+       x="2331.3467"
+       y="3160.47"
+       rx="13.131984" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text10227"
+       y="3173.5786"
+       x="2365.7112"
+       style="font-size:38.19095612px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:-5.54723597px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
+       xml:space="preserve"><tspan
+         style="font-size:30.55276299px;letter-spacing:-8.7839222px;writing-mode:tb-rl"
+         y="2365.7112"
+         x="3173.5786"
+         id="tspan10229"
+         sodipodi:role="line">Done</tspan></text>
+    <rect
+       ry="13.131984"
+       style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect10281"
+       width="68.743721"
+       height="68.743721"
+       x="2254.9648"
+       y="3236.8518"
+       rx="13.131984" />
+    <rect
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="C:\xampp\htdocs\javascript\criss-crosswords\img\keyboard.png"
+       rx="22.223356"
+       ry="24.24366"
+       y="2435.9265"
+       x="1648.9368"
+       height="288.90363"
+       width="746.12634"
+       id="rect10495"
+       style="fill:#999999;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect10505"
+       width="746.12634"
+       height="119.198"
+       x="1648.9368"
+       y="2745.9265"
+       ry="24.24366"
+       rx="22.223356"
+       inkscape:export-filename="C:\xampp\htdocs\javascript\criss-crosswords\img\keyboard.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="C:\xampp\htdocs\javascript\criss-crosswords\img\keyboard.png"
+       style="fill:#ffdd55;fill-opacity:1;stroke:#000000;stroke-width:3.99999976;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect10507"
+       width="452.09418"
+       height="88.571426"
+       x="1797.9529"
+       y="2315.5049"
+       ry="15.714286"
+       rx="11.428571" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="C:\xampp\htdocs\javascript\criss-crosswords\img\keyboard.png"
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
+       x="1909.4258"
+       y="2387.1948"
+       id="text10509"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
          x="1909.4258"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:New Athletic M54;-inkscape-font-specification:New Athletic M54"
-         xml:space="preserve"
-         inkscape:export-filename="C:\xampp\htdocs\javascript\criss-crosswords\img\keyboard.png"
-         inkscape:export-xdpi="90"
-         inkscape:export-ydpi="90"><tspan
-           id="tspan10511"
-           style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New"
-           y="2387.1948"
-           x="1909.4258"
-           sodipodi:role="line">Fill In</tspan></text>
+         y="2387.1948"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New"
+         id="tspan10511">Fill In</tspan></text>
+    <rect
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="C:\xampp\htdocs\javascript\criss-crosswords\img\keyboard.png"
+       rx="22.223356"
+       ry="24.243662"
+       y="2885.561"
+       x="1648.9368"
+       height="165.66501"
+       width="746.12634"
+       id="rect10513"
+       style="fill:#999999;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="1691.5215"
+       y="2932.4756"
+       id="text10515"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\xampp\htdocs\javascript\criss-crosswords\img\keyboard.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan10517"
+         x="1691.5215"
+         y="2932.4756">Type in your answer and press 'done'</tspan><tspan
+         sodipodi:role="line"
+         x="1691.5215"
+         y="2982.4756"
+         id="tspan10519">when you are finished. Hold 'exit' to</tspan><tspan
+         sodipodi:role="line"
+         x="1691.5215"
+         y="3032.4756"
+         id="tspan10521">cancel.</tspan></text>
+    <rect
+       rx="11.428571"
+       ry="15.714286"
+       y="2636.4009"
+       x="2197.6694"
+       height="74.429291"
+       width="183.39362"
+       id="rect10618"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:3.99999976;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       inkscape:export-filename="C:\xampp\htdocs\javascript\criss-crosswords\img\menu_help.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <g
+       id="g10897">
       <rect
-         style="fill:#999999;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         id="rect10513"
-         width="746.12634"
-         height="165.66501"
-         x="1648.9368"
-         y="2885.561"
-         ry="24.243662"
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="C:\xampp\htdocs\javascript\criss-crosswords\img\keyboard.png"
+         rx="22.223356"
+         ry="24.24366"
+         y="2604.0161"
+         x="767.87311"
+         height="450.8345"
+         width="727.19006"
+         id="rect10856"
+         style="opacity:0.5;fill:#000000;stroke:#000000;stroke-width:8;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <rect
+         style="fill:#ffe680;fill-opacity:1;stroke:#000000;stroke-width:8;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect10822"
+         width="727.19006"
+         height="450.8345"
+         x="754.22845"
+         y="2592.3225"
+         ry="24.24366"
          rx="22.223356"
          inkscape:export-filename="C:\xampp\htdocs\javascript\criss-crosswords\img\keyboard.png"
          inkscape:export-xdpi="90"
          inkscape:export-ydpi="90" />
-      <text
-         inkscape:export-ydpi="90"
-         inkscape:export-xdpi="90"
-         inkscape:export-filename="C:\xampp\htdocs\javascript\criss-crosswords\img\keyboard.png"
-         sodipodi:linespacing="125%"
-         id="text10515"
-         y="2932.4756"
-         x="1691.5215"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-         xml:space="preserve"><tspan
-           y="2932.4756"
-           x="1691.5215"
-           id="tspan10517"
-           sodipodi:role="line">Type in your answer and press 'done'</tspan><tspan
-           id="tspan10519"
-           y="2982.4756"
-           x="1691.5215"
-           sodipodi:role="line">when you are finished. Hold 'exit' to</tspan><tspan
-           id="tspan10521"
-           y="3032.4756"
-           x="1691.5215"
-           sodipodi:role="line">cancel.</tspan></text>
-      <rect
-         inkscape:export-ydpi="90"
-         inkscape:export-xdpi="90"
-         inkscape:export-filename="C:\xampp\htdocs\javascript\criss-crosswords\img\menu_help.png"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:3.99999976;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         id="rect10618"
-         width="183.39362"
-         height="74.429291"
-         x="2197.6694"
-         y="2636.4009"
-         ry="15.714286"
-         rx="11.428571" />
+      <g
+         transform="translate(9.8234558,0.306336)"
+         id="g10864">
+        <rect
+           inkscape:export-ydpi="90"
+           inkscape:export-xdpi="90"
+           inkscape:export-filename="C:\xampp\htdocs\javascript\criss-crosswords\img\menu_help.png"
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:3.99999976;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+           id="rect10839"
+           width="183.39362"
+           height="74.429291"
+           x="1016.3032"
+           y="2950.4214"
+           ry="15.714286"
+           rx="11.428571" />
+        <text
+           xml:space="preserve"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+           x="1058.6399"
+           y="3010.2297"
+           id="text10842"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan10844"
+             x="1058.6399"
+             y="3010.2297"
+             style="font-size:64px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:School Book New;-inkscape-font-specification:School Book New">OK</tspan></text>
+      </g>
     </g>
   </g>
 </svg>

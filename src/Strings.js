@@ -26,6 +26,7 @@ ccw.STRINGS = {
 
   ASSERT_INVALID_GAME_VIEW: "Invalid game view!",
   ASSERT_IMAGE_NOT_FOUND: "Image not found!",
+  ASSERT_RESOURCE_LOAD_FAILED: "Some resources failed to load!",
 
   HINT_LABEL_HINT: "HINT",
   HINT_LABEL_CLUE: "CLUE",
@@ -35,6 +36,12 @@ ccw.STRINGS = {
   HINT_POSTAMBLE_SINGULAR: " hint left.",
   HINT_POSTAMBLE_PLURAL: " hints left.",
   HINT_POSTAMBLE_ZERO: " clue. This is your last hint.",
+
+  DEFAULT_MESSAGE: "Default Message",
+
+  DIALOG_CHECK_SOLUTION: "You have no more solutions. You can get more via the 'help' menu.",
+  DIALOG_NEW_PUZZLE: "This demo includes only one puzzle. You can get more via the 'help' menu.",
+  DIALOG_IAP_OFFLINE: "The purchasing server is currently offline.",
 };
 
 

@@ -39,7 +39,6 @@ ccw.HelpLayerClass = new joe.ClassEx({
     this.commands = commands;
 
     this.guiManager = new joe.GuiClass();
-    this.guiManager.setClipRect();
 
     for (i=0; i<ccw.HelpLayerClass.BUTTON_HIGHLIGHTS.length; ++i) {
       highlightImage = ccw.game.getImage(ccw.HelpLayerClass.BUTTON_HIGHLIGHTS[i]);
@@ -57,19 +56,34 @@ ccw.HelpLayerClass = new joe.ClassEx({
     // HACK: Set the input callbacks manually. Setting them in the above
     // loop fails because the closure only retains the final value of 'i',
     // meaning all widgets execute the "hideHelp" function.
+
     widgets[0].widgetSetInputCallbacks({mouseUp: function(x, y) { commands.showInstructions(); return true; },
+                                        mouseDown: function(x, y) {ccw.game.playSound("CLICK_HIGH"); return true; },
+                                        touchDown: function(id, x, y) {ccw.game.playSound("CLICK_HIGH"); return true; },
                                         touchUp: function(id, x, y) {commands.showInstructions(); return true; }});
     widgets[1].widgetSetInputCallbacks({mouseUp: function(x, y) { commands.checkSolution(); return true; },
+                                        mouseDown: function(x, y) {ccw.game.playSound("CLICK_HIGH"); return true; },
+                                        touchDown: function(id, x, y) {ccw.game.playSound("CLICK_HIGH"); return true; },
                                         touchUp: function(id, x, y) {commands.checkSolution(); return true; }});
     widgets[2].widgetSetInputCallbacks({mouseUp: function(x, y) { commands.startNewPuzzle(); return true; },
+                                        mouseDown: function(x, y) {ccw.game.playSound("CLICK_HIGH"); return true; },
+                                        touchDown: function(id, x, y) {ccw.game.playSound("CLICK_HIGH"); return true; },
                                         touchUp: function(id, x, y) {commands.startNewPuzzle(); return true; }});
     widgets[3].widgetSetInputCallbacks({mouseUp: function(x, y) { commands.buyHints(); return true; },
+                                        mouseDown: function(x, y) {ccw.game.playSound("CLICK_HIGH"); return true; },
+                                        touchDown: function(id, x, y) {ccw.game.playSound("CLICK_HIGH"); return true; },
                                         touchUp: function(id, x, y) {commands.buyHints(); return true; }});
     widgets[4].widgetSetInputCallbacks({mouseUp: function(x, y) { commands.buySolutions(); return true; },
+                                        mouseDown: function(x, y) {ccw.game.playSound("CLICK_HIGH"); return true; },
+                                        touchDown: function(id, x, y) {ccw.game.playSound("CLICK_HIGH"); return true; },
                                         touchUp: function(id, x, y) {commands.buySolutions(); return true; }});
     widgets[5].widgetSetInputCallbacks({mouseUp: function(x, y) { commands.buyPuzzles(); return true; },
+                                        mouseDown: function(x, y) {ccw.game.playSound("CLICK_HIGH"); return true; },
+                                        touchDown: function(id, x, y) {ccw.game.playSound("CLICK_HIGH"); return true; },
                                         touchUp: function(id, x, y) {commands.buyPuzzles(); return true; }});
     widgets[6].widgetSetInputCallbacks({mouseUp: function(x, y) { commands.hideHelp(); return true; },
+                                        mouseDown: function(x, y) {ccw.game.playSound("CLICK_HIGH"); return true; },
+                                        touchDown: function(id, x, y) {ccw.game.playSound("CLICK_HIGH"); return true; },
                                         touchUp: function(id, x, y) {commands.hideHelp(); return true; }});
   },
 

@@ -19,6 +19,14 @@ ccw.GameClass = new joe.ClassEx({
            KEYBOARD: 13,
            HIGHLIGHT_KEY_LARGE: 14,
            HIGHLIGHT_KEY_SMALL: 15,
+           DIALOG_FRAME: 16,
+          },
+
+  SOUNDS: {CLICK_LOW: 0,
+           MUSIC: 1,
+           CLICK_HIGH: 2,
+           SLIDE: 3,
+           SWEEP: 4,
           },
 
   Z_ORDER: {
@@ -34,11 +42,27 @@ ccw.GameClass = new joe.ClassEx({
   titleState: null,
   playState: null,
   images: [],
+  sounds: [],
+  nResLoaded: 0,
 
   getImage: function(whichImage) {
     var index = ccw.GameClass.IMAGES[whichImage];
 
     return index >= 0 && index < this.images.length ? this.images[index] : null;
+  },
+
+  getSound: function(whichSound) {
+    var index = ccw.GameClass.SOUNDS[whichSound];
+
+    return index >= 0 && index < this.sounds.length ? this.sounds[index] : null;
+  },
+
+  playSound: function(whichSound) {
+    var sound = this.getSound(whichSound);
+
+    if (sound) {
+      joe.Sound.play(sound, 1);
+    }
   },
 
   init: function() {
@@ -156,6 +180,48 @@ ccw.GameClass = new joe.ClassEx({
                                                     ccw.onResourceLoaded,
                                                     ccw.onResourceLoadFailed,
                                                     this));
+
+    this.images.push(joe.Resources.loader.loadImage("img/dialog_frame.png",
+                                                    ccw.onResourceLoaded,
+                                                    ccw.onResourceLoadFailed,
+                                                    this));
+
+    this.sounds.push(joe.Resources.loader.loadSound("audio/click_low.mp3",
+                                                    ccw.onResourceLoaded,
+                                                    ccw.onResourceLoadFailed,
+                                                    this,
+                                                    3,
+                                                    0.1));
+
+    this.sounds.push(joe.Resources.loader.loadSound("audio/music.mp3",
+                                                    ccw.onResourceLoaded,
+                                                    ccw.onResourceLoadFailed,
+                                                    this,
+                                                    1,
+                                                    0.1));
+
+    this.sounds.push(joe.Resources.loader.loadSound("audio/click_high.mp3",
+                                                    ccw.onResourceLoaded,
+                                                    ccw.onResourceLoadFailed,
+                                                    this,
+                                                    2,
+                                                    0.1));
+
+    this.sounds.push(joe.Resources.loader.loadSound("audio/slide.mp3",
+                                                    ccw.onResourceLoaded,
+                                                    ccw.onResourceLoadFailed,
+                                                    this,
+                                                    2,
+                                                    0.1));
+
+    this.sounds.push(joe.Resources.loader.loadSound("audio/chirp.mp3",
+                                                    ccw.onResourceLoaded,
+                                                    ccw.onResourceLoadFailed,
+                                                    this,
+                                                    2,
+                                                    0.1));
+
+    joe.MouseInput.addListener(this);
     joe.MouseInput.addListener(this);
     joe.KeyInput.addListener(this);
   },
@@ -180,7 +246,11 @@ ccw.GameClass = new joe.ClassEx({
 });
 
 ccw.onResourceLoaded = function(resource) {
+  this.nResLoaded += 1;
+
   if (joe.Resources.loadComplete()) {
+    joe.assert(joe.Resources.loadSuccessful(), ccw.STRINGS.ASSERT_RESOURCE_LOAD_FAILED);
+
     ccw.game.start();
   }
 };

@@ -19,7 +19,7 @@ ccw.InputLayerClass = new joe.ClassEx({
                ],
                charList: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
                           'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']},
-  EXIT_HOLD_TIME: 500,
+  EXIT_HOLD_TIME: joe.Utility.isMobile() ? 250 : 0,
 
   backImage: null,
   commands: null,
@@ -57,7 +57,6 @@ ccw.InputLayerClass = new joe.ClassEx({
     this.commands = commands;
 
     this.guiManager = new joe.GuiClass();
-    this.guiManager.setClipRect();
 
     this.clueLabel = this.guiManager.addWidget(new joe.GUI.Label('Default Clue Text',
                                                ccw.game.sysFont,
@@ -150,17 +149,17 @@ ccw.InputLayerClass = new joe.ClassEx({
   },
 
   flipClueText: function(x, y) {
-    if (this.hintLabel.AABBcontainsPoint(x, y)) {
-      if (this.hintLabel.getText() === ccw.STRINGS.HINT_LABEL_HINT) {
-        // Flip from hint to clue.
-        this.hintLabel.setText(ccw.STRINGS.HINT_LABEL_CLUE);
-        this.clueLabel.setText(this.buildHintText());
-      }
-      else {
-        // Flip from clue to hint.
-        this.hintLabel.setText(ccw.STRINGS.HINT_LABEL_HINT);
-        this.clueLabel.setText(this.clueText);
-      }
+    ccw.game.playSound("CLICK_HIGH");
+    
+    if (this.hintLabel.getText() === ccw.STRINGS.HINT_LABEL_HINT) {
+      // Flip from hint to clue.
+      this.hintLabel.setText(ccw.STRINGS.HINT_LABEL_CLUE);
+      this.clueLabel.setText(this.buildHintText());
+    }
+    else {
+      // Flip from clue to hint.
+      this.hintLabel.setText(ccw.STRINGS.HINT_LABEL_HINT);
+      this.clueLabel.setText(this.clueText);
     }
 
     return true;
@@ -319,6 +318,8 @@ ccw.InputLayerClass = new joe.ClassEx({
     this.highlightPos.x = 0;
     this.highlightPos.y = 0;
 
+    ccw.game.playSound("CLICK_LOW");
+
     if (this.vkeyStart) {
       switch(this.vkeyStart) {
         case "1":
@@ -456,9 +457,7 @@ ccw.InputLayerClass = new joe.ClassEx({
   mouseUp: function(x, y) {
     joe.assert(this.commands, joe.Strings.ASSERT_INVALID_ARGS);
 
-    if (!this.guiManager.mouseUp(x, y)) {
-      this.commands.hideInput(null);
-    }
+    this.guiManager.mouseUp(x, y);
 
     return true;
   },

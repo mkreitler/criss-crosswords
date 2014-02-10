@@ -104,15 +104,20 @@ joe.Sound = new joe.ClassEx({
     if (sound) {
       playedIndex = joe.Sound.getFreeChannelIndex(sound, now);
       
-      if (playedIndex !== joe.Sound.INVALID_CHANNEL) {
-        sound.iChannel = playedIndex;
-        sound.lastPlayTime[playedIndex] = now;
-        sound.channels[playedIndex].pause();
-        sound.channels[playedIndex].loop = false;
-        sound.channels[playedIndex].volume = totalVolume;
-        sound.channels[playedIndex].currentTime = 0;
-        sound.playing[playedIndex] = true;
-        sound.channels[playedIndex].play();
+      try {
+        if (playedIndex !== joe.Sound.INVALID_CHANNEL) {
+          sound.iChannel = playedIndex;
+          sound.lastPlayTime[playedIndex] = now;
+          sound.channels[playedIndex].pause();
+          sound.channels[playedIndex].loop = false;
+          sound.channels[playedIndex].volume = totalVolume;
+          sound.channels[playedIndex].currentTime = 0;
+          sound.playing[playedIndex] = true;
+          sound.channels[playedIndex].play();
+        }
+      }
+      catch(err) {
+        // Error message?
       }
     }
     
@@ -128,15 +133,20 @@ joe.Sound = new joe.ClassEx({
     if (sound) {
       playedIndex = joe.Sound.getFreeChannelIndex(sound, now);
       
-      if (playedIndex !== joe.Sound.INVALID_CHANNEL) {
-        sound.iChannel = playedIndex;
-        sound.lastPlayTime[playedIndex] = now;
-        sound.channels[playedIndex].pause();
-        sound.channels[playedIndex].loop = true;
-        sound.channels[playedIndex].volume = totalVolume;
-        sound.channels[playedIndex].currentTime = 0;
-        sound.playing[playedIndex] = true;
-        sound.channels[playedIndex].play();
+      try {
+        if (playedIndex !== joe.Sound.INVALID_CHANNEL) {
+          sound.iChannel = playedIndex;
+          sound.lastPlayTime[playedIndex] = now;
+          sound.channels[playedIndex].pause();
+          sound.channels[playedIndex].loop = true;
+          sound.channels[playedIndex].volume = totalVolume;
+          sound.channels[playedIndex].currentTime = 0;
+          sound.playing[playedIndex] = true;
+          sound.channels[playedIndex].play();
+        }
+      }
+      catch(err) {
+        // Error message?
       }
     }
     
@@ -167,14 +177,24 @@ joe.Sound = new joe.ClassEx({
   
   stop: function(sound, channelIndex) {
     var iChannel = 0;
-    var iStart = channelIndex === joe.Sound.INVALID_CHANNEL ? 0 : channelIndex;
-    var iEnd = channelIndex === joe.Sound.INVALID_CHANNEL ? sound.channels.length - 1 : channelIndex;
+    var iStart = typeof(channelIndex) === 'undefined' || channelIndex === joe.Sound.INVALID_CHANNEL ? 0 : channelIndex;
+    var iEnd = typeof(channelIndex) === 'undefined' || channelIndex === joe.Sound.INVALID_CHANNEL ? sound.channels.length - 1 : channelIndex;
+
+    if (channelIndex === joe.Sound.STOP_ALL_CHANNELS) {
+      iStart = 0;
+      iEnd = sound.channels.length - 1;
+    }
     
-    for (iChannel = iStart; iChannel <= iEnd; ++iChannel) {
-      sound.channels[iChannel].pause();
-      sound.channels[iChannel].loop = false;
-      sound.channels[iChannel].currentTime = 0;
-      sound.playing[iChannel] = false;
+    try {
+      for (iChannel = iStart; iChannel <= iEnd; ++iChannel) {
+        sound.channels[iChannel].pause();
+        sound.channels[iChannel].loop = false;
+        sound.channels[iChannel].currentTime = 0;
+        sound.playing[iChannel] = false;
+      }
+    }
+    catch(err) {
+      // Error message?
     }
   },
   
@@ -202,7 +222,7 @@ joe.Sound = new joe.ClassEx({
     var numChannels = nChannels || joe.Sound.DEFAULT_CHANNELS;
     var minReplayDelay = replayDelay || joe.Sound.DEFAULT_DELAY;
     
-    var path = "../audio/" + resourceName;
+    var path = resourceName;
     var extension = path.substring(path.lastIndexOf("."));
     var nNewChannels = 0;
     var i = 0;
@@ -263,3 +283,5 @@ joe.Sound = new joe.ClassEx({
   audioClip: null,
   
 });
+
+joe.Sound.init();

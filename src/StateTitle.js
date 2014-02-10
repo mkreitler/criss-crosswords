@@ -16,9 +16,11 @@ ccw.StateTitleClass = new joe.ClassEx({
   },
 
   enter: function() {
+    joe.Sound.loop(ccw.game.getSound("MUSIC"));
   },
 
   exit: function() {
+    joe.Sound.stop(ccw.game.getSound("MUSIC"));
   },
 
   draw: function(gfx) {

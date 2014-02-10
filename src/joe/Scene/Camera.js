@@ -51,7 +51,7 @@ joe.Scene.Camera = new joe.ClassEx({
   },
 
   isTransitioning: function() {
-    return this.srcTransInfo.bTransitioning;
+    return this.srcTransInfo.bTransitioning || this.destTransInfo.bTransitioning;
   },
 
   update: function(dt, gameTime) {

@@ -210,12 +210,15 @@ ccw.PlayLayerClass = new joe.ClassEx({
       if (commands) {
         dragType = commands.checkDrag(x, y);
 
+        if (dragType !== ccw.PlayCommandsClass.SWIPE_TYPE.NONE) {
+          this.unselectClueLabel();
+        }
+
         switch(dragType) {
           case ccw.PlayCommandsClass.SWIPE_TYPE.LEFT:
           case ccw.PlayCommandsClass.SWIPE_TYPE.RIGHT:
             commands.executeDrag(dragType);
             this.bDragged = true;
-            this.unselectClueLabel();
           break;
         }
       }
@@ -229,17 +232,24 @@ ccw.PlayLayerClass = new joe.ClassEx({
 
     this.bDragged = false;
 
-    if (this.wordGrid && this.guiManager) {
-      endClue = this.guiManager.getWidgetAt(x, y);
+    if (!commandHandler.isSliding()) {
+      this.bDragged = false;
 
-      if (endClue === this.selectedClueLabel) {
-        if (!this.wordGrid.selectFromClueList(bUp, clueIndex, commandHandler)) {
+      if (this.wordGrid && this.guiManager) {
+        endClue = this.guiManager.getWidgetAt(x, y);
+
+        if (endClue === this.selectedClueLabel) {
+          if (!this.wordGrid.selectFromClueList(bUp, clueIndex, commandHandler)) {
+            this.unselectClueLabel();
+          }
+        }
+        else {
           this.unselectClueLabel();
         }
       }
-      else {
-        this.unselectClueLabel();
-      }
+    }
+    else {
+      this.unselectClueLabel();
     }
 
     return true;
@@ -433,8 +443,13 @@ ccw.PlayLayerClass = new joe.ClassEx({
                                                                     buttonImage.width,
                                                                     buttonImage.height,
                                                                     buttonImage,
-                                                                    {mouseUp: function(x, y) {
+                                                                    {mouseDown: function(x, y) {
+                                                                        ccw.game.playSound("CLICK_HIGH");
+                                                                        return true;
+                                                                      },
+                                                                      mouseUp: function(x, y) {
                                                                       commandHandler.showHelp();
+                                                                      return true;
                                                                     }})); // TODO: <-- input callbacks here.
     // Left arrow.
     buttonImage = ccw.game.getImage("HIGHLIGHT_ARROW_LEFT");
@@ -447,6 +462,7 @@ ccw.PlayLayerClass = new joe.ClassEx({
                                                                     buttonImage,
                                                                     {mouseUp: function(x, y) {
                                                                       commandHandler.slideLeft();
+                                                                      return true;
                                                                     }})); // TODO: <-- input callbacks here.
     // Right arrow.
     buttonImage = ccw.game.getImage("HIGHLIGHT_ARROW_RIGHT");
@@ -458,6 +474,7 @@ ccw.PlayLayerClass = new joe.ClassEx({
                                                                     buttonImage,
                                                                     {mouseUp: function(x, y) {
                                                                       commandHandler.slideRight();
+                                                                      return true;
                                                                     }})); // TODO: <-- input callbacks here.
   }
 });

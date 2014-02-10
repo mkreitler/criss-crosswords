@@ -37,6 +37,7 @@ ccw.InstructionsLayerClass = new joe.ClassEx({
     joe.assert(this.commands, joe.Strings.ASSERT_INVALID_ARGS);
 
     this.commands.hideInstructions();
+    ccw.game.playSound("SLIDE");
     return true;
   },
 

@@ -21,24 +21,33 @@ ccw.PlayCommandsClass = new joe.ClassEx({
     this.state = state;
   },
 
+  hideDialog: function() {
+    this.state.dialogView.setWorldPos(-joe.Graphics.getWidth(), this.state.dialogView.getWorldRect().y);
+  },
+
+  showDialog: function(text) {
+    this.state.dialogLayer.setText(text);
+    this.state.dialogView.setWorldPos(Math.round(joe.Graphics.getWidth() * 0.5 - ccw.game.getImage("DIALOG_FRAME").width * 0.5), this.state.dialogView.getWorldRect().y);
+  },
+
   checkSolution: function() {
-    window.alert("CheckSolution");
+   this.showDialog(ccw.STRINGS.DIALOG_CHECK_SOLUTION);
   },
 
   startNewPuzzle: function() {
-    window.alert("StartNewPuzzle");
+   this.showDialog(ccw.STRINGS.DIALOG_NEW_PUZZLE);
   },
 
   buyHints: function() {
-    window.alert("BuyHints");
+   this.showDialog(ccw.STRINGS.DIALOG_IAP_OFFLINE);
   },
 
   buySolutions: function() {
-    window.alert("BuySolution");
+   this.showDialog(ccw.STRINGS.DIALOG_IAP_OFFLINE);
   },
 
   buyPuzzles: function() {
-    window.alert("BuyPuzzles");
+   this.showDialog(ccw.STRINGS.DIALOG_IAP_OFFLINE);
   },
 
   showHelp: function() {
@@ -78,6 +87,10 @@ ccw.PlayCommandsClass = new joe.ClassEx({
 
   slideRight: function() {
     this.state.slideLayerRight();
+  },
+
+  isSliding: function() {
+    return this.state.isSliding();
   },
 
   checkForSwipe: function(dx, dy, magnitude) {

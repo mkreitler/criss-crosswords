@@ -29,15 +29,17 @@
 
 joe.Resources = {
   resourcesPending: 0,
-
+  bResourceLoadSuccessful: true,
   resourcesLoaded: 0,
 
   incPendingCount: function() {
     this.resourcesPending += 1;
   },
 
-  incLoadedCount: function() {
+  incLoadedCount: function(bLoadSuccessful) {
     this.resourcesLoaded += 1;
+
+    this.bResourceLoadSuccessful &= bLoadSuccessful;
 
     if (this.resourcesLoaded === this.resourcesPending) {
       this.clearResourceCount();
@@ -51,9 +53,12 @@ joe.Resources = {
 
   loadComplete: function() {
     return this.resourcesPending === 0 && this.resourcesLoaded === 0;
+  },
+
+  loadSuccessful: function() {
+    return this.bResourceLoadSuccessful;
   }
 },
-
 
 joe.ResourceLoader = new joe.ClassEx(null, {
 // Static Definitions /////////////////////////////////////////////////////////
@@ -66,12 +71,12 @@ joe.ResourceLoader = new joe.ClassEx(null, {
     joe.Resources.incPendingCount();
   
     image.onload = function() {
-      joe.Resources.incLoadedCount();
+      joe.Resources.incLoadedCount(true);
       if (onLoadedCallback) { onLoadedCallback.call(observer, image); }
     }
     
     image.onerror = function() {
-      joe.Resources.incLoadedCount();
+      joe.Resources.incLoadedCount(false);
       if (onErrorCallback) { onErrorCallback.call(observer, imageURL); }
     }
   
@@ -113,11 +118,11 @@ joe.ResourceLoader = new joe.ClassEx(null, {
 
     var font = joe.Resources.FontEx.newFromResource(fontURL,
                function() {
-                 joe.Resources.incLoadedCount();
+                 joe.Resources.incLoadedCount(true);
                  if (onLoadedCallback) { onLoadedCallback.call(observer, font); }
                },
                function() {
-                 joe.Resources.incLoadedCount();
+                 joe.Resources.incLoadedCount(false);
                  if (onErrorCallback) { onErrorCallback.call(observer, fontURL); }
                },
                observer);    
@@ -126,12 +131,15 @@ joe.ResourceLoader = new joe.ClassEx(null, {
   },
   
   loadSound: function(soundURL, onLoadedCallback, onErrorCallback, observer, nChannels, repeatDelaySec) {
-    return joe.Sound.load(soundName,
+    joe.Resources.incPendingCount();
+
+    return joe.Sound.load(soundURL,
         function() {
-          joe.Resources.incLoadedCount();
+          joe.Resources.incLoadedCount(true);
           if (onLoadedCallback) { onLoadedCallback.call(observer, soundURL); }
         },
         function() {
+          joe.Resources.incLoadedCount(false);
           if (onLoadedCallback) { onLoadedCallback.call(observer, soundURL); }
         },
         nChannels, repeatDelaySec);
@@ -143,6 +151,8 @@ joe.ResourceLoader = new joe.ClassEx(null, {
     var title = svgName;
     var matches = null;
   
+    joe.Resources.incPendingCount();
+
     xhr.open("POST", url, true);
 
     // Send the proper header information along with the request
@@ -155,12 +165,12 @@ joe.ResourceLoader = new joe.ClassEx(null, {
             if (onErrorCallback) onErrorCallback.call(observer);
           }
           else if (onLoadedCallback) {
-            joe.Resources.incLoadedCount();
+            joe.Resources.incLoadedCount(true);
             onLoadedCallback.call(observer, xhr.responseText);
           }
         }
         else if (xhr.responseText) {
-          joe.Resources.incLoadedCount();
+          joe.Resources.incLoadedCount(false);
           if (onErrorCallback) onErrorCallback.call(observer, svgName);
         }
       }
