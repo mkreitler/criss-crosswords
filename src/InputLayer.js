@@ -19,7 +19,7 @@ ccw.InputLayerClass = new joe.ClassEx({
                ],
                charList: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
                           'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']},
-  EXIT_HOLD_TIME: joe.Utility.isMobile() ? 250 : 0,
+  EXIT_HOLD_TIME: joe.Utility.isMobile() ? 0 : 0,
 
   backImage: null,
   commands: null,
